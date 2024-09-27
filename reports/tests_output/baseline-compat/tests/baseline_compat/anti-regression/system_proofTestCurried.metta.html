@@ -15,6 +15,7 @@
 .ansi1 { font-weight: bold; }
 .ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -84,7 +85,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-21 17:16:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-27 15:23:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -93,43 +94,58 @@ Script started on 2024-09-21 17:16:39+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-Verbosity set to level 1  
-Argv=['']  
-<span class="ansi31"
+<span class="ansi31"
 >
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1:
-Warning:    Invalid mode declaration in PlDoc comment: metta_python_patcher(-'Content')is(dynamic)
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:107:
+Warning:    Clauses of </span><span class="ansi34"
+>from_python/5</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:73
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous from_python/5.</span><span class="ansi31"
+> to suppress this message
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1: PlDoc: failed to process structured comment:
-%!  metta_python_patcher(-Content) is dynamic.
-%
-%   A dynamic predicate that stores the content of the Python file 'metta_python_patcher.py'.
-%   The content is read into a string and asserted as a fact for later use.
-%   This allows the Python code to be loaded and used at runtime in Prolog.
-%
-%   @arg Content A string representing the contents of the 'metta_python_patcher.py' file.
-%
-%   @example
-%   % Reading and asserting the Python patcher file content:
-%   ?- metta_python_patcher(Content).
-%   Content = "... Python code ...".
-%
-
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:649:
+Warning:    Singleton variables: [ID]
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:21:
-Warning:    Invalid mode declaration in PlDoc comment: did_load_metta_python_patcher is (volatile)
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:654:
+Warning:    Singleton variables: [Type,ID]
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:21: PlDoc: failed to process structured comment:
-%!  did_load_metta_python_patcher is volatile.
-%
-%   A volatile predicate used as a flag to track whether the Python patcher has been loaded.
-%   This predicate will not be saved across sessions and exists only for the current runtime.
-%
-%   @example
-%   % After loading the patcher, this will succeed:
-%   ?- did_load_metta_python_patcher.
-%
-
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:669:
+Warning:    Singleton variables: [ID1]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:675:
+Warning:    Singleton variables: [Atom]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:689:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:706:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:719:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:731:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:736:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:752:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:764:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:769:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:802:
+Warning:    Singleton variables: [ID]
 </span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -2657,7 +2673,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.SYSTEM-PROOFTESTCURRIED.01</h3>
 ; 
 ; EVAL TEST
-; took 12.98 seconds.
+; took 12.70 seconds.
 
   !(let $expected 
     (expected) 
@@ -2686,9 +2702,9 @@ Deterministic: ()
         (: 
           (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
           (-> 
-            (ms_threshold $_27324) 
+            (ms_threshold $_403264) 
             (-> 
-              (⍃ $_27324 
+              (⍃ $_403264 
                 (S (S (S (S Z))))) 
               (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))))) 
         (: 
@@ -2704,12 +2720,12 @@ Deterministic: ()
         (: 
           (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
           (-> 
-            (specializationOf $_26544 
+            (specializationOf $_402484 
               (Inheritance 
                 (VarIdx Z) 
                 (VarIdx (S Z)))) 
-            (supportOf $_26544 
-              (countNat $_26544)))) 
+            (supportOf $_402484 
+              (countNat $_402484)))) 
         (: 
           ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z))))) 
           (supportOf 
@@ -2719,9 +2735,9 @@ Deterministic: ()
         (: 
           (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) 
           (-> 
-            (ms_threshold $_25818) 
+            (ms_threshold $_401758) 
             (-> 
-              (⍃ $_25818 
+              (⍃ $_401758 
                 (S Z)) 
               (minsup (Inheritance B (VarIdx (S Z))))))) 
         (: 
@@ -2740,9 +2756,9 @@ Deterministic: ()
         (: 
           (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) 
           (-> 
-            (ms_threshold $_24594) 
+            (ms_threshold $_400534) 
             (-> 
-              (⍃ $_24594 
+              (⍃ $_400534 
                 (S (S Z))) 
               (minsup (Inheritance (VarIdx Z) A))))) 
         (: 
@@ -2764,9 +2780,9 @@ Deterministic: ()
         (: 
           (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) 
           (-> 
-            (ms_threshold $_22932) 
+            (ms_threshold $_398872) 
             (-> 
-              (⍃ $_22932 
+              (⍃ $_398872 
                 (S (S Z))) 
               (minsup (Inheritance C (VarIdx (S Z))))))) 
         (: 
@@ -2788,9 +2804,9 @@ Deterministic: ()
         (: 
           (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) 
           (-> 
-            (ms_threshold $_21234) 
+            (ms_threshold $_397174) 
             (-> 
-              (⍃ $_21234 
+              (⍃ $_397174 
                 (S Z)) 
               (minsup (Inheritance D (VarIdx (S Z))))))) 
         (: 
@@ -2809,9 +2825,9 @@ Deterministic: ()
         (: 
           (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) 
           (-> 
-            (ms_threshold $_20010) 
+            (ms_threshold $_395950) 
             (-> 
-              (⍃ $_20010 
+              (⍃ $_395950 
                 (S (S Z))) 
               (minsup (Inheritance (VarIdx Z) E))))) 
         (: 
@@ -2827,13 +2843,13 @@ Deterministic: ()
         (: 
           (support-cnj (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
           (-> 
-            (minsup $_18720) 
+            (minsup $_394660) 
             (supportOf 
               (, 
                 (Inheritance 
                   (VarIdx Z) 
-                  (VarIdx (S Z))) $_18720) 
-              (countNat (, (Inheritance (VarIdx Z) (VarIdx (S Z))) $_18720)))))) 
+                  (VarIdx (S Z))) $_394660) 
+              (countNat (, (Inheritance (VarIdx Z) (VarIdx (S Z))) $_394660)))))) 
       ( (: 
           (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z)))) 
           (supportOf 
@@ -3681,9 +3697,9 @@ Deterministic: ()
    <span class="ansi1 ansi31"
 >Fail: </span>(252) [system] var(rtrace:pop_tracer)
 ^  <span class="ansi1 ansi32"
->Call: </span>(254) [system] setup_call_cleanup('$notrace'(_36192, _36194), once(rtrace:retract(t_l:tracer_reset(_36182))), '$restore_trace'(_36192, _36194))
+>Call: </span>(254) [system] setup_call_cleanup('$notrace'(_53980, _53982), once(rtrace:retract(t_l:tracer_reset(_53970))), '$restore_trace'(_53980, _53982))
 ^  <span class="ansi1 ansi32"
->Call: </span>(255) [system] sig_atomic(system:'$notrace'(_36192, _36194))
+>Call: </span>(255) [system] sig_atomic(system:'$notrace'(_53980, _53982))
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(254) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(rtrace:retract(t_l:tracer_reset(tAt_normal))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
@@ -3692,7 +3708,7 @@ Deterministic: ()
 
 ]
 <span class="ansi32"
->% 95,015,062 inferences, 22.143 CPU in 22.144 seconds (100% CPU, 4290963 Lips)
+>% 95,033,414 inferences, 21.723 CPU in 21.729 seconds (100% CPU, 4374845 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/system_proofTestCurried.metta  0)
 <span class="ansi1"
@@ -3727,7 +3743,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-21 17:17:06+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-27 15:23:28+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

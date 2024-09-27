@@ -15,6 +15,7 @@
 .ansi1 { font-weight: bold; }
 .ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -41,7 +42,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-21 17:17:50+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-27 15:24:16+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -50,43 +51,58 @@ Script started on 2024-09-21 17:17:50+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-Verbosity set to level 1  
-Argv=['']  
-<span class="ansi31"
+<span class="ansi31"
 >
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1:
-Warning:    Invalid mode declaration in PlDoc comment: metta_python_patcher(-'Content')is(dynamic)
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:107:
+Warning:    Clauses of </span><span class="ansi34"
+>from_python/5</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:73
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous from_python/5.</span><span class="ansi31"
+> to suppress this message
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1: PlDoc: failed to process structured comment:
-%!  metta_python_patcher(-Content) is dynamic.
-%
-%   A dynamic predicate that stores the content of the Python file 'metta_python_patcher.py'.
-%   The content is read into a string and asserted as a fact for later use.
-%   This allows the Python code to be loaded and used at runtime in Prolog.
-%
-%   @arg Content A string representing the contents of the 'metta_python_patcher.py' file.
-%
-%   @example
-%   % Reading and asserting the Python patcher file content:
-%   ?- metta_python_patcher(Content).
-%   Content = "... Python code ...".
-%
-
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:649:
+Warning:    Singleton variables: [ID]
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:21:
-Warning:    Invalid mode declaration in PlDoc comment: did_load_metta_python_patcher is (volatile)
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:654:
+Warning:    Singleton variables: [Type,ID]
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:21: PlDoc: failed to process structured comment:
-%!  did_load_metta_python_patcher is volatile.
-%
-%   A volatile predicate used as a flag to track whether the Python patcher has been loaded.
-%   This predicate will not be saved across sessions and exists only for the current runtime.
-%
-%   @example
-%   % After loading the patcher, this will succeed:
-%   ?- did_load_metta_python_patcher.
-%
-
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:669:
+Warning:    Singleton variables: [ID1]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:675:
+Warning:    Singleton variables: [Atom]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:689:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:706:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:719:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:731:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:736:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:752:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:764:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:769:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:802:
+Warning:    Singleton variables: [ID]
 </span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -177,7 +193,7 @@ Warning:    Invalid mode declaration in PlDoc comment: did_load_metta_python_pat
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000333 secs. (332.50 microseconds) 
+; took 0.000464 secs. (464.12 microseconds) 
 
   !(assertEqualToResult 
     (Frog Sam) 
@@ -202,7 +218,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000357 secs. (357.25 microseconds) 
+; took 0.000428 secs. (428.23 microseconds) 
 
   !(assertEqual 
     (frog Sam) T)
@@ -225,7 +241,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000420 secs. (419.54 microseconds) 
+; took 0.000429 secs. (429.41 microseconds) 
 
   !(assertEqualToResult 
     (frog Fritz) ())
@@ -299,7 +315,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.04</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.39 milliseconds) 
+; took 0.005 secs. (4.96 milliseconds) 
 
   !(assertEqual 
     (deduce (Evaluation (mortal Plato))) T)
@@ -364,7 +380,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B2-BACKCHAIN.05</h3>
 ; 
 ; EVAL TEST
-; took 0.016 secs. (15.51 milliseconds) 
+; took 0.022 secs. (21.54 milliseconds) 
 
   !(assertEqual 
     (explain (Evaluation (mortal Plato))) 
@@ -391,7 +407,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 369,076 inferences, 0.083 CPU in 0.083 seconds (100% CPU, 4440765 Lips)
+>% 387,592 inferences, 0.190 CPU in 0.190 seconds (100% CPU, 2044138 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b2_backchain.metta  0)
 <span class="ansi1"
@@ -426,7 +442,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-21 17:17:54+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-27 15:24:21+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

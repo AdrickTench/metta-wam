@@ -15,6 +15,7 @@
 .ansi1 { font-weight: bold; }
 .ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
 .ansi38-255165000 { color: #FFA500; }
@@ -85,7 +86,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-21 17:15:51+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-27 15:22:13+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -94,43 +95,58 @@ Script started on 2024-09-21 17:15:51+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-Verbosity set to level 1  
-Argv=['']  
-<span class="ansi31"
+<span class="ansi31"
 >
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1:
-Warning:    Invalid mode declaration in PlDoc comment: metta_python_patcher(-'Content')is(dynamic)
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:107:
+Warning:    Clauses of </span><span class="ansi34"
+>from_python/5</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:73
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous from_python/5.</span><span class="ansi31"
+> to suppress this message
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1: PlDoc: failed to process structured comment:
-%!  metta_python_patcher(-Content) is dynamic.
-%
-%   A dynamic predicate that stores the content of the Python file 'metta_python_patcher.py'.
-%   The content is read into a string and asserted as a fact for later use.
-%   This allows the Python code to be loaded and used at runtime in Prolog.
-%
-%   @arg Content A string representing the contents of the 'metta_python_patcher.py' file.
-%
-%   @example
-%   % Reading and asserting the Python patcher file content:
-%   ?- metta_python_patcher(Content).
-%   Content = "... Python code ...".
-%
-
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:649:
+Warning:    Singleton variables: [ID]
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:21:
-Warning:    Invalid mode declaration in PlDoc comment: did_load_metta_python_patcher is (volatile)
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:654:
+Warning:    Singleton variables: [Type,ID]
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:21: PlDoc: failed to process structured comment:
-%!  did_load_metta_python_patcher is volatile.
-%
-%   A volatile predicate used as a flag to track whether the Python patcher has been loaded.
-%   This predicate will not be saved across sessions and exists only for the current runtime.
-%
-%   @example
-%   % After loading the patcher, this will succeed:
-%   ?- did_load_metta_python_patcher.
-%
-
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:669:
+Warning:    Singleton variables: [ID1]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:675:
+Warning:    Singleton variables: [Atom]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:689:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:706:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:719:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:731:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:736:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:752:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:764:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:769:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:802:
+Warning:    Singleton variables: [ID]
 </span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -2638,7 +2654,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED.01</h3>
 ; 
 ; EVAL TEST
-; took 13.35 seconds.
+; took 12.35 seconds.
 
   !(let $expected 
     (expected) 
@@ -2658,9 +2674,9 @@ Deterministic: ()
         (: 
           (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
           (-> 
-            (ms_threshold $_138158) 
+            (ms_threshold $_459600) 
             (-> 
-              (⍃ $_138158 
+              (⍃ $_459600 
                 (S (S (S (S Z))))) 
               (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))))) 
         (: 
@@ -2676,12 +2692,12 @@ Deterministic: ()
         (: 
           (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
           (-> 
-            (specializationOf $_137378 
+            (specializationOf $_458820 
               (Inheritance 
                 (VarIdx Z) 
                 (VarIdx (S Z)))) 
-            (supportOf $_137378 
-              (countNat $_137378)))) 
+            (supportOf $_458820 
+              (countNat $_458820)))) 
         (: 
           ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z))))) 
           (supportOf 
@@ -2691,9 +2707,9 @@ Deterministic: ()
         (: 
           (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) 
           (-> 
-            (ms_threshold $_136652) 
+            (ms_threshold $_458094) 
             (-> 
-              (⍃ $_136652 
+              (⍃ $_458094 
                 (S Z)) 
               (minsup (Inheritance B (VarIdx (S Z))))))) 
         (: 
@@ -2712,9 +2728,9 @@ Deterministic: ()
         (: 
           (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) 
           (-> 
-            (ms_threshold $_135428) 
+            (ms_threshold $_456870) 
             (-> 
-              (⍃ $_135428 
+              (⍃ $_456870 
                 (S (S Z))) 
               (minsup (Inheritance (VarIdx Z) A))))) 
         (: 
@@ -2736,9 +2752,9 @@ Deterministic: ()
         (: 
           (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) 
           (-> 
-            (ms_threshold $_133766) 
+            (ms_threshold $_455208) 
             (-> 
-              (⍃ $_133766 
+              (⍃ $_455208 
                 (S (S Z))) 
               (minsup (Inheritance C (VarIdx (S Z))))))) 
         (: 
@@ -2760,9 +2776,9 @@ Deterministic: ()
         (: 
           (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) 
           (-> 
-            (ms_threshold $_132068) 
+            (ms_threshold $_453510) 
             (-> 
-              (⍃ $_132068 
+              (⍃ $_453510 
                 (S Z)) 
               (minsup (Inheritance D (VarIdx (S Z))))))) 
         (: 
@@ -2781,9 +2797,9 @@ Deterministic: ()
         (: 
           (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) 
           (-> 
-            (ms_threshold $_130844) 
+            (ms_threshold $_452286) 
             (-> 
-              (⍃ $_130844 
+              (⍃ $_452286 
                 (S (S Z))) 
               (minsup (Inheritance (VarIdx Z) E))))) 
         (: 
@@ -2799,13 +2815,13 @@ Deterministic: ()
         (: 
           (support-cnj (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
           (-> 
-            (minsup $_17860) 
+            (minsup $_450996) 
             (supportOf 
               (, 
                 (Inheritance 
                   (VarIdx Z) 
-                  (VarIdx (S Z))) $_17860) 
-              (countNat (, (Inheritance (VarIdx Z) (VarIdx (S Z))) $_17860)))))) 
+                  (VarIdx (S Z))) $_450996) 
+              (countNat (, (Inheritance (VarIdx Z) (VarIdx (S Z))) $_450996)))))) 
       ( (: 
           (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z)))) 
           (supportOf 
@@ -3635,9 +3651,9 @@ Deterministic: ()
    <span class="ansi1 ansi31"
 >Fail: </span>(252) [system] var(rtrace:pop_tracer)
 ^  <span class="ansi1 ansi32"
->Call: </span>(254) [system] setup_call_cleanup('$notrace'(_35346, _35348), once(rtrace:retract(t_l:tracer_reset(_35336))), '$restore_trace'(_35346, _35348))
+>Call: </span>(254) [system] setup_call_cleanup('$notrace'(_53120, _53122), once(rtrace:retract(t_l:tracer_reset(_53110))), '$restore_trace'(_53120, _53122))
 ^  <span class="ansi1 ansi32"
->Call: </span>(255) [system] sig_atomic(system:'$notrace'(_35346, _35348))
+>Call: </span>(255) [system] sig_atomic(system:'$notrace'(_53120, _53122))
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(254) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(rtrace:retract(t_l:tracer_reset(tAt_normal))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
@@ -3664,11 +3680,1082 @@ Deterministic: ()
 
 ;<h3 id="ANTI-REGRESSION.METTALOGTESTCURRIED.02"
 >;; ANTI-REGRESSION.METTALOGTESTCURRIED.02</h3>
+; 
+; EVAL TEST
+; took 9.57 seconds.
 
-Script done on 2024-09-21 17:16:31+00:00 [COMMAND_EXIT_CODE="143"]
+  !(let $expected 
+    (expected) 
+    (assertEqualToResult 
+      (let $aptrn 
+        (Inheritance 
+          (VarIdx Z) 
+          (VarIdx (S Z))) 
+        (fc 
+          (: 
+            (supportwitness $aptrn) 
+            (supportOf $aptrn 
+              (countNat $aptrn))) 
+          (fromNumber 8))) $expected))
+
+<span class="ansi31"
+>  (loonit_failureR  
+    (equal_enough_for_test  
+      ( (: 
+          (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z)))) 
+          (supportOf 
+            (Inheritance 
+              (VarIdx Z) 
+              (VarIdx (S Z))) 
+            (S (S (S (S Z)))))) 
+        (: 
+          (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+          (-> 
+            (ms_threshold $_165178) 
+            (-> 
+              (⍃ $_165178 
+                (S (S (S (S Z))))) 
+              (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))))) 
+        (: 
+          ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S (S (S (S Z))))) 
+            (minsup (Inheritance (VarIdx Z) (VarIdx (S Z)))))) 
+        (: 
+          ( ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z))))))) 
+          (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+        (: 
+          (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+          (-> 
+            (specializationOf $_164398 
+              (Inheritance 
+                (VarIdx Z) 
+                (VarIdx (S Z)))) 
+            (supportOf $_164398 
+              (countNat $_164398)))) 
+        (: 
+          ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z))))) 
+          (supportOf 
+            (Inheritance B 
+              (VarIdx (S Z))) 
+            (S Z))) 
+        (: 
+          (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) 
+          (-> 
+            (ms_threshold $_163672) 
+            (-> 
+              (⍃ $_163672 
+                (S Z)) 
+              (minsup (Inheritance B (VarIdx (S Z))))))) 
+        (: 
+          ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S Z)) 
+            (minsup (Inheritance B (VarIdx (S Z)))))) 
+        (: 
+          ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A))) 
+          (supportOf 
+            (Inheritance 
+              (VarIdx Z) A) 
+            (S (S Z)))) 
+        (: 
+          (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) 
+          (-> 
+            (ms_threshold $_162448) 
+            (-> 
+              (⍃ $_162448 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) A))))) 
+        (: 
+          ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S (S Z))) 
+            (minsup (Inheritance (VarIdx Z) A)))) 
+        (: 
+          ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+          (minsup (Inheritance (VarIdx Z) A))) 
+        (: 
+          ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z))))) 
+          (supportOf 
+            (Inheritance C 
+              (VarIdx (S Z))) 
+            (S (S Z)))) 
+        (: 
+          (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) 
+          (-> 
+            (ms_threshold $_160786) 
+            (-> 
+              (⍃ $_160786 
+                (S (S Z))) 
+              (minsup (Inheritance C (VarIdx (S Z))))))) 
+        (: 
+          ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S (S Z))) 
+            (minsup (Inheritance C (VarIdx (S Z)))))) 
+        (: 
+          ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+          (minsup (Inheritance C (VarIdx (S Z))))) 
+        (: 
+          ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z))))) 
+          (supportOf 
+            (Inheritance D 
+              (VarIdx (S Z))) 
+            (S Z))) 
+        (: 
+          (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) 
+          (-> 
+            (ms_threshold $_159088) 
+            (-> 
+              (⍃ $_159088 
+                (S Z)) 
+              (minsup (Inheritance D (VarIdx (S Z))))))) 
+        (: 
+          ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S Z)) 
+            (minsup (Inheritance D (VarIdx (S Z)))))) 
+        (: 
+          ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E))) 
+          (supportOf 
+            (Inheritance 
+              (VarIdx Z) E) 
+            (S (S Z)))) 
+        (: 
+          (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) 
+          (-> 
+            (ms_threshold $_157864) 
+            (-> 
+              (⍃ $_157864 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) E))))) 
+        (: 
+          ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S (S Z))) 
+            (minsup (Inheritance (VarIdx Z) E)))) 
+        (: 
+          ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+          (minsup (Inheritance (VarIdx Z) E))) 
+        (: 
+          (support-cnj (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+          (-> 
+            (minsup $_156574) 
+            (supportOf 
+              (, 
+                (Inheritance 
+                  (VarIdx Z) 
+                  (VarIdx (S Z))) $_156574) 
+              (countNat (, (Inheritance (VarIdx Z) (VarIdx (S Z))) $_156574)))))) 
+      ( (: 
+          (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z)))) 
+          (supportOf 
+            (Inheritance 
+              (VarIdx Z) 
+              (VarIdx (S Z))) 
+            (S (S (S (S Z)))))) 
+        (: 
+          (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+          (-> 
+            (ms_threshold $_6320) 
+            (-> 
+              (⍃ $_6320 
+                (S (S (S (S Z))))) 
+              (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))))) 
+        (: 
+          ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S (S (S (S Z))))) 
+            (minsup (Inheritance (VarIdx Z) (VarIdx (S Z)))))) 
+        (: 
+          ( ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z))))))) 
+          (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+        (: 
+          (support-cnj (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+          (-> 
+            (minsup $_6920) 
+            (supportOf 
+              (, 
+                (Inheritance 
+                  (VarIdx Z) 
+                  (VarIdx (S Z))) $_6920) 
+              (countNat (, (Inheritance (VarIdx Z) (VarIdx (S Z))) $_6920))))) 
+        (: 
+          (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+          (-> 
+            (specializationOf $_7214 
+              (Inheritance 
+                (VarIdx Z) 
+                (VarIdx (S Z)))) 
+            (supportOf $_7214 
+              (countNat $_7214)))) 
+        (: 
+          ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z))))) 
+          (supportOf 
+            (Inheritance B 
+              (VarIdx (S Z))) 
+            (S Z))) 
+        (: 
+          (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) 
+          (-> 
+            (ms_threshold $_7742) 
+            (-> 
+              (⍃ $_7742 
+                (S Z)) 
+              (minsup (Inheritance B (VarIdx (S Z))))))) 
+        (: 
+          ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S Z)) 
+            (minsup (Inheritance B (VarIdx (S Z)))))) 
+        (: 
+          ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A))) 
+          (supportOf 
+            (Inheritance 
+              (VarIdx Z) A) 
+            (S (S Z)))) 
+        (: 
+          (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) 
+          (-> 
+            (ms_threshold $_8678) 
+            (-> 
+              (⍃ $_8678 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) A))))) 
+        (: 
+          ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S (S Z))) 
+            (minsup (Inheritance (VarIdx Z) A)))) 
+        (: 
+          ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+          (minsup (Inheritance (VarIdx Z) A))) 
+        (: 
+          ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z))))) 
+          (supportOf 
+            (Inheritance C 
+              (VarIdx (S Z))) 
+            (S (S Z)))) 
+        (: 
+          (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) 
+          (-> 
+            (ms_threshold $_9884) 
+            (-> 
+              (⍃ $_9884 
+                (S (S Z))) 
+              (minsup (Inheritance C (VarIdx (S Z))))))) 
+        (: 
+          ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S (S Z))) 
+            (minsup (Inheritance C (VarIdx (S Z)))))) 
+        (: 
+          ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+          (minsup (Inheritance C (VarIdx (S Z))))) 
+        (: 
+          ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E))) 
+          (supportOf 
+            (Inheritance 
+              (VarIdx Z) E) 
+            (S (S Z)))) 
+        (: 
+          (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) 
+          (-> 
+            (ms_threshold $_11138) 
+            (-> 
+              (⍃ $_11138 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) E))))) 
+        (: 
+          ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S (S Z))) 
+            (minsup (Inheritance (VarIdx Z) E)))) 
+        (: 
+          ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+          (minsup (Inheritance (VarIdx Z) E))) 
+        (: 
+          ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z))))) 
+          (supportOf 
+            (Inheritance D 
+              (VarIdx (S Z))) 
+            (S Z))) 
+        (: 
+          (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) 
+          (-> 
+            (ms_threshold $_12344) 
+            (-> 
+              (⍃ $_12344 
+                (S Z)) 
+              (minsup (Inheritance D (VarIdx (S Z))))))) 
+        (: 
+          ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) ms_Threshold) 
+          (-> 
+            (⍃ 
+              (S Z) 
+              (S Z)) 
+            (minsup (Inheritance D (VarIdx (S Z)))))))))
+</span>
+
+  (failed  once 
+    (write_pass_fail  
+      (let $expected 
+        (expected) 
+        (assertEqualToResult 
+          (let $aptrn 
+            (Inheritance 
+              (VarIdx Z) 
+              (VarIdx (S Z))) 
+            (fc 
+              (: 
+                (supportwitness $aptrn) 
+                (supportOf $aptrn 
+                  (countNat $aptrn))) 
+              (fromNumber 8))) $expected)) FAIL 
+      (equal_enough_for_test  
+        ( (: 
+            (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z)))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) 
+                (VarIdx (S Z))) 
+              (S (S (S (S Z)))))) 
+          (: 
+            (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+            (-> 
+              (ms_threshold $_165178) 
+              (-> 
+                (⍃ $_165178 
+                  (S (S (S (S Z))))) 
+                (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S (S (S Z))))) 
+              (minsup (Inheritance (VarIdx Z) (VarIdx (S Z)))))) 
+          (: 
+            ( ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z))))))) 
+            (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+          (: 
+            (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+            (-> 
+              (specializationOf $_164398 
+                (Inheritance 
+                  (VarIdx Z) 
+                  (VarIdx (S Z)))) 
+              (supportOf $_164398 
+                (countNat $_164398)))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance B 
+                (VarIdx (S Z))) 
+              (S Z))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_163672) 
+              (-> 
+                (⍃ $_163672 
+                  (S Z)) 
+                (minsup (Inheritance B (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S Z)) 
+              (minsup (Inheritance B (VarIdx (S Z)))))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) A) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) 
+            (-> 
+              (ms_threshold $_162448) 
+              (-> 
+                (⍃ $_162448 
+                  (S (S Z))) 
+                (minsup (Inheritance (VarIdx Z) A))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) A)))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance (VarIdx Z) A))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance C 
+                (VarIdx (S Z))) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_160786) 
+              (-> 
+                (⍃ $_160786 
+                  (S (S Z))) 
+                (minsup (Inheritance C (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance C (VarIdx (S Z)))))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance C (VarIdx (S Z))))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance D 
+                (VarIdx (S Z))) 
+              (S Z))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_159088) 
+              (-> 
+                (⍃ $_159088 
+                  (S Z)) 
+                (minsup (Inheritance D (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S Z)) 
+              (minsup (Inheritance D (VarIdx (S Z)))))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) E) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) 
+            (-> 
+              (ms_threshold $_157864) 
+              (-> 
+                (⍃ $_157864 
+                  (S (S Z))) 
+                (minsup (Inheritance (VarIdx Z) E))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) E)))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance (VarIdx Z) E))) 
+          (: 
+            (support-cnj (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+            (-> 
+              (minsup $_156574) 
+              (supportOf 
+                (, 
+                  (Inheritance 
+                    (VarIdx Z) 
+                    (VarIdx (S Z))) $_156574) 
+                (countNat (, (Inheritance (VarIdx Z) (VarIdx (S Z))) $_156574)))))) 
+        ( (: 
+            (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z)))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) 
+                (VarIdx (S Z))) 
+              (S (S (S (S Z)))))) 
+          (: 
+            (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+            (-> 
+              (ms_threshold $_6320) 
+              (-> 
+                (⍃ $_6320 
+                  (S (S (S (S Z))))) 
+                (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S (S (S Z))))) 
+              (minsup (Inheritance (VarIdx Z) (VarIdx (S Z)))))) 
+          (: 
+            ( ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z))))))) 
+            (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+          (: 
+            (support-cnj (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+            (-> 
+              (minsup $_6920) 
+              (supportOf 
+                (, 
+                  (Inheritance 
+                    (VarIdx Z) 
+                    (VarIdx (S Z))) $_6920) 
+                (countNat (, (Inheritance (VarIdx Z) (VarIdx (S Z))) $_6920))))) 
+          (: 
+            (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+            (-> 
+              (specializationOf $_7214 
+                (Inheritance 
+                  (VarIdx Z) 
+                  (VarIdx (S Z)))) 
+              (supportOf $_7214 
+                (countNat $_7214)))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance B 
+                (VarIdx (S Z))) 
+              (S Z))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_7742) 
+              (-> 
+                (⍃ $_7742 
+                  (S Z)) 
+                (minsup (Inheritance B (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S Z)) 
+              (minsup (Inheritance B (VarIdx (S Z)))))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) A) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) 
+            (-> 
+              (ms_threshold $_8678) 
+              (-> 
+                (⍃ $_8678 
+                  (S (S Z))) 
+                (minsup (Inheritance (VarIdx Z) A))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) A)))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance (VarIdx Z) A))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance C 
+                (VarIdx (S Z))) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_9884) 
+              (-> 
+                (⍃ $_9884 
+                  (S (S Z))) 
+                (minsup (Inheritance C (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance C (VarIdx (S Z)))))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance C (VarIdx (S Z))))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) E) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) 
+            (-> 
+              (ms_threshold $_11138) 
+              (-> 
+                (⍃ $_11138 
+                  (S (S Z))) 
+                (minsup (Inheritance (VarIdx Z) E))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) E)))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance (VarIdx Z) E))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance D 
+                (VarIdx (S Z))) 
+              (S Z))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_12344) 
+              (-> 
+                (⍃ $_12344 
+                  (S Z)) 
+                (minsup (Inheritance D (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S Z)) 
+              (minsup (Inheritance D (VarIdx (S Z))))))))))
+
+
+
+
+  (failed  once 
+    (write_pass_fail  
+      (let $expected 
+        (expected) 
+        (assertEqualToResult 
+          (let $aptrn 
+            (Inheritance 
+              (VarIdx Z) 
+              (VarIdx (S Z))) 
+            (fc 
+              (: 
+                (supportwitness $aptrn) 
+                (supportOf $aptrn 
+                  (countNat $aptrn))) 
+              (fromNumber 8))) $expected)) FAIL 
+      (equal_enough_for_test  
+        ( (: 
+            (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z)))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) 
+                (VarIdx (S Z))) 
+              (S (S (S (S Z)))))) 
+          (: 
+            (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+            (-> 
+              (ms_threshold $_165178) 
+              (-> 
+                (⍃ $_165178 
+                  (S (S (S (S Z))))) 
+                (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S (S (S Z))))) 
+              (minsup (Inheritance (VarIdx Z) (VarIdx (S Z)))))) 
+          (: 
+            ( ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z))))))) 
+            (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+          (: 
+            (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+            (-> 
+              (specializationOf $_164398 
+                (Inheritance 
+                  (VarIdx Z) 
+                  (VarIdx (S Z)))) 
+              (supportOf $_164398 
+                (countNat $_164398)))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance B 
+                (VarIdx (S Z))) 
+              (S Z))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_163672) 
+              (-> 
+                (⍃ $_163672 
+                  (S Z)) 
+                (minsup (Inheritance B (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S Z)) 
+              (minsup (Inheritance B (VarIdx (S Z)))))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) A) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) 
+            (-> 
+              (ms_threshold $_162448) 
+              (-> 
+                (⍃ $_162448 
+                  (S (S Z))) 
+                (minsup (Inheritance (VarIdx Z) A))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) A)))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance (VarIdx Z) A))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance C 
+                (VarIdx (S Z))) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_160786) 
+              (-> 
+                (⍃ $_160786 
+                  (S (S Z))) 
+                (minsup (Inheritance C (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance C (VarIdx (S Z)))))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance C (VarIdx (S Z))))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance D 
+                (VarIdx (S Z))) 
+              (S Z))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_159088) 
+              (-> 
+                (⍃ $_159088 
+                  (S Z)) 
+                (minsup (Inheritance D (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S Z)) 
+              (minsup (Inheritance D (VarIdx (S Z)))))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) E) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) 
+            (-> 
+              (ms_threshold $_157864) 
+              (-> 
+                (⍃ $_157864 
+                  (S (S Z))) 
+                (minsup (Inheritance (VarIdx Z) E))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) E)))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance (VarIdx Z) E))) 
+          (: 
+            (support-cnj (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+            (-> 
+              (minsup $_156574) 
+              (supportOf 
+                (, 
+                  (Inheritance 
+                    (VarIdx Z) 
+                    (VarIdx (S Z))) $_156574) 
+                (countNat (, (Inheritance (VarIdx Z) (VarIdx (S Z))) $_156574)))))) 
+        ( (: 
+            (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z)))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) 
+                (VarIdx (S Z))) 
+              (S (S (S (S Z)))))) 
+          (: 
+            (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+            (-> 
+              (ms_threshold $_6320) 
+              (-> 
+                (⍃ $_6320 
+                  (S (S (S (S Z))))) 
+                (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S (S (S Z))))) 
+              (minsup (Inheritance (VarIdx Z) (VarIdx (S Z)))))) 
+          (: 
+            ( ( (minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z))))))) 
+            (minsup (Inheritance (VarIdx Z) (VarIdx (S Z))))) 
+          (: 
+            (support-cnj (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+            (-> 
+              (minsup $_6920) 
+              (supportOf 
+                (, 
+                  (Inheritance 
+                    (VarIdx Z) 
+                    (VarIdx (S Z))) $_6920) 
+                (countNat (, (Inheritance (VarIdx Z) (VarIdx (S Z))) $_6920))))) 
+          (: 
+            (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) 
+            (-> 
+              (specializationOf $_7214 
+                (Inheritance 
+                  (VarIdx Z) 
+                  (VarIdx (S Z)))) 
+              (supportOf $_7214 
+                (countNat $_7214)))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance B 
+                (VarIdx (S Z))) 
+              (S Z))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_7742) 
+              (-> 
+                (⍃ $_7742 
+                  (S Z)) 
+                (minsup (Inheritance B (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance B (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S Z)) 
+              (minsup (Inheritance B (VarIdx (S Z)))))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) A) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) 
+            (-> 
+              (ms_threshold $_8678) 
+              (-> 
+                (⍃ $_8678 
+                  (S (S Z))) 
+                (minsup (Inheritance (VarIdx Z) A))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) A)))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) A)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance (VarIdx Z) A))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance C 
+                (VarIdx (S Z))) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_9884) 
+              (-> 
+                (⍃ $_9884 
+                  (S (S Z))) 
+                (minsup (Inheritance C (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance C (VarIdx (S Z)))))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance C (VarIdx (S Z)))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance C (VarIdx (S Z))))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E))) 
+            (supportOf 
+              (Inheritance 
+                (VarIdx Z) E) 
+              (S (S Z)))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) 
+            (-> 
+              (ms_threshold $_11138) 
+              (-> 
+                (⍃ $_11138 
+                  (S (S Z))) 
+                (minsup (Inheritance (VarIdx Z) E))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S (S Z))) 
+              (minsup (Inheritance (VarIdx Z) E)))) 
+          (: 
+            ( ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance (VarIdx Z) E)))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S Z))))) 
+            (minsup (Inheritance (VarIdx Z) E))) 
+          (: 
+            ( (apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z))))) 
+            (supportOf 
+              (Inheritance D 
+                (VarIdx (S Z))) 
+              (S Z))) 
+          (: 
+            (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) 
+            (-> 
+              (ms_threshold $_12344) 
+              (-> 
+                (⍃ $_12344 
+                  (S Z)) 
+                (minsup (Inheritance D (VarIdx (S Z))))))) 
+          (: 
+            ( (minsupport ((apriori-rule (((minsupport (supportwitness (Inheritance (VarIdx Z) (VarIdx (S Z))))) ms_Threshold) (WitnessOf (⍃ (S Z) (S (S (S (S Z)))))))) (sp_witness (Inheritance D (VarIdx (S Z)))))) ms_Threshold) 
+            (-> 
+              (⍃ 
+                (S Z) 
+                (S Z)) 
+              (minsup (Inheritance D (VarIdx (S Z))))))))))
+
+
+^  <span class="ansi1 ansi32"
+>Call: </span>(250) [user] call(user:once, user:write_pass_fail([let, _expected, [expected], [assertEqualToResult, [let, _aptrn, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], [fc, [:, [supportwitness, _aptrn], [supportOf, _aptrn, [countNat, _aptrn]]], [fromNumber, 8]]], _expected]], 'FAIL', equal_enough_for_test([[:, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], ['S', ['S', ['S', ['S', 'Z']]]]]], [:, [minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [->, [ms_threshold, _165178], [->, [⍃, _165178, ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [:, ['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [specializationOf, _164398, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, _164398, [countNat, _164398]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _163672], [->, [⍃, _163672, ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'A'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [->, [ms_threshold, _162448], [->, [⍃, _162448, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _160786], [->, [⍃, _160786, ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _159088], [->, [⍃, _159088, ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'E'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [->, [ms_threshold, _157864], [->, [⍃, _157864, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [:, ['support-cnj', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [minsup, _156574], [supportOf, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _156574], [countNat, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _156574]]]]]], [[:, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], ['S', ['S', ['S', ['S', 'Z']]]]]], [:, [minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [->, [ms_threshold, _6320], [->, [⍃, _6320, ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [:, ['support-cnj', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [minsup, _6920], [supportOf, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _6920], [countNat, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _6920]]]]], [:, ['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [specializationOf, _7214, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, _7214, [countNat, _7214]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _7742], [->, [⍃, _7742, ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'A'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [->, [ms_threshold, _8678], [->, [⍃, _8678, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _9884], [->, [⍃, _9884, ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'E'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [->, [ms_threshold, _11138], [->, [⍃, _11138, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _12344], [->, [⍃, _12344, ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]])))
+^  <span class="ansi1 ansi32"
+>Call: </span>(251) [user] once(user:write_pass_fail([let, _expected, [expected], [assertEqualToResult, [let, _aptrn, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], [fc, [:, [supportwitness, _aptrn], [supportOf, _aptrn, [countNat, _aptrn]]], [fromNumber, 8]]], _expected]], 'FAIL', equal_enough_for_test([[:, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], ['S', ['S', ['S', ['S', 'Z']]]]]], [:, [minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [->, [ms_threshold, _165178], [->, [⍃, _165178, ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [:, ['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [specializationOf, _164398, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, _164398, [countNat, _164398]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _163672], [->, [⍃, _163672, ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'A'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [->, [ms_threshold, _162448], [->, [⍃, _162448, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _160786], [->, [⍃, _160786, ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _159088], [->, [⍃, _159088, ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'E'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [->, [ms_threshold, _157864], [->, [⍃, _157864, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [:, ['support-cnj', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [minsup, _156574], [supportOf, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _156574], [countNat, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _156574]]]]]], [[:, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], ['S', ['S', ['S', ['S', 'Z']]]]]], [:, [minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [->, [ms_threshold, _6320], [->, [⍃, _6320, ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [:, ['support-cnj', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [minsup, _6920], [supportOf, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _6920], [countNat, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _6920]]]]], [:, ['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [specializationOf, _7214, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, _7214, [countNat, _7214]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _7742], [->, [⍃, _7742, ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'A'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [->, [ms_threshold, _8678], [->, [⍃, _8678, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _9884], [->, [⍃, _9884, ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'E'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [->, [ms_threshold, _11138], [->, [⍃, _11138, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _12344], [->, [⍃, _12344, ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]])))
+^  <span class="ansi1 ansi32"
+>Call: </span>(252) [user] write_pass_fail([let, _expected, [expected], [assertEqualToResult, [let, _aptrn, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], [fc, [:, [supportwitness, _aptrn], [supportOf, _aptrn, [countNat, _aptrn]]], [fromNumber, 8]]], _expected]], 'FAIL', equal_enough_for_test([[:, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], ['S', ['S', ['S', ['S', 'Z']]]]]], [:, [minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [->, [ms_threshold, _165178], [->, [⍃, _165178, ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [:, ['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [specializationOf, _164398, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, _164398, [countNat, _164398]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _163672], [->, [⍃, _163672, ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'A'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [->, [ms_threshold, _162448], [->, [⍃, _162448, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _160786], [->, [⍃, _160786, ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _159088], [->, [⍃, _159088, ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'E'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [->, [ms_threshold, _157864], [->, [⍃, _157864, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [:, ['support-cnj', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [minsup, _156574], [supportOf, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _156574], [countNat, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _156574]]]]]], [[:, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], ['S', ['S', ['S', ['S', 'Z']]]]]], [:, [minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [->, [ms_threshold, _6320], [->, [⍃, _6320, ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [:, ['support-cnj', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [minsup, _6920], [supportOf, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _6920], [countNat, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _6920]]]]], [:, ['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [specializationOf, _7214, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, _7214, [countNat, _7214]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _7742], [->, [⍃, _7742, ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'A'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [->, [ms_threshold, _8678], [->, [⍃, _8678, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _9884], [->, [⍃, _9884, ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'E'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [->, [ms_threshold, _11138], [->, [⍃, _11138, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _12344], [->, [⍃, _12344, ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]]))
+^  <span class="ansi1 ansi31"
+>Fail: </span>(252) [user] write_pass_fail([let, _expected, [expected], [assertEqualToResult, [let, _aptrn, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], [fc, [:, [supportwitness, _aptrn], [supportOf, _aptrn, [countNat, _aptrn]]], [fromNumber, 8]]], _expected]], 'FAIL', equal_enough_for_test([[:, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], ['S', ['S', ['S', ['S', 'Z']]]]]], [:, [minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [->, [ms_threshold, _165178], [->, [⍃, _165178, ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [:, ['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [specializationOf, _164398, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, _164398, [countNat, _164398]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _163672], [->, [⍃, _163672, ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'A'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [->, [ms_threshold, _162448], [->, [⍃, _162448, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _160786], [->, [⍃, _160786, ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _159088], [->, [⍃, _159088, ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'E'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [->, [ms_threshold, _157864], [->, [⍃, _157864, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [:, ['support-cnj', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [minsup, _156574], [supportOf, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _156574], [countNat, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _156574]]]]]], [[:, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], ['S', ['S', ['S', ['S', 'Z']]]]]], [:, [minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [->, [ms_threshold, _6320], [->, [⍃, _6320, ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [:, ['support-cnj', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [minsup, _6920], [supportOf, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _6920], [countNat, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _6920]]]]], [:, ['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [specializationOf, _7214, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, _7214, [countNat, _7214]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _7742], [->, [⍃, _7742, ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'A'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [->, [ms_threshold, _8678], [->, [⍃, _8678, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _9884], [->, [⍃, _9884, ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'E'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [->, [ms_threshold, _11138], [->, [⍃, _11138, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _12344], [->, [⍃, _12344, ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]]))
+^  <span class="ansi1 ansi31"
+>Fail: </span>(250) [system] call(user:once, user:write_pass_fail([let, _expected, [expected], [assertEqualToResult, [let, _aptrn, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], [fc, [:, [supportwitness, _aptrn], [supportOf, _aptrn, [countNat, _aptrn]]], [fromNumber, 8]]], _expected]], 'FAIL', equal_enough_for_test([[:, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], ['S', ['S', ['S', ['S', 'Z']]]]]], [:, [minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [->, [ms_threshold, _165178], [->, [⍃, _165178, ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [:, ['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [specializationOf, _164398, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, _164398, [countNat, _164398]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _163672], [->, [⍃, _163672, ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'A'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [->, [ms_threshold, _162448], [->, [⍃, _162448, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _160786], [->, [⍃, _160786, ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _159088], [->, [⍃, _159088, ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'E'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [->, [ms_threshold, _157864], [->, [⍃, _157864, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [:, ['support-cnj', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [minsup, _156574], [supportOf, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _156574], [countNat, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _156574]]]]]], [[:, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], ['S', ['S', ['S', ['S', 'Z']]]]]], [:, [minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [->, [ms_threshold, _6320], [->, [⍃, _6320, ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], [:, ['support-cnj', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [minsup, _6920], [supportOf, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _6920], [countNat, [',', ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]], _6920]]]]], [:, ['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [->, [specializationOf, _7214, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]], [supportOf, _7214, [countNat, _7214]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _7742], [->, [⍃, _7742, ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'B', ['VarIdx', ['S', 'Z']]]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'A'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [->, [ms_threshold, _8678], [->, [⍃, _8678, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'A']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'A']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _9884], [->, [⍃, _9884, ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', 'C', ['VarIdx', ['S', 'Z']]]]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [supportOf, ['Inheritance', ['VarIdx', 'Z'], 'E'], ['S', ['S', 'Z']]]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [->, [ms_threshold, _11138], [->, [⍃, _11138, ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', ['S', 'Z']]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], [:, [[[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', ['VarIdx', 'Z'], 'E']]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', 'Z']]]]], [minsup, ['Inheritance', ['VarIdx', 'Z'], 'E']]], [:, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]], [supportOf, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]], ['S', 'Z']]], [:, [minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], [->, [ms_threshold, _12344], [->, [⍃, _12344, ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]], [:, [[minsupport, [['apriori-rule', [[[minsupport, [supportwitness, ['Inheritance', ['VarIdx', 'Z'], ['VarIdx', ['S', 'Z']]]]], ms_Threshold], ['WitnessOf', [⍃, ['S', 'Z'], ['S', ['S', ['S', ['S', 'Z']]]]]]]], [sp_witness, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]], ms_Threshold], [->, [⍃, ['S', 'Z'], ['S', 'Z']], [minsup, ['Inheritance', 'D', ['VarIdx', ['S', 'Z']]]]]]])))
+^  <span class="ansi1 ansi32"
+>Call: </span>(250) [bugger] bugger:mquietly_if(true, rtrace:pop_tracer)
+   <span class="ansi1 ansi32"
+>Call: </span>(252) [system] var(rtrace:pop_tracer)
+   <span class="ansi1 ansi31"
+>Fail: </span>(252) [system] var(rtrace:pop_tracer)
+^  <span class="ansi1 ansi32"
+>Call: </span>(254) [system] setup_call_cleanup('$notrace'(_217998, _218000), once(rtrace:retract(t_l:tracer_reset(_217988))), '$restore_trace'(_217998, _218000))
+^  <span class="ansi1 ansi32"
+>Call: </span>(255) [system] sig_atomic(system:'$notrace'(_217998, _218000))
+^  <span class="ansi1 ansi32"
+>Exit: </span>(254) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(rtrace:retract(t_l:tracer_reset(tAt_normal))), system:'$restore_trace'(3, -1))
+^  <span class="ansi1 ansi32"
+>Call: </span>(254) [rtrace] tAt(false, 271, 271, false)
+<no-results>
+
+]
+<span class="ansi32"
+>% 201,537,609 inferences, 34.961 CPU in 34.963 seconds (100% CPU, 5764643 Lips)
+</span>P;HTML|
+;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/mettalogTestCurried.metta  0)
+<span class="ansi1"
+>LoonIt Report
+</span>------------
+<span class="ansi32"
+>Successes: 0
+</span><span class="ansi31"
+>Failures: 2
+</span><br/> <a href="#" onclick="window.history.back(); return false;"
+>Return to summaries</a><br/>
+P;HTML|
+;           (is_cmd_option  execute halt --halt=true true)
+P;HTML|
+;            (set_option_value  halt true)
+P;HTML|
+;            (is_cmd_option  execute stdin --stdin=tty tty)
+P;HTML|
+;            (set_option_value  stdin tty)
+P;HTML|
+;            (is_cmd_option  execute stdout --stdout=tty tty)
+P;HTML|
+;             (set_option_value  stdout tty)
+P;HTML|
+;            (is_cmd_option  execute stderr --stderr=tty tty)
+P;HTML|
+;             (set_option_value  stderr tty)
+P;HTML|
+;           (set_option_value  prolog false)
+P;HTML|
+;           (set_option_value  compat auto)
+P;HTML|
+;           (set_option_value  compatio true)
+
+Script done on 2024-09-27 15:22:53+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
 
 </html>
-\033[1;33mCompleted (EXITCODE=143) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat/' --timeout=40 --html --repl=false  --test "tests/baseline_compat/anti-regression/mettalogTestCurried.metta" --halt=true\033[0m
+\033[0;32mCompleted successfully (EXITCODE=7) Under 40 seconds: ./mettalog '--output=./reports/tests_output/baseline-compat/' --timeout=40 --html --repl=false  --test "tests/baseline_compat/anti-regression/mettalogTestCurried.metta" --halt=true\033[0m

@@ -15,6 +15,7 @@
 .ansi1 { font-weight: bold; }
 .ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
@@ -37,7 +38,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-21 17:21:21+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-27 15:28:17+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -46,43 +47,58 @@ Script started on 2024-09-21 17:21:21+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-Verbosity set to level 1  
-Argv=['']  
-<span class="ansi31"
+<span class="ansi31"
 >
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1:
-Warning:    Invalid mode declaration in PlDoc comment: metta_python_patcher(-'Content')is(dynamic)
+Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:107:
+Warning:    Clauses of </span><span class="ansi34"
+>from_python/5</span><span class="ansi31"
+> are not together in the source-file
+Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:73
+Warning:    Current predicate: </span><span class="ansi34"
+>'$pldoc'/4</span><span class="ansi31"
+>
+Warning:    Use </span><span class="ansi34"
+>:- discontiguous from_python/5.</span><span class="ansi31"
+> to suppress this message
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:1: PlDoc: failed to process structured comment:
-%!  metta_python_patcher(-Content) is dynamic.
-%
-%   A dynamic predicate that stores the content of the Python file 'metta_python_patcher.py'.
-%   The content is read into a string and asserted as a fact for later use.
-%   This allows the Python code to be loaded and used at runtime in Prolog.
-%
-%   @arg Content A string representing the contents of the 'metta_python_patcher.py' file.
-%
-%   @example
-%   % Reading and asserting the Python patcher file content:
-%   ?- metta_python_patcher(Content).
-%   Content = "... Python code ...".
-%
-
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:649:
+Warning:    Singleton variables: [ID]
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:21:
-Warning:    Invalid mode declaration in PlDoc comment: did_load_metta_python_patcher is (volatile)
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:654:
+Warning:    Singleton variables: [Type,ID]
 </span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:21: PlDoc: failed to process structured comment:
-%!  did_load_metta_python_patcher is volatile.
-%
-%   A volatile predicate used as a flag to track whether the Python patcher has been loaded.
-%   This predicate will not be saved across sessions and exists only for the current runtime.
-%
-%   @example
-%   % After loading the patcher, this will succeed:
-%   ?- did_load_metta_python_patcher.
-%
-
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:669:
+Warning:    Singleton variables: [ID1]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:675:
+Warning:    Singleton variables: [Atom]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:689:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:706:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:719:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:731:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:736:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:752:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:764:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:769:
+Warning:    Singleton variables: [ID]
+</span><span class="ansi31"
+>Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:802:
+Warning:    Singleton variables: [ID]
 </span>P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -161,7 +177,7 @@ Warning:    Invalid mode declaration in PlDoc comment: did_load_metta_python_pat
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000294 secs. (294.25 microseconds) 
+; took 0.000261 secs. (261.19 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -174,8 +190,8 @@ Warning:    Invalid mode declaration in PlDoc comment: did_load_metta_python_pat
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote (= ($_35306 $_35312 $_35318) ($_35330)))) 
-      ( (quote (= ($_26368 $_26322 $_26488) ($_26390))))))
+      ( (quote (= ($_571368 $_571374 $_571380) ($_571392)))) 
+      ( (quote (= ($_562430 $_562384 $_562550) ($_562452))))))
 </span>
 Deterministic: ()
 ()]
@@ -192,7 +208,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000164 secs. (164.15 microseconds) 
+; took 0.000150 secs. (150.09 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -203,8 +219,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote (= ($_55858 $_55864)))) 
-      ( (quote (= ($_48976 $_49056))))))
+      ( (quote (= ($_591922 $_591928)))) 
+      ( (quote (= ($_585040 $_585120))))))
 </span>
 Deterministic: ()
 ()]
@@ -221,7 +237,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000922 secs. (921.57 microseconds) 
+; took 0.000834 secs. (833.73 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -232,8 +248,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (output (input $_85466))) 
-      ( (output (input $_69802)))))
+      ( (output (input $_621530))) 
+      ( (output (input $_605866)))))
 </span>
 Deterministic: ()
 ()]
@@ -254,7 +270,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.34 milliseconds) 
+; took 0.001 secs. (1.24 milliseconds) 
 
   !(assertEqual 
     (let 
@@ -269,8 +285,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (output (input $_122512))) 
-      ( (output (input $_126096)))))
+      ( (output (input $_658576))) 
+      ( (output (input $_662160)))))
 </span>
 Deterministic: ()
 ()]
@@ -293,7 +309,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000410 secs. (410.13 microseconds) 
+; took 0.000365 secs. (365.00 microseconds) 
 
   !(assertEqualToResult 
     (callsealer $x $y) 
@@ -302,8 +318,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_162104) (/ 100 $_162128))))) 
-      ( (quote ((* (+ 40 $_151126) (/ 100 $_151148)))))))
+      ( (quote ((* (+ 40 $_698168) (/ 100 $_698192))))) 
+      ( (quote ((* (+ 40 $_687190) (/ 100 $_687212)))))))
 </span>
 Deterministic: ()
 ()]
@@ -319,7 +335,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000421 secs. (421.40 microseconds) 
+; took 0.000343 secs. (343.05 microseconds) 
 
   !(assertEqualToResult 
     (callsealer 10 25) 
@@ -353,7 +369,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000420 secs. (419.65 microseconds) 
+; took 0.000425 secs. (424.80 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 5 $y) 
@@ -362,8 +378,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 5) (/ 100 $_222108))))) 
-      ( (quote ((* (+ 40 5) (/ 100 $_211186)))))))
+      ( (quote ((* (+ 40 5) (/ 100 $_758172))))) 
+      ( (quote ((* (+ 40 5) (/ 100 $_747250)))))))
 </span>
 Deterministic: ()
 ()]
@@ -378,7 +394,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000416 secs. (416.08 microseconds) 
+; took 0.000435 secs. (434.80 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 $x $y) 
@@ -387,8 +403,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_246808) (/ 100 $_246832))))) 
-      ( (quote ((* (+ 40 $_235804) (/ 100 $_235710)))))))
+      ( (quote ((* (+ 40 $_782872) (/ 100 $_782896))))) 
+      ( (quote ((* (+ 40 $_771868) (/ 100 $_771774)))))))
 </span>
 Deterministic: ()
 ()]
@@ -413,7 +429,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000453 secs. (452.53 microseconds) 
+; took 0.000376 secs. (375.60 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x 4) 
@@ -422,8 +438,8 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_282948) (/ 100 4))))) 
-      ( (quote ((* (+ 40 $_272050) (/ 100 4)))))))
+      ( (quote ((* (+ 40 $_819012) (/ 100 4))))) 
+      ( (quote ((* (+ 40 $_808114) (/ 100 4)))))))
 </span>
 Deterministic: ()
 ()]
@@ -439,7 +455,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000464 secs. (464.32 microseconds) 
+; took 0.000333 secs. (333.42 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x $y) 
@@ -448,14 +464,14 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (quote ((* (+ 40 $_307846) (/ 100 $_307870))))) 
-      ( (quote ((* (+ 40 $_296700) (/ 100 $_296746)))))))
+      ( (quote ((* (+ 40 $_843910) (/ 100 $_843934))))) 
+      ( (quote ((* (+ 40 $_832764) (/ 100 $_832810)))))))
 </span>
 Deterministic: ()
 ()]
 ;;;both $x and $y sealed
 <span class="ansi32"
->% 607,266 inferences, 0.113 CPU in 0.113 seconds (100% CPU, 5366736 Lips)
+>% 625,795 inferences, 0.134 CPU in 0.134 seconds (100% CPU, 4653165 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/sealed_test.metta  0)
 <span class="ansi1"
@@ -490,7 +506,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-21 17:21:26+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-27 15:28:22+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
