@@ -13,9 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
-.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
-.ansi34 { color: #0000aa; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
@@ -50,7 +48,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-09-27 16:04:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-09-27 18:08:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -59,59 +57,7 @@ Script started on 2024-09-27 16:04:14+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;           (set_option_value  compatio true)
-<span class="ansi31"
->
-Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:107:
-Warning:    Clauses of </span><span class="ansi34"
->from_python/5</span><span class="ansi31"
-> are not together in the source-file
-Warning:    Earlier definition at /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:73
-Warning:    Current predicate: </span><span class="ansi34"
->'$pldoc'/4</span><span class="ansi31"
->
-Warning:    Use </span><span class="ansi34"
->:- discontiguous from_python/5.</span><span class="ansi31"
-> to suppress this message
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:649:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:654:
-Warning:    Singleton variables: [Type,ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:669:
-Warning:    Singleton variables: [ID1]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:675:
-Warning:    Singleton variables: [Atom]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:689:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:706:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:719:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:731:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:736:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:752:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:764:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:769:
-Warning:    Singleton variables: [ID]
-</span><span class="ansi31"
->Warning: /home/runner/work/metta-wam/metta-wam/src/canary/metta_corelib.pl:802:
-Warning:    Singleton variables: [ID]
-</span>P;HTML|
+P;HTML|
 ;            (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;            (set_option_value  halt true)
@@ -209,7 +155,7 @@ Warning:    Singleton variables: [ID]
 >;; QUICK.D1-GADT.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000233 secs. (232.82 microseconds) 
+; took 0.000227 secs. (226.71 microseconds) 
 
   !(assertEqual 
     (get-type 5) Number)
@@ -232,7 +178,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000194 secs. (194.32 microseconds) 
+; took 0.000208 secs. (207.92 microseconds) 
 
   !(assertEqual 
     (get-type (+ 5 7)) Number)
@@ -257,7 +203,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000177 secs. (176.73 microseconds) 
+; took 0.000178 secs. (178.44 microseconds) 
 
   !(assertEqual 
     (get-type +) 
@@ -283,7 +229,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000282 secs. (282.40 microseconds) 
+; took 0.000268 secs. (268.28 microseconds) 
 
   !(assertEqualToResult 
     (get-type (+ 5 "4")) ())
@@ -305,7 +251,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000195 secs. (195.34 microseconds) 
+; took 0.000206 secs. (206.00 microseconds) 
 
   !(assertEqualToResult 
     (get-type (+ -)) ())
@@ -330,7 +276,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000140 secs. (139.80 microseconds) 
+; took 0.000158 secs. (158.18 microseconds) 
 
   !(assertEqual 
     (get-type Either) Type)
@@ -363,7 +309,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000236 secs. (235.56 microseconds) 
+; took 0.000220 secs. (220.27 microseconds) 
 
   !(assertEqual 
     (get-type (Left 5)) Either)
@@ -395,7 +341,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000339 secs. (338.89 microseconds) 
+; took 0.000361 secs. (360.87 microseconds) 
 
   !(assertEqual 
     (get-type (isLeft (Right 5))) Bool)
@@ -419,7 +365,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000250 secs. (250.16 microseconds) 
+; took 0.000244 secs. (243.99 microseconds) 
 
   !(assertEqualToResult 
     (get-type (isLeft 5)) ())
@@ -457,7 +403,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000643 secs. (643.29 microseconds) 
+; took 0.000651 secs. (650.91 microseconds) 
 
   !(assertEqual 
     (get-type (LeftP 5)) 
@@ -490,7 +436,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000974 secs. (974.17 microseconds) 
+; took 0.000984 secs. (983.86 microseconds) 
 
   !(assertEqual 
     (get-type (pair (LeftP 5) "String")) 
@@ -533,7 +479,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000794 secs. (793.74 microseconds) 
+; took 0.000781 secs. (780.58 microseconds) 
 
   !(assertEqual 
     (get-type (Cons 5 (Cons 6 Nil))) 
@@ -557,7 +503,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.13</h3>
 ; 
 ; EVAL TEST
-; took 0.000390 secs. (389.63 microseconds) 
+; took 0.000399 secs. (398.87 microseconds) 
 
   !(assertEqualToResult 
     (get-type (Cons 5 (Cons "6" Nil))) ())
@@ -585,7 +531,7 @@ Deterministic: ()
 >;; QUICK.D1-GADT.14</h3>
 ; 
 ; EVAL TEST
-; took 0.000670 secs. (669.54 microseconds) 
+; took 0.000669 secs. (668.71 microseconds) 
 
   !(assertEqual 
     (let 
@@ -601,7 +547,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 488,104 inferences, 0.128 CPU in 0.128 seconds (100% CPU, 3819747 Lips)
+>% 488,112 inferences, 0.129 CPU in 0.129 seconds (100% CPU, 3789091 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/quick/d1_gadt.metta  0)
 <span class="ansi1"
@@ -636,7 +582,7 @@ Deterministic: ()
 P;HTML|
 ;           (set_option_value  compatio true)
 
-Script done on 2024-09-27 16:04:20+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-09-27 18:08:24+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
