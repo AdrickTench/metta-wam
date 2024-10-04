@@ -60,10 +60,10 @@
 :- set_prolog_flag(backtrace_goal_dept,100).
 :- set_prolog_flag(backtrace_show_lines,true).
 :- set_prolog_flag(write_attributes,portray).
-:- set_prolog_flag(debug_on_interrupt,true).
 :- set_prolog_flag(debug_on_error,true).
 :- ensure_loaded(swi_support).
 :- ensure_loaded(library(pldoc)).
+%:- set_prolog_flag(debug_on_interrupt,true).
 %:- set_prolog_flag(compile_meta_arguments,control).
 :- (prolog_load_context(directory, Value);Value='.'), absolute_file_name('../packs/',Dir,[relative_to(Value)]),
     atom_concat(Dir,'predicate_streams',PS),
@@ -458,7 +458,7 @@ write_answer_output.
 
 
 null_io(G):- null_user_output(Out), !, with_output_to(Out,G).
-user_io(G):- original_user_output(Out), !, with_output_to(Out,G).
+user_io(G):- original_user_output(Out), ttyflush, !, with_output_to(Out,G), flush_output(Out), ttyflush.
 user_err(G):- original_user_error(Out), !, with_output_to(Out,G).
 with_output_to_s(Out,G):- current_output(COut),
   redo_call_cleanup(set_prolog_IO(user_input, Out,user_error), G,
@@ -993,7 +993,8 @@ load_hook0(Load,Assertion):- fail,
        assertion_hb(Assertion,Self,H,B),
        functs_to_preds([=,H,B],Preds),
        assert_preds(Self,Load,Preds).
-load_hook0(Load,Assertion):- fail,
+% old compiler hook       
+load_hook0(Load,Assertion):-
      assertion_hb(Assertion,Self, Eq, H,B),
      rtrace_on_error(compile_for_assert_eq(Eq, H, B, Preds)),!,
      rtrace_on_error(assert_preds(Self,Load,Preds)).
@@ -1414,9 +1415,9 @@ do_metta_exec(From,Self,TermV,FOut):-
    give_up(Why),pp_m(red,gave_up(Why)))),!.
 
 
-o_s(['assertEqual'|O],S):- o_s(O,S).
-o_s(['assertEqualToResult'|O],S):- o_s(O,S).
-o_s([O|_],S):- !, o_s(O,S).
+o_s(['assertEqual'|O],S):- nonvar(O), o_s(O,S).
+o_s(['assertEqualToResult'|O],S):- nonvar(O), o_s(O,S).
+o_s([O|_],S):- nonvar(O), !, o_s(O,S).
 o_s(S,S).
 into_simple_op(Load,[Op|O],op(Load,Op,S)):- o_s(O,S),!.
 
@@ -1428,7 +1429,8 @@ call_for_term_variables(TermV,catch_red(show_failure(Term)),NamedVarsList,X):-
   call_for_term_variables5(TermV, DCAllVars, Singletons, NonSingletons, Term,NamedVarsList,X),!,
   must_be(callable,Term).
 
-into_metta_callable(_Self,TermV,Term,X,NamedVarsList,Was):- \+ never_compile(TermV),
+into_metta_callable(_Self,TermV,Term,X,NamedVarsList,Was):- 
+ \+ never_compile(TermV),
  is_transpiling, !,
  must_det_ll((((
 
@@ -1438,7 +1440,7 @@ into_metta_callable(_Self,TermV,Term,X,NamedVarsList,Was):- \+ never_compile(Ter
   subst_vars(Res+ExecGoal,Res+Term,NamedVarsList),
   copy_term_g(NamedVarsList,Was),
   term_variables(Term,Vars),
-  %notrace((color_g_mesg('#114411',print_pl_source(answer(Res):-ExecGoal)))),
+  notrace((color_g_mesg('#114411',print_pl_source(answer(Res):-ExecGoal)))),
   %nl,writeq(Term),nl,
   ((\+ \+
   ((numbervars(v(TermV,Term,NamedVarsList,Vars),999,_,[attvar(bind)]),
@@ -1550,10 +1552,19 @@ not_in_eq(List, Element) :-
 %   ; Evaluation took 123.45 ms.
 %   ; Evaluation took 0.012 ms. (12.33 microseconds)
 %
-time_eval(Goal):-
-  time_eval('Evaluation',Goal).
+time_eval(Goal):- time_eval('Evaluation',Goal).
 time_eval(What,Goal) :-
     timed_call(Goal,Seconds),
+    give_time(What,Seconds).
+
+ctime_eval(Goal):- ctime_eval('Evaluation',Goal).
+ctime_eval(What,Goal) :-
+    ctimed_call(Goal,Seconds),
+    give_time(What,Seconds).
+
+wtime_eval(Goal):- wtime_eval('Evaluation',Goal).
+wtime_eval(What,Goal) :-
+    wtimed_call(Goal,Seconds),
     give_time(What,Seconds).
 
 %give_time(_What,_Seconds):- is_compatio,!.
@@ -1566,11 +1577,20 @@ give_time(What,Seconds):-
             ;( Micro is Milliseconds * 1_000,
               format('~N; ~w took ~6f secs. (~2f microseconds) ~n~n', [What, Seconds, Micro])))).
 
-timed_call(Goal,Seconds):-
+timed_call(Goal,Seconds):- ctimed_call(Goal,Seconds).
+
+ctimed_call(Goal,Seconds):-
     statistics(cputime, Start),
     ( \+ rtrace_this(Goal)->rtrace_on_error(Goal);rtrace(Goal)),
     statistics(cputime, End),
     Seconds is End - Start.
+
+wtimed_call(Goal,Seconds):-
+    statistics(walltime, [Start,_]),
+    ( \+ rtrace_this(Goal)->rtrace_on_error(Goal);rtrace(Goal)),
+    statistics(walltime, [End,_]),
+    Seconds is (End - Start)/1000.
+
 
 rtrace_this(eval_H(_, _, P , _)):- compound(P), !, rtrace_this(P).
 rtrace_this([P|_]):- P == 'pragma!',!,fail.
