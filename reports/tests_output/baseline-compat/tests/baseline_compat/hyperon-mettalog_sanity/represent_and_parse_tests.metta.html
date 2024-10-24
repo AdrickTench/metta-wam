@@ -12,8 +12,10 @@
 .body_background { background-color: #000000; }
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
 .ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
+.ansi90 { color: #7f7f7f; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
 </style>
@@ -21,7 +23,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-23 15:34:45+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-24 22:58:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -336,7 +338,10 @@ Script started on 2024-10-23 15:34:45+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;                                         (= 3  "0.01user 0.00system 0:00.02elapsed 78%CPU (0avgtext+0avgdata 24648maxresident)k")
 P;HTML|
 ;                                         (= 3  "0inputs+0outputs (1major+3002minor)pagefaults 0swaps")
-P;HTML|
+<span class="ansi1 ansi90"
+>
+Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/represent_and_parse_tests.metta is 455 bytes (12 lines)
+</span>P;HTML|
 ;                                        (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/represent_and_parse_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/represent_and_parse_tests.metta)
 
 ;;; 16:28 18-8-2024
@@ -395,7 +400,7 @@ NDet Result(5): (assertEqualToResults e (a b c d e f))
 
 NDet Result(6): (assertEqualToResults f (a b c d e f))<span class="ansi32"
 >
-% 469,426 inferences, 0.129 CPU in 0.129 seconds (100% CPU, 3633551 Lips)
+% 538,605 inferences, 0.146 CPU in 0.149 seconds (98% CPU, 3685213 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/represent_and_parse_tests.metta  0)
 <br/> <a href="#" onclick="window.history.back(); return false;"
@@ -529,7 +534,7 @@ NDet Result(6): (assertEqualToResults f (a b c d e f))<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-23 15:34:51+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-24 22:58:59+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
