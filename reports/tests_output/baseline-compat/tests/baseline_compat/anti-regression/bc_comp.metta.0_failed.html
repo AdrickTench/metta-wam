@@ -691,7 +691,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-24 22:48:40+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-24 22:49:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 ^@P;HTML|
 ;           (set_option_value  compat false)
 
@@ -1163,7 +1163,7 @@ Deterministic: ()<span class="ansi38-255165009"
 > (: axiom (nums 2 3))
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.96 milliseconds) 
+; took 0.002 secs. (1.94 milliseconds) 
 
 !(assertEqualToResult (add-atom &kb (: axiom (nums 2 3))) (()))
 
@@ -1221,7 +1221,7 @@ Deterministic: ()<span class="ansi38-255165009"
 > (: rule1 (-> (nums $_4844 $_4862) (rule1output $_4844 $_4862)))
 </span>; 
 ; EVAL TEST
-; took 0.005 secs. (5.13 milliseconds) 
+; took 0.005 secs. (5.21 milliseconds) 
 
 !(assertEqualToResult (add-atom &kb (: rule1 (-> (nums $x $y) (rule1output $x $y)))) (()))
 
@@ -1288,7 +1288,7 @@ Deterministic: ()<span class="ansi38-255165009"
 > (: rule (-> (rule1output $_5012 $_5030) (-> (⍃ $_5012 $_5030) (less $_5012 $_5030))))
 </span>; 
 ; EVAL TEST
-; took 0.007 secs. (6.99 milliseconds) 
+; took 0.007 secs. (6.98 milliseconds) 
 
 !(assertEqualToResult (add-atom &kb (: rule (-> (rule1output $x $y) (-> (⍃ $x $y) (less $x $y))))) (()))
 
@@ -1671,7 +1671,7 @@ Deterministic: ()
 >  100:0   |-<--(if (and (and (is-closed 2) (is-closed 3)) (< 2 3)) (: CPU (⍃ 2 3)) (empty)) </span>
 ; 
 ; EVAL TEST
-; took 0.150 secs. (149.57 milliseconds) 
+; took 0.151 secs. (151.39 milliseconds) 
 
 !(assertEqualToResult (bc (: CPU (⍃ 2 3)) &kb Z) ((: CPU (⍃ 2 3))))
 
@@ -1912,7 +1912,7 @@ Deterministic: ()<span class="ansi38-255165009"
 >   86:0   |-<--(if (and (and (is-closed 4) (is-closed 3)) (< 4 3)) (: CPU (⍃ 4 3)) (empty)) </span>
 ; 
 ; EVAL TEST
-; took 0.145 secs. (145.23 milliseconds) 
+; took 0.146 secs. (145.92 milliseconds) 
 
 !(assertEqualToResult (bc (: CPU (⍃ 4 3)) &kb Z) ())
 
@@ -2869,7 +2869,7 @@ Deterministic: ()
 >  363:1   |   |-<--(: ((rule (rule1 axiom)) CPU) (less 2 3)) </span>
 ; 
 ; EVAL TEST
-; took 1.125 secs. (1124.81 milliseconds) 
+; took 1.136 secs. (1135.97 milliseconds) 
 
 !(assertEqualToResult (bc (: $prf (less $x $y)) &kb (S (S (S Z)))) ((: ((rule (rule1 axiom)) CPU) (less 2 3))))
 
@@ -2878,7 +2878,7 @@ Deterministic: ()
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 10,540,786 inferences, 1.872 CPU in 1.874 seconds (100% CPU, 5630473 Lips)
+% 10,566,076 inferences, 1.898 CPU in 1.900 seconds (100% CPU, 5566827 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/bc_comp.metta  0)
 <span class="ansi1"
@@ -3027,7 +3027,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-10-24 22:48:48+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-10-24 22:49:27+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
