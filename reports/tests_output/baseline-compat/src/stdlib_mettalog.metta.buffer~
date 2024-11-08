@@ -6501,4 +6501,58 @@ metta_file_buffer(2,412002122,constant,'Expression',[],'/home/runner/work/metta-
 metta_file_buffer(2,412002122,constant,'Atom',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1816,41),line_char(1816,45))).
 metta_file_buffer(1,412002122,metta_other,[->,'Stream','Expression','Atom'],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1816,19),line_char(1816,46))).
 metta_file_buffer(0,412002122,decl(ftype),[:,'with-output-to!',[->,'Stream','Expression','Atom']],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1816,0),line_char(1816,47))).
-metta_file_buffer(0,413002122,constant,end_of_file,[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1817,0),line_char(1817,0))).
+metta_file_buffer(0,413002122,indexed(metta_comment,";; Public MeTTaLog"),'$COMMENT'(";; Public MeTTaLog",1818,0),[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1818,0),line_char(1818,18))).
+metta_file_buffer(1,413002123,constant,'@doc',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1819,1),line_char(1819,5))).
+metta_file_buffer(1,413002123,constant,'load-file!',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1819,6),line_char(1819,16))).
+metta_file_buffer(2,413002124,constant,'@desc',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1820,3),line_char(1820,8))).
+metta_file_buffer(2,413002124,string,"Loads the contents of Filename into Space, returning () if successful.",[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1820,9),line_char(1820,81))).
+metta_file_buffer(1,413002124,metta_other,['@desc',"Loads the contents of Filename into Space, returning () if successful."],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1820,2),line_char(1820,82))).
+metta_file_buffer(2,413002125,constant,'@params',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1821,3),line_char(1821,10))).
+metta_file_buffer(4,413002127,constant,'@param',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1822,5),line_char(1822,11))).
+metta_file_buffer(4,413002127,string,"Space",[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1822,12),line_char(1822,19))).
+metta_file_buffer(3,413002127,metta_other,['@param',"Space"],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1822,4),line_char(1822,20))).
+metta_file_buffer(4,413002128,constant,'@param',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1823,5),line_char(1823,11))).
+metta_file_buffer(4,413002128,string,"Filename",[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1823,12),line_char(1823,22))).
+metta_file_buffer(3,413002128,metta_other,['@param',"Filename"],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1823,4),line_char(1823,23))).
+metta_file_buffer(2,413002128,array,[['@param',"Space"],['@param',"Filename"]],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1821,11),line_char(1823,24))).
+metta_file_buffer(1,413002128,metta_other,['@params',[['@param',"Space"],['@param',"Filename"]]],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1821,2),line_char(1823,25))).
+metta_file_buffer(2,413002129,constant,'@return',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1824,3),line_char(1824,10))).
+metta_file_buffer(2,413002129,string,"Expression",[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1824,11),line_char(1824,23))).
+metta_file_buffer(1,413002129,metta_other,['@return',"Expression"],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1824,2),line_char(1824,24))).
+metta_file_buffer(0,413002129,decl(doc),['@doc','load-file!',['@desc',"Loads the contents of Filename into Space, returning () if successful."],['@params',[['@param',"Space"],['@param',"Filename"]]],['@return',"Expression"]],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1819,0),line_char(1824,25))).
+metta_file_buffer(1,414002130,constant,:,[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1825,1),line_char(1825,2))).
+metta_file_buffer(1,414002130,constant,'load-file!',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1825,3),line_char(1825,13))).
+metta_file_buffer(2,414002131,constant,->,[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1825,15),line_char(1825,17))).
+metta_file_buffer(2,414002131,constant,'hyperon::space::DynSpace',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1825,18),line_char(1825,42))).
+metta_file_buffer(2,414002131,constant,'String',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1825,43),line_char(1825,49))).
+metta_file_buffer(2,414002131,constant,'Expression',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1825,50),line_char(1825,60))).
+metta_file_buffer(1,414002131,metta_other,[->,'hyperon::space::DynSpace','String','Expression'],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1825,14),line_char(1825,61))).
+metta_file_buffer(0,414002131,decl(ftype),[:,'load-file!',[->,'hyperon::space::DynSpace','String','Expression']],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1825,0),line_char(1825,62))).
+metta_file_buffer(0,415002131,indexed(metta_comment,";; Public MeTTa"),'$COMMENT'(";; Public MeTTa",1827,0),[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1827,0),line_char(1827,15))).
+metta_file_buffer(1,415002132,constant,'@doc',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1828,1),line_char(1828,5))).
+metta_file_buffer(1,415002132,constant,'load-ascii',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1828,6),line_char(1828,16))).
+metta_file_buffer(2,415002133,constant,'@desc',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1829,3),line_char(1829,8))).
+metta_file_buffer(2,415002133,string,"Loads the contents of Filename into Space, returning () if successful.",[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1829,9),line_char(1829,81))).
+metta_file_buffer(1,415002133,metta_other,['@desc',"Loads the contents of Filename into Space, returning () if successful."],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1829,2),line_char(1829,82))).
+metta_file_buffer(2,415002134,constant,'@params',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1830,3),line_char(1830,10))).
+metta_file_buffer(4,415002136,constant,'@param',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1831,5),line_char(1831,11))).
+metta_file_buffer(4,415002136,string,"Space",[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1831,12),line_char(1831,19))).
+metta_file_buffer(3,415002136,metta_other,['@param',"Space"],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1831,4),line_char(1831,20))).
+metta_file_buffer(4,415002137,constant,'@param',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1832,5),line_char(1832,11))).
+metta_file_buffer(4,415002137,string,"Filename",[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1832,12),line_char(1832,22))).
+metta_file_buffer(3,415002137,metta_other,['@param',"Filename"],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1832,4),line_char(1832,23))).
+metta_file_buffer(2,415002137,array,[['@param',"Space"],['@param',"Filename"]],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1830,11),line_char(1832,24))).
+metta_file_buffer(1,415002137,metta_other,['@params',[['@param',"Space"],['@param',"Filename"]]],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1830,2),line_char(1832,25))).
+metta_file_buffer(2,415002138,constant,'@return',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1833,3),line_char(1833,10))).
+metta_file_buffer(2,415002138,string,"Expression",[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1833,11),line_char(1833,23))).
+metta_file_buffer(1,415002138,metta_other,['@return',"Expression"],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1833,2),line_char(1833,24))).
+metta_file_buffer(0,415002138,decl(doc),['@doc','load-ascii',['@desc',"Loads the contents of Filename into Space, returning () if successful."],['@params',[['@param',"Space"],['@param',"Filename"]]],['@return',"Expression"]],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1828,0),line_char(1833,25))).
+metta_file_buffer(1,416002139,constant,:,[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1834,1),line_char(1834,2))).
+metta_file_buffer(1,416002139,constant,'load-ascii',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1834,3),line_char(1834,13))).
+metta_file_buffer(2,416002140,constant,->,[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1834,15),line_char(1834,17))).
+metta_file_buffer(2,416002140,constant,'hyperon::space::DynSpace',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1834,18),line_char(1834,42))).
+metta_file_buffer(2,416002140,constant,'String',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1834,43),line_char(1834,49))).
+metta_file_buffer(2,416002140,constant,'Expression',[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1834,50),line_char(1834,60))).
+metta_file_buffer(1,416002140,metta_other,[->,'hyperon::space::DynSpace','String','Expression'],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1834,14),line_char(1834,61))).
+metta_file_buffer(0,416002140,decl(ftype),[:,'load-ascii',[->,'hyperon::space::DynSpace','String','Expression']],[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1834,0),line_char(1834,62))).
+metta_file_buffer(0,417002140,constant,end_of_file,[],'/home/runner/work/metta-wam/metta-wam/src/canary/stdlib_mettalog.metta',range(line_char(1835,0),line_char(1835,0))).
