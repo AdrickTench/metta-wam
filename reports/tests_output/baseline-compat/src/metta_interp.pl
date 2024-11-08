@@ -101,6 +101,7 @@
 % This library provides tools for generating and interacting with Prolog documentation.
 :- ensure_loaded(library(pldoc)).
 
+/*
 % Set the encoding of the `current_input` stream to UTF-8.
 % This ensures that any input read from `current_input` (which is typically `user_input`) is interpreted as UTF-8.
 :- set_stream(current_input, encoding(utf8)).
@@ -128,7 +129,7 @@
 % Flush any pending output to ensure that anything waiting to be written to output is immediately written.
 % Useful to make sure output is synchronized and nothing is left in the buffer.
 :- flush_output.
-
+*/
 %:- set_prolog_flag(debug_on_interrupt,true).
 %:- set_prolog_flag(compile_meta_arguments,control).
 :- (prolog_load_context(directory, Value);Value='.'), absolute_file_name('../packs/',Dir,[relative_to(Value)]),
@@ -296,6 +297,7 @@ keep_output:- dont_change_streams,!.
 keep_output:- is_win64,!.
 keep_output:- is_mettalog,!.
 keep_output:- is_testing,!.
+
 keep_output:- is_compatio,!,fail.
 
 
@@ -303,7 +305,7 @@ keep_output:- is_compatio,!,fail.
 :- dynamic(original_user_output/1).
 original_user_output(X):- stream_property(X,file_no(1)).
 original_user_error(X):- stream_property(X,file_no(2)).
-:- original_user_output(_)->true;current_output(Out),asserta(original_user_output(Out)).
+:- original_user_output(_)->true;(current_output(Out),asserta(original_user_output(Out))).
 unnullify_output:- current_output(MFS),  original_user_output(OUT), MFS==OUT, !.
 unnullify_output:- original_user_output(MFS), set_prolog_IO(user_input,MFS,user_error).
 
@@ -639,6 +641,7 @@ with_answer_output(Goal, S) :-
     ).
 
 null_io(G):- null_user_output(Out), !, with_output_to(Out,G).
+user_io(G):- current_prolog_flag(mettalog_rt, true), !, original_user_error(Out), ttyflush, !, with_output_to(Out,G), flush_output(Out), ttyflush.
 user_io(G):- original_user_output(Out), ttyflush, !, with_output_to(Out,G), flush_output(Out), ttyflush.
 user_err(G):- original_user_error(Out), !, with_output_to(Out,G).
 with_output_to_s(Out,G):- current_output(COut),
@@ -1278,7 +1281,6 @@ fn_append1(Term,X,eval_H(Term,X)).
 assert_preds(Self,Load,List):- is_list(List),!,maplist(assert_preds(Self,Load),List).
 %assert_preds(_Self,_Load,_Preds):- \+ show_transpiler,!.
 assert_preds(Self,Load,Preds):-
-
   expand_to_hb(Preds,H,_B),
   functor(H,F,A), %trace,
   if_t((show_transpiler),
@@ -1351,7 +1353,7 @@ assertion_neck_cl(':-').
 load_hook0(_,_):- \+ show_transpiler, !. % \+ is_transpiling, !.
 load_hook0(Load,Assertion):- assertion_hb(Assertion,Self,Eq,H,B),
        functs_to_preds([Eq,H,B],Preds),
-       assert_preds(Self,Load,Preds).
+       assert_preds(Self,Load,Preds),!.
 % old compiler hook
 load_hook0(Load,Assertion):-
      assertion_hb(Assertion,Self, Eq, H,B),
