@@ -38,7 +38,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-15 22:14:55+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-15 23:20:05+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -389,7 +389,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lan
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE3.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000489 secs. (488.61 microseconds) 
+; took 0.000445 secs. (444.57 microseconds) 
 
 !(assertEqualToResult (println "xx 8 ") ((println "xx 8 ")))
 
@@ -406,7 +406,7 @@ Deterministic: ()
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE3.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000409 secs. (408.83 microseconds) 
+; took 0.000494 secs. (494.01 microseconds) 
 
 !(assertEqualToResult (fruit $x) (apple))
 
@@ -429,7 +429,7 @@ Deterministic: ()
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE3.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000280 secs. (279.87 microseconds) 
+; took 0.000272 secs. (272.22 microseconds) 
 
 !(assertEqualToResult (println "xx 9 ") ((println "xx 9 ")))
 
@@ -446,7 +446,7 @@ Deterministic: ()
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE3.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000026 secs. (26.14 microseconds) 
+; took 0.000025 secs. (24.99 microseconds) 
 
 !(assertEqualToResult (quote (fruit $x)) ((quote (fruit $x))))
 
@@ -475,7 +475,7 @@ Deterministic: ()
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE3.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000280 secs. (280.28 microseconds) 
+; took 0.000292 secs. (291.78 microseconds) 
 
 !(assertEqualToResult (println "xx 10 ") ((println "xx 10 ")))
 
@@ -493,7 +493,7 @@ Deterministic: ()
 (EVAL: (quote 12) --> 12)
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.03 milliseconds) 
+; took 0.000989 secs. (988.79 microseconds) 
 
 !(assertEqualToResult (trace-eval (+ 5 7)) (12))
 
@@ -509,7 +509,7 @@ Deterministic: ()
 ;;;[STDOUT] (EVAL: (quote (fruit $x)) --> apple)
 ;;;[(Overall result is apple)]
 <span class="ansi32"
->% 332,107 inferences, 0.096 CPU in 0.098 seconds (98% CPU, 3467284 Lips)
+>% 333,267 inferences, 0.096 CPU in 0.098 seconds (98% CPU, 3484244 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language3.metta  0)
 <span class="ansi1"
@@ -654,7 +654,7 @@ Deterministic: ()
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-11-15 22:15:02+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-15 23:20:11+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
