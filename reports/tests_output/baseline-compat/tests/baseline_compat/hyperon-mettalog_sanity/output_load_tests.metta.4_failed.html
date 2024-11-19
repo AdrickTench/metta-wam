@@ -108,7 +108,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-15 23:11:48+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-19 18:04:16+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -420,13 +420,13 @@ Script started on 2024-11-15 23:11:48+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         (= 1  "Expected: [\"(bar 1)\", \"(bar 2)\"]")
 P;HTML|
-;                                         (= 1  "Got: [(call-cleanup! (with-output-to! (open! \"output_load_tests.tmp\" write) (print \"(bar 2)\")) (close! (open! \"output_load_tests.tmp\" write))), (call-cleanup! (with-output-to! (open! \"output_load_tests.tmp\" write) (print \"(bar 1)\")) (close! (open! \"output_load_tests.tmp\" write)))]")
+;                                         (= 1  "Got: [(call-cleanup! (with-output-to! (open! \"output_load_tests.tmp\" write) (print \"(bar 1)\")) (close! (open! \"output_load_tests.tmp\" write))), (call-cleanup! (with-output-to! (open! \"output_load_tests.tmp\" write) (print \"(bar 2)\")) (close! (open! \"output_load_tests.tmp\" write)))]")
 P;HTML|
 ;                                         (= 2  "Missed result: \"(bar 1)\")]")
 P;HTML|
-;                                         (= 2  "0.04user 0.01system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 26576maxresident)k")
+;                                         (= 2  "0.04user 0.01system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 26116maxresident)k")
 P;HTML|
-;                                         (= 2  "0inputs+0outputs (0major+3147minor)pagefaults 0swaps")
+;                                         (= 2  "0inputs+0outputs (0major+3141minor)pagefaults 0swaps")
 <span class="ansi1 ansi90"
 >
 Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/output_load_tests.metta is 3.08K bytes (79 lines)
@@ -447,11 +447,11 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 ;<h3 id="HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.01"
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.01</h3>
 P;HTML|
-;                                         (eval_call  (apply  close (<stream>(0x55d19c692f20))) $TF)
+;                                         (eval_call  (apply  close (<stream>(0x5595cfc88600))) $TF)
 
 ; 
 ; EVAL TEST
-; took 0.003 secs. (2.58 milliseconds) 
+; took 0.003 secs. (2.55 milliseconds) 
 
 !(assertEqualToResult (let $s (open! (filename) write) (call-cleanup! (with-output-to! $s (foo $x)) (close! $s))) ("(bar 1)" "(bar 2)"))
 
@@ -479,7 +479,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 </span><span class="ansi38-255165000"
 > (bar 2)
 </span><span class="ansi32"
->% 28,750 inferences, 0.010 CPU in 0.012 seconds (83% CPU, 2871954 Lips)
+>% 28,833 inferences, 0.010 CPU in 0.011 seconds (83% CPU, 3031224 Lips)
 </span>P;HTML|
 ;                                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/output_load_tests.tmp  0)
 <span class="ansi1"
@@ -493,7 +493,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 >Return to summaries</a><br/>
 ; 
 ; EVAL TEST
-; took 0.013 secs. (13.02 milliseconds) 
+; took 0.012 secs. (12.49 milliseconds) 
 
 !(assertEqualToResult (let $f (filename) (load-file! &self $f)) (()))
 
@@ -509,7 +509,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000205 secs. (205.05 microseconds) 
+; took 0.000217 secs. (217.19 microseconds) 
 
 !(assertEqualToResult (match &self (bar $x) $x) (1 2))
 
@@ -554,7 +554,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000151 secs. (150.64 microseconds) 
+; took 0.000177 secs. (176.53 microseconds) 
 
 !(assertEqualToResult (match &self (bar $x) $x) ())
 
@@ -574,11 +574,11 @@ Deterministic: ()
 ;<h3 id="HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.05"
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.05</h3>
 P;HTML|
-;                                         (eval_call  (apply  close (<stream>(0x55d19c776140))) $TF)
+;                                         (eval_call  (apply  close (<stream>(0x5595cfe55b90))) $TF)
 
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.24 milliseconds) 
+; took 0.002 secs. (2.21 milliseconds) 
 
 !(assertEqualToResult (let $s (open! (filename) append) (call-cleanup! (with-output-to! $s (foo $x)) (close! $s))) ("(bar 3)" "(bar 4)"))
 
@@ -609,7 +609,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 > (bar 4)
 </span>; 
 ; EVAL TEST
-; took 0.013 secs. (12.98 milliseconds) 
+; took 0.013 secs. (12.93 milliseconds) 
 
 !(assertEqualToResult (let $f (filename) (load-file! &self $f)) (()))
 
@@ -625,7 +625,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000211 secs. (211.13 microseconds) 
+; took 0.000205 secs. (204.50 microseconds) 
 
 !(assertEqualToResult (match &self (bar $x) $x) (1 2 3 4))
 
@@ -684,7 +684,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000166 secs. (165.83 microseconds) 
+; took 0.000165 secs. (164.63 microseconds) 
 
 !(assertEqualToResult (match &self (bar $x) $x) ())
 
@@ -704,11 +704,11 @@ Deterministic: ()
 ;<h3 id="HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.09"
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.09</h3>
 P;HTML|
-;                                         (eval_call  (apply  close (<stream>(0x55d19c798b90))) $TF)
+;                                         (eval_call  (apply  close (<stream>(0x5595cfe786a0))) $TF)
 
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.38 milliseconds) 
+; took 0.002 secs. (2.31 milliseconds) 
 
 !(assertEqualToResult (let $s (open! (filename) update) (call-cleanup! (with-output-to! $s (foo $x)) (close! $s))) ("(bar 5)" "(bar 6)"))
 
@@ -743,7 +743,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 > (bar 6)
 </span>; 
 ; EVAL TEST
-; took 0.016 secs. (15.82 milliseconds) 
+; took 0.015 secs. (15.23 milliseconds) 
 
 !(assertEqualToResult (let $f (filename) (load-file! &self $f)) (()))
 
@@ -759,7 +759,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000230 secs. (229.64 microseconds) 
+; took 0.000258 secs. (258.45 microseconds) 
 
 !(assertEqualToResult (match &self (bar $x) $x) (3 4 5 6))
 
@@ -818,7 +818,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000192 secs. (192.18 microseconds) 
+; took 0.000174 secs. (174.47 microseconds) 
 
 !(assertEqualToResult (match &self (bar $x) $x) ())
 
@@ -838,11 +838,11 @@ Deterministic: ((Error  (got  (1 2)) (expected  ())))
 ;<h3 id="HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.13"
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.13</h3>
 P;HTML|
-;                                         (eval_call  (apply  close (<stream>(0x55d19c7bff00))) $TF)
+;                                         (eval_call  (apply  close (<stream>(0x5595cfe9f640))) $TF)
 
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.44 milliseconds) 
+; took 0.002 secs. (2.34 milliseconds) 
 
 !(assertEqualToResult (let $s (open! (filename) write) (call-cleanup! (with-output-to! $s (foo $x)) (close! $s))) ("(bar 1)" "(bar 2)"))
 
@@ -877,7 +877,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 > (bar 6)
 </span>; 
 ; EVAL TEST
-; took 0.014 secs. (14.05 milliseconds) 
+; took 0.013 secs. (13.16 milliseconds) 
 
 !(assertEqualToResult (let $f (filename) (load-file! &self $f)) (()))
 
@@ -893,7 +893,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.15</h3>
 ; 
 ; EVAL TEST
-; took 0.000236 secs. (236.34 microseconds) 
+; took 0.000231 secs. (231.14 microseconds) 
 
 !(assertEqualToResult (match &self (bar $x) $x) (1 2))
 
@@ -934,7 +934,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.OUTPUT-LOAD-TESTS.16</h3>
 ; 
 ; EVAL TEST
-; took 0.000451 secs. (450.96 microseconds) 
+; took 0.000412 secs. (412.07 microseconds) 
 
 !(assertEqualToResult (match &gen-space (likes $x $y) ($x $y)) ((John Jane)))
 
@@ -951,7 +951,7 @@ Deterministic: ()
 "(bar 1)"
 ; 
 ; EVAL TEST
-; took 0.000910 secs. (910.33 microseconds) 
+; took 0.000917 secs. (916.94 microseconds) 
 
 !(assertEqualToResult (metta (foo 1) Number &new-space) (2))
 
@@ -988,31 +988,31 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
 ^  <span class="ansi1 ansi34"
 >Unify: </span>(253) [user] eval_args(=, _5700, 499, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _6058)
 ^  <span class="ansi1 ansi32"
->Call: </span>(255) [system] setup_call_cleanup('$notrace'(_14842, _14844), once(user:self_eval(['save-space!', '&gen-space', "save-space-test.tmp"])), '$restore_trace'(_14842, _14844))
+>Call: </span>(255) [system] setup_call_cleanup('$notrace'(_15722, _15724), once(user:self_eval(['save-space!', '&gen-space', "save-space-test.tmp"])), '$restore_trace'(_15722, _15724))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(255) [system] setup_call_cleanup(system:'$notrace'(_14842, _14844), system:once(user:self_eval(['save-space!', '&gen-space', "save-space-test.tmp"])), system:'$restore_trace'(_14842, _14844))
+>Unify: </span>(255) [system] setup_call_cleanup(system:'$notrace'(_15722, _15724), system:once(user:self_eval(['save-space!', '&gen-space', "save-space-test.tmp"])), system:'$restore_trace'(_15722, _15724))
 ^  <span class="ansi1 ansi32"
->Call: </span>(256) [system] sig_atomic(system:'$notrace'(_14842, _14844))
+>Call: </span>(256) [system] sig_atomic(system:'$notrace'(_15722, _15724))
 ^  <span class="ansi1 ansi33"
 >Redo: </span>(253) [user] eval_args(=, _5700, 499, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _6058)
 ^  <span class="ansi1 ansi34"
 >Unify: </span>(253) [user] eval_args(=, _5700, 499, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _6058)
 ^  <span class="ansi1 ansi32"
->Call: </span>(255) [system] setup_call_cleanup('$notrace'(_19580, _19582), once(user:nonvar(_6058)), '$restore_trace'(_19580, _19582))
+>Call: </span>(255) [system] setup_call_cleanup('$notrace'(_20900, _20902), once(user:nonvar(_6058)), '$restore_trace'(_20900, _20902))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(255) [system] setup_call_cleanup(system:'$notrace'(_19580, _19582), system:once(user:nonvar(_6058)), system:'$restore_trace'(_19580, _19582))
+>Unify: </span>(255) [system] setup_call_cleanup(system:'$notrace'(_20900, _20902), system:once(user:nonvar(_6058)), system:'$restore_trace'(_20900, _20902))
 ^  <span class="ansi1 ansi32"
->Call: </span>(256) [system] sig_atomic(system:'$notrace'(_19580, _19582))
+>Call: </span>(256) [system] sig_atomic(system:'$notrace'(_20900, _20902))
 ^  <span class="ansi1 ansi33"
 >Redo: </span>(253) [user] eval_args(=, _5700, 499, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _6058)
 ^  <span class="ansi1 ansi34"
 >Unify: </span>(253) [user] eval_args(=, _5700, 499, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _6058)
 ^  <span class="ansi1 ansi32"
->Call: </span>(255) [system] setup_call_cleanup('$notrace'(_24318, _24320), once(user:nonvar(_6058)), '$restore_trace'(_24318, _24320))
+>Call: </span>(255) [system] setup_call_cleanup('$notrace'(_26078, _26080), once(user:nonvar(_6058)), '$restore_trace'(_26078, _26080))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(255) [system] setup_call_cleanup(system:'$notrace'(_24318, _24320), system:once(user:nonvar(_6058)), system:'$restore_trace'(_24318, _24320))
+>Unify: </span>(255) [system] setup_call_cleanup(system:'$notrace'(_26078, _26080), system:once(user:nonvar(_6058)), system:'$restore_trace'(_26078, _26080))
 ^  <span class="ansi1 ansi32"
->Call: </span>(256) [system] sig_atomic(system:'$notrace'(_24318, _24320))
+>Call: </span>(256) [system] sig_atomic(system:'$notrace'(_26078, _26080))
 ^  <span class="ansi1 ansi33"
 >Redo: </span>(253) [user] eval_args(=, _5700, 499, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _6058)
 ^  <span class="ansi1 ansi34"
@@ -1038,11 +1038,11 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
 ^  <span class="ansi1 ansi34"
 >Unify: </span>(254) [user] self_eval(['save-space!', '&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi32"
->Call: </span>(256) [system] setup_call_cleanup('$notrace'(_38384, _38386), once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), '$restore_trace'(_38384, _38386))
+>Call: </span>(256) [system] setup_call_cleanup('$notrace'(_41464, _41466), once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), '$restore_trace'(_41464, _41466))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(256) [system] setup_call_cleanup(system:'$notrace'(_38384, _38386), system:once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), system:'$restore_trace'(_38384, _38386))
+>Unify: </span>(256) [system] setup_call_cleanup(system:'$notrace'(_41464, _41466), system:once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), system:'$restore_trace'(_41464, _41466))
 ^  <span class="ansi1 ansi32"
->Call: </span>(257) [system] sig_atomic(system:'$notrace'(_38384, _38386))
+>Call: </span>(257) [system] sig_atomic(system:'$notrace'(_41464, _41466))
 ^  <span class="ansi1 ansi31"
 >Fail: </span>(254) [user] self_eval(['save-space!', '&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi33"
@@ -1058,11 +1058,11 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
 ^  <span class="ansi1 ansi34"
 >Unify: </span>(255) [user] self_eval(['save-space!', '&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi32"
->Call: </span>(257) [system] setup_call_cleanup('$notrace'(_47782, _47784), once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), '$restore_trace'(_47782, _47784))
+>Call: </span>(257) [system] setup_call_cleanup('$notrace'(_51742, _51744), once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), '$restore_trace'(_51742, _51744))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(257) [system] setup_call_cleanup(system:'$notrace'(_47782, _47784), system:once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), system:'$restore_trace'(_47782, _47784))
+>Unify: </span>(257) [system] setup_call_cleanup(system:'$notrace'(_51742, _51744), system:once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), system:'$restore_trace'(_51742, _51744))
 ^  <span class="ansi1 ansi32"
->Call: </span>(258) [system] sig_atomic(system:'$notrace'(_47782, _47784))
+>Call: </span>(258) [system] sig_atomic(system:'$notrace'(_51742, _51744))
 ^  <span class="ansi1 ansi31"
 >Fail: </span>(255) [user] self_eval(['save-space!', '&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi33"
@@ -1086,51 +1086,51 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(256) [user] if_t((499<1, trace_on_overflow), debug(metta(eval_args)))
 ^  <span class="ansi1 ansi32"
->Call: </span>(257) [system] setup_call_cleanup('$notrace'(_60940, _60942), once(user:(_60916 is 499-1, copy_term(['save-space!', '&gen-space', "save-space-test.tmp"], _60930))), '$restore_trace'(_60940, _60942))
+>Call: </span>(257) [system] setup_call_cleanup('$notrace'(_66132, _66134), once(user:(_66108 is 499-1, copy_term(['save-space!', '&gen-space', "save-space-test.tmp"], _66122))), '$restore_trace'(_66132, _66134))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(257) [system] setup_call_cleanup(system:'$notrace'(_60940, _60942), system:once(user:(_60916 is 499-1, copy_term(['save-space!', '&gen-space', "save-space-test.tmp"], _60930))), system:'$restore_trace'(_60940, _60942))
+>Unify: </span>(257) [system] setup_call_cleanup(system:'$notrace'(_66132, _66134), system:once(user:(_66108 is 499-1, copy_term(['save-space!', '&gen-space', "save-space-test.tmp"], _66122))), system:'$restore_trace'(_66132, _66134))
 ^  <span class="ansi1 ansi32"
->Call: </span>(258) [system] sig_atomic(system:'$notrace'(_60940, _60942))
+>Call: </span>(258) [system] sig_atomic(system:'$notrace'(_66132, _66134))
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(257) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(498 is 499-1, copy_term(['save-space!', '&gen-space', "save-space-test.tmp"], ['save-space!', '&gen-space', "save-space-test.tmp"]))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Call: </span>(256) [user] trace_eval(eval_20(=, _5700), e, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Call: </span>(256) [user] trace_eval(eval_20(=, _5700), e, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(256) [user] trace_eval(eval_20(=, _5700), e, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(256) [user] trace_eval(eval_20(=, _5700), e, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi32"
->Call: </span>(257) [user] must_det_ll((notrace((flag(eval_num, _66634, _66634+1), _66652 is _66634 mod 500, _66670 is 99-498 mod 100, _66694=_66696, option_else('trace-length', _66708, 500), option_else('trace-depth', _66716, 30))), quietly(if_t((nop(stop_rtrace), _66652>_66708), (set_debug(eval, false), _66772 is _66708+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_66772])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_66824)))))
+>Call: </span>(257) [user] must_det_ll((notrace((flag(eval_num, _72354, _72354+1), _72372 is _72354 mod 500, _72390 is 99-498 mod 100, _72414=_72416, option_else('trace-length', _72428, 500), option_else('trace-depth', _72436, 30))), quietly(if_t((nop(stop_rtrace), _72372>_72428), (set_debug(eval, false), _72492 is _72428+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_72492])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_72544)))))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(257) [user] must_det_ll(user:(notrace((flag(eval_num, _66634, _66634+1), _66652 is _66634 mod 500, _66670 is 99-498 mod 100, _66694=_66696, option_else('trace-length', _66708, 500), option_else('trace-depth', _66716, 30))), quietly(if_t((nop(stop_rtrace), _66652>_66708), (set_debug(eval, false), _66772 is _66708+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_66772])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_66824)))))
+>Unify: </span>(257) [user] must_det_ll(user:(notrace((flag(eval_num, _72354, _72354+1), _72372 is _72354 mod 500, _72390 is 99-498 mod 100, _72414=_72416, option_else('trace-length', _72428, 500), option_else('trace-depth', _72436, 30))), quietly(if_t((nop(stop_rtrace), _72372>_72428), (set_debug(eval, false), _72492 is _72428+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_72492])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_72544)))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(258) [user] once(user:(notrace((flag(eval_num, _66634, _66634+1), _66652 is _66634 mod 500, _66670 is 99-498 mod 100, _66694=_66696, option_else('trace-length', _66708, 500), option_else('trace-depth', _66716, 30))), quietly(if_t((nop(stop_rtrace), _66652>_66708), (set_debug(eval, false), _66772 is _66708+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_66772])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_66824)))))
+>Call: </span>(258) [user] once(user:(notrace((flag(eval_num, _72354, _72354+1), _72372 is _72354 mod 500, _72390 is 99-498 mod 100, _72414=_72416, option_else('trace-length', _72428, 500), option_else('trace-depth', _72436, 30))), quietly(if_t((nop(stop_rtrace), _72372>_72428), (set_debug(eval, false), _72492 is _72428+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_72492])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_72544)))))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(258) [system] once(user:(notrace((flag(eval_num, _66634, _66634+1), _66652 is _66634 mod 500, _66670 is 99-498 mod 100, _66694=_66696, option_else('trace-length', _66708, 500), option_else('trace-depth', _66716, 30))), quietly(if_t((nop(stop_rtrace), _66652>_66708), (set_debug(eval, false), _66772 is _66708+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_66772])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_66824)))))
+>Unify: </span>(258) [system] once(user:(notrace((flag(eval_num, _72354, _72354+1), _72372 is _72354 mod 500, _72390 is 99-498 mod 100, _72414=_72416, option_else('trace-length', _72428, 500), option_else('trace-depth', _72436, 30))), quietly(if_t((nop(stop_rtrace), _72372>_72428), (set_debug(eval, false), _72492 is _72428+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_72492])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_72544)))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(261) [system] setup_call_cleanup('$notrace'(_70548, _70550), once(user:(flag(eval_num, _66634, _66634+1), _66652 is _66634 mod 500, _66670 is 99-498 mod 100, _66694=_66696, option_else('trace-length', _66708, 500), option_else('trace-depth', _66716, 30))), '$restore_trace'(_70548, _70550))
+>Call: </span>(261) [system] setup_call_cleanup('$notrace'(_76620, _76622), once(user:(flag(eval_num, _72354, _72354+1), _72372 is _72354 mod 500, _72390 is 99-498 mod 100, _72414=_72416, option_else('trace-length', _72428, 500), option_else('trace-depth', _72436, 30))), '$restore_trace'(_76620, _76622))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(261) [system] setup_call_cleanup(system:'$notrace'(_70548, _70550), system:once(user:(flag(eval_num, _66634, _66634+1), _66652 is _66634 mod 500, _66670 is 99-498 mod 100, _66694=_66696, option_else('trace-length', _66708, 500), option_else('trace-depth', _66716, 30))), system:'$restore_trace'(_70548, _70550))
+>Unify: </span>(261) [system] setup_call_cleanup(system:'$notrace'(_76620, _76622), system:once(user:(flag(eval_num, _72354, _72354+1), _72372 is _72354 mod 500, _72390 is 99-498 mod 100, _72414=_72416, option_else('trace-length', _72428, 500), option_else('trace-depth', _72436, 30))), system:'$restore_trace'(_76620, _76622))
 ^  <span class="ansi1 ansi32"
->Call: </span>(262) [system] sig_atomic(system:'$notrace'(_70548, _70550))
+>Call: </span>(262) [system] sig_atomic(system:'$notrace'(_76620, _76622))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(261) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(flag(eval_num, 1, 1+1), 1 is 1 mod 500, 1 is 99-498 mod 100, _66694=_66694, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), system:'$restore_trace'(3, -1))
+>Exit: </span>(261) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(flag(eval_num, 1, 1+1), 1 is 1 mod 500, 1 is 99-498 mod 100, _72414=_72414, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Call: </span>(261) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 1>500), (set_debug(eval, false), _66772 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_66772])), nop((start_rtrace, rtrace)))))
+>Call: </span>(261) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 1>500), (set_debug(eval, false), _72492 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_72492])), nop((start_rtrace, rtrace)))))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(261) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 1>500), (set_debug(eval, false), _66772 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_66772])), nop((start_rtrace, rtrace)))))
+>Unify: </span>(261) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 1>500), (set_debug(eval, false), _72492 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_72492])), nop((start_rtrace, rtrace)))))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(261) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 1>500), (set_debug(eval, false), _66772 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_66772])), nop((start_rtrace, rtrace)))))
+>Exit: </span>(261) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 1>500), (set_debug(eval, false), _72492 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_72492])), nop((start_rtrace, rtrace)))))
    <span class="ansi1 ansi32"
->Call: </span>(260) [user] nop(notrace(no_repeats_var(_66824)))
+>Call: </span>(260) [user] nop(notrace(no_repeats_var(_72544)))
    <span class="ansi1 ansi34"
->Unify: </span>(260) [user] nop(notrace(no_repeats_var(_66824)))
+>Unify: </span>(260) [user] nop(notrace(no_repeats_var(_72544)))
    <span class="ansi1 ansi32"
->Exit: </span>(260) [user] nop(notrace(no_repeats_var(_66824)))
+>Exit: </span>(260) [user] nop(notrace(no_repeats_var(_72544)))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(258) [system] once(user:(notrace((flag(eval_num, 1, 1+1), 1 is 1 mod 500, 1 is 99-498 mod 100, _66694=_66694, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 1>500), (set_debug(eval, false), _66772 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_66772])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_66824)))))
+>Exit: </span>(258) [system] once(user:(notrace((flag(eval_num, 1, 1+1), 1 is 1 mod 500, 1 is 99-498 mod 100, _72414=_72414, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 1>500), (set_debug(eval, false), _72492 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_72492])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_72544)))))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(257) [user] must_det_ll(user:(notrace((flag(eval_num, 1, 1+1), 1 is 1 mod 500, 1 is 99-498 mod 100, _66694=_66694, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 1>500), (set_debug(eval, false), _66772 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_66772])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_66824)))))
+>Exit: </span>(257) [user] must_det_ll(user:(notrace((flag(eval_num, 1, 1+1), 1 is 1 mod 500, 1 is 99-498 mod 100, _72414=_72414, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 1>500), (set_debug(eval, false), _72492 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_72492])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_72544)))))
    <span class="ansi1 ansi32"
->Call: </span>(257) [occurs] occurs:sub_term(_82012, e)
+>Call: </span>(257) [occurs] occurs:sub_term(_89316, e)
    <span class="ansi1 ansi34"
 >Unify: </span>(257) [occurs] occurs:sub_term(e, e)
    <span class="ansi1 ansi32"
@@ -1140,57 +1140,57 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
    <span class="ansi1 ansi31"
 >Fail: </span>(257) [system] e\=e
    <span class="ansi1 ansi33"
->Redo: </span>(257) [occurs] occurs:sub_term(_82012, e)
+>Redo: </span>(257) [occurs] occurs:sub_term(_89316, e)
    <span class="ansi1 ansi34"
->Unify: </span>(257) [occurs] occurs:sub_term(_82012, e)
+>Unify: </span>(257) [occurs] occurs:sub_term(_89316, e)
    <span class="ansi1 ansi32"
 >Call: </span>(258) [system] compound(e)
    <span class="ansi1 ansi31"
 >Fail: </span>(258) [system] compound(e)
    <span class="ansi1 ansi31"
->Fail: </span>(257) [occurs] occurs:sub_term(_82012, e)
+>Fail: </span>(257) [occurs] occurs:sub_term(_89316, e)
 ^  <span class="ansi1 ansi33"
->Redo: </span>(256) [user] trace_eval(eval_20(=, _5700), e, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(256) [user] trace_eval(eval_20(=, _5700), e, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
    <span class="ansi1 ansi32"
->Call: </span>(257) [system] _92230=e
+>Call: </span>(257) [system] _100502=e
    <span class="ansi1 ansi32"
 >Exit: </span>(257) [system] e=e
 ^  <span class="ansi1 ansi32"
->Call: </span>(257) [user] if_trace((eval;e), (_66694=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))
+>Call: </span>(257) [user] if_trace((eval;e), (_72414=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(257) [user] if_trace((eval;e), (_66694=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))
+>Unify: </span>(257) [user] if_trace((eval;e), (_72414=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))
 ^  <span class="ansi1 ansi32"
->Call: </span>(259) [system] setup_call_cleanup('$notrace'(_96034, _96036), once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _66694=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]]))), _95992, fbug((_95992-->if_trace((eval;e), (_66694=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))))))), '$restore_trace'(_96034, _96036))
+>Call: </span>(259) [system] setup_call_cleanup('$notrace'(_104658, _104660), once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _72414=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]]))), _104616, fbug((_104616-->if_trace((eval;e), (_72414=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))))))), '$restore_trace'(_104658, _104660))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [system] setup_call_cleanup(system:'$notrace'(_96034, _96036), system:once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _66694=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]]))), _95992, fbug((_95992-->if_trace((eval;e), (_66694=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))))))), system:'$restore_trace'(_96034, _96036))
+>Unify: </span>(259) [system] setup_call_cleanup(system:'$notrace'(_104658, _104660), system:once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _72414=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]]))), _104616, fbug((_104616-->if_trace((eval;e), (_72414=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))))))), system:'$restore_trace'(_104658, _104660))
 ^  <span class="ansi1 ansi32"
->Call: </span>(260) [system] sig_atomic(system:'$notrace'(_96034, _96036))
+>Call: </span>(260) [system] sig_atomic(system:'$notrace'(_104658, _104660))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(259) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _66694=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]]))), _95992, fbug((_95992-->if_trace((eval;e), (_66694=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))))))), system:'$restore_trace'(3, -1))
+>Exit: </span>(259) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _72414=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]]))), _104616, fbug((_104616-->if_trace((eval;e), (_72414=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))))))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(257) [user] if_trace((eval;e), (_66694=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))
+>Exit: </span>(257) [user] if_trace((eval;e), (_72414=1, indentq(1, 1, -->, [e, ['save-space!', '&gen-space', "save-space-test.tmp"]])))
    <span class="ansi1 ansi32"
->Call: </span>(257) [system] _100816=retval(fail)
+>Call: </span>(257) [system] _109880=retval(fail)
    <span class="ansi1 ansi32"
 >Exit: </span>(257) [system] retval(fail)=retval(fail)
    <span class="ansi1 ansi32"
->Call: </span>(257) [system] _102678=(\+ \+ (flag(eval_num, _102698, _102698+1), (retval(fail)\=@=retval(fail), nonvar(_64724)->indentq(1, _102698, <--, [e, _64724]);indentq(1, _102698, <--, [e, retval(fail)]))))
+>Call: </span>(257) [system] _111918=(\+ \+ (flag(eval_num, _111938, _111938+1), (retval(fail)\=@=retval(fail), nonvar(_70268)->indentq(1, _111938, <--, [e, _70268]);indentq(1, _111938, <--, [e, retval(fail)]))))
    <span class="ansi1 ansi32"
->Exit: </span>(257) [system] (\+ \+ (flag(eval_num, _102698, _102698+1), (retval(fail)\=@=retval(fail), nonvar(_64724)->indentq(1, _102698, <--, [e, _64724]);indentq(1, _102698, <--, [e, retval(fail)]))))=(\+ \+ (flag(eval_num, _102698, _102698+1), (retval(fail)\=@=retval(fail), nonvar(_64724)->indentq(1, _102698, <--, [e, _64724]);indentq(1, _102698, <--, [e, retval(fail)]))))
+>Exit: </span>(257) [system] (\+ \+ (flag(eval_num, _111938, _111938+1), (retval(fail)\=@=retval(fail), nonvar(_70268)->indentq(1, _111938, <--, [e, _70268]);indentq(1, _111938, <--, [e, retval(fail)]))))=(\+ \+ (flag(eval_num, _111938, _111938+1), (retval(fail)\=@=retval(fail), nonvar(_70268)->indentq(1, _111938, <--, [e, _70268]);indentq(1, _111938, <--, [e, retval(fail)]))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(257) [user] call_cleanup(((call(eval_20(=, _5700), 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)*->nb_setarg(1, retval(fail), _64724);fail, trace, call(eval_20(=, _5700), 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)), ignore(notrace((\+_64724\=_66824, nb_setarg(1, retval(fail), _64724))))), ignore((_66694==1->ignore(\+ \+ (flag(eval_num, _102698, _102698+1), (retval(fail)\=@=retval(fail), nonvar(_64724)->indentq(1, _102698, <--, [e, _64724]);indentq(1, _102698, <--, [e, retval(fail)]))));notrace(ignore(if_t(1<30, if_trace((eval;e), ignore(\+ \+ (flag(eval_num, _102698, _102698+1), (retval(fail)\=@=retval(fail), nonvar(_64724)->indentq(1, _102698, <--, [e, _64724]);indentq(1, _102698, <--, [e, retval(fail)])))))))))))
+>Call: </span>(257) [user] call_cleanup(((call(eval_20(=, _5700), 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)*->nb_setarg(1, retval(fail), _70268);fail, trace, call(eval_20(=, _5700), 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)), ignore(notrace((\+_70268\=_72544, nb_setarg(1, retval(fail), _70268))))), ignore((_72414==1->ignore(\+ \+ (flag(eval_num, _111938, _111938+1), (retval(fail)\=@=retval(fail), nonvar(_70268)->indentq(1, _111938, <--, [e, _70268]);indentq(1, _111938, <--, [e, retval(fail)]))));notrace(ignore(if_t(1<30, if_trace((eval;e), ignore(\+ \+ (flag(eval_num, _111938, _111938+1), (retval(fail)\=@=retval(fail), nonvar(_70268)->indentq(1, _111938, <--, [e, _70268]);indentq(1, _111938, <--, [e, retval(fail)])))))))))))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(257) [system] call_cleanup(user:((call(eval_20(=, _5700), 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)*->nb_setarg(1, retval(fail), _64724);fail, trace, call(eval_20(=, _5700), 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)), ignore(notrace((\+_64724\=_66824, nb_setarg(1, retval(fail), _64724))))), user:ignore((_66694==1->ignore(\+ \+ (flag(eval_num, _102698, _102698+1), (retval(fail)\=@=retval(fail), nonvar(_64724)->indentq(1, _102698, <--, [e, _64724]);indentq(1, _102698, <--, [e, retval(fail)]))));notrace(ignore(if_t(1<30, if_trace((eval;e), ignore(\+ \+ (flag(eval_num, _102698, _102698+1), (retval(fail)\=@=retval(fail), nonvar(_64724)->indentq(1, _102698, <--, [e, _64724]);indentq(1, _102698, <--, [e, retval(fail)])))))))))))
+>Unify: </span>(257) [system] call_cleanup(user:((call(eval_20(=, _5700), 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)*->nb_setarg(1, retval(fail), _70268);fail, trace, call(eval_20(=, _5700), 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)), ignore(notrace((\+_70268\=_72544, nb_setarg(1, retval(fail), _70268))))), user:ignore((_72414==1->ignore(\+ \+ (flag(eval_num, _111938, _111938+1), (retval(fail)\=@=retval(fail), nonvar(_70268)->indentq(1, _111938, <--, [e, _70268]);indentq(1, _111938, <--, [e, retval(fail)]))));notrace(ignore(if_t(1<30, if_trace((eval;e), ignore(\+ \+ (flag(eval_num, _111938, _111938+1), (retval(fail)\=@=retval(fail), nonvar(_70268)->indentq(1, _111938, <--, [e, _70268]);indentq(1, _111938, <--, [e, retval(fail)])))))))))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Call: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] atom(['save-space!', '&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi32"
 >Call: </span>(260) [user] no_eval(['save-space!', '&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi34"
@@ -1200,11 +1200,11 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
 ^  <span class="ansi1 ansi34"
 >Unify: </span>(261) [user] self_eval(['save-space!', '&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi32"
->Call: </span>(263) [system] setup_call_cleanup('$notrace'(_115084, _115086), once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), '$restore_trace'(_115084, _115086))
+>Call: </span>(263) [system] setup_call_cleanup('$notrace'(_125468, _125470), once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), '$restore_trace'(_125468, _125470))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(263) [system] setup_call_cleanup(system:'$notrace'(_115084, _115086), system:once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), system:'$restore_trace'(_115084, _115086))
+>Unify: </span>(263) [system] setup_call_cleanup(system:'$notrace'(_125468, _125470), system:once(user:self_eval0(['save-space!', '&gen-space', "save-space-test.tmp"])), system:'$restore_trace'(_125468, _125470))
 ^  <span class="ansi1 ansi32"
->Call: </span>(264) [system] sig_atomic(system:'$notrace'(_115084, _115086))
+>Call: </span>(264) [system] sig_atomic(system:'$notrace'(_125468, _125470))
 ^  <span class="ansi1 ansi31"
 >Fail: </span>(261) [user] self_eval(['save-space!', '&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi33"
@@ -1222,15 +1222,15 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
    <span class="ansi1 ansi32"
 >Call: </span>(262) [system] number('save-space!')
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] ['&gen-space', "save-space-test.tmp"]==[]
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] atom(=)
    <span class="ansi1 ansi32"
@@ -1238,21 +1238,21 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] (=)\==(=)
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] callable('save-space!')
    <span class="ansi1 ansi32"
 >Exit: </span>(260) [system] callable('save-space!')
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], [_136532])
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], [_148940])
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] ['&gen-space', "save-space-test.tmp"]==[]
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] is_list(['&gen-space', "save-space-test.tmp"])
    <span class="ansi1 ansi32"
@@ -1260,89 +1260,89 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] is_list('save-space!')
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] is_list(['&gen-space', "save-space-test.tmp"])
    <span class="ansi1 ansi32"
 >Exit: </span>(260) [system] is_list(['&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] is_list(['save-space!', '&gen-space', "save-space-test.tmp"])
    <span class="ansi1 ansi32"
 >Exit: </span>(260) [system] is_list(['save-space!', '&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], ['save-space!'|_149600])
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], ['save-space!'|_163240])
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] var('save-space!')
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi32"
->Call: </span>(260) [user] once(expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], _153362))
+>Call: </span>(260) [user] once(expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], _167354))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(260) [system] once(user:expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], _153362))
+>Unify: </span>(260) [system] once(user:expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], _167354))
 ^  <span class="ansi1 ansi32"
->Call: </span>(261) [user] expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], _153362)
+>Call: </span>(261) [user] expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], _167354)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(261) [user] expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], _153362)
+>Unify: </span>(261) [user] expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], _167354)
    <span class="ansi1 ansi32"
 >Call: </span>(262) [system] is_list(['save-space!', '&gen-space', "save-space-test.tmp"])
    <span class="ansi1 ansi32"
 >Exit: </span>(262) [system] is_list(['save-space!', '&gen-space', "save-space-test.tmp"])
 ^  <span class="ansi1 ansi34"
->Unify: </span>(261) [user] expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], ['save-space!'|_158938])
+>Unify: </span>(261) [user] expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], ['save-space!'|_173458])
    <span class="ansi1 ansi32"
 >Call: </span>(262) [system] ground('save-space!')
    <span class="ansi1 ansi32"
 >Exit: </span>(262) [system] ground('save-space!')
 ^  <span class="ansi1 ansi34"
->Unify: </span>(261) [user] expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], ['save-space!'|_161720])
+>Unify: </span>(261) [user] expand_eval(['save-space!', '&gen-space', "save-space-test.tmp"], ['save-space!'|_176504])
 ^  <span class="ansi1 ansi32"
->Call: </span>(262) [user] apply:maplist(expand_eval, ['&gen-space', "save-space-test.tmp"], _161720)
+>Call: </span>(262) [user] apply:maplist(expand_eval, ['&gen-space', "save-space-test.tmp"], _176504)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(262) [apply] apply:maplist(user:expand_eval, ['&gen-space', "save-space-test.tmp"], _161720)
+>Unify: </span>(262) [apply] apply:maplist(user:expand_eval, ['&gen-space', "save-space-test.tmp"], _176504)
    <span class="ansi1 ansi32"
->Call: </span>(263) [apply] apply:maplist_(['&gen-space', "save-space-test.tmp"], _161720, user:expand_eval)
+>Call: </span>(263) [apply] apply:maplist_(['&gen-space', "save-space-test.tmp"], _176504, user:expand_eval)
    <span class="ansi1 ansi34"
->Unify: </span>(263) [apply] apply:maplist_(['&gen-space', "save-space-test.tmp"], [_165466|_165468], user:expand_eval)
+>Unify: </span>(263) [apply] apply:maplist_(['&gen-space', "save-space-test.tmp"], [_180602|_180604], user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Call: </span>(264) [user] expand_eval('&gen-space', _165466)
+>Call: </span>(264) [user] expand_eval('&gen-space', _180602)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(264) [user] expand_eval('&gen-space', _165466)
+>Unify: </span>(264) [user] expand_eval('&gen-space', _180602)
    <span class="ansi1 ansi32"
 >Call: </span>(265) [system] is_list('&gen-space')
 ^  <span class="ansi1 ansi33"
->Redo: </span>(264) [user] expand_eval('&gen-space', _165466)
+>Redo: </span>(264) [user] expand_eval('&gen-space', _180602)
    <span class="ansi1 ansi32"
->Call: </span>(265) [system] '&gen-space'=_165466
+>Call: </span>(265) [system] '&gen-space'=_180602
    <span class="ansi1 ansi32"
 >Exit: </span>(265) [system] '&gen-space'='&gen-space'
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(264) [user] expand_eval('&gen-space', '&gen-space')
    <span class="ansi1 ansi32"
->Call: </span>(264) [apply] apply:maplist_(["save-space-test.tmp"], _165468, user:expand_eval)
+>Call: </span>(264) [apply] apply:maplist_(["save-space-test.tmp"], _180604, user:expand_eval)
    <span class="ansi1 ansi34"
->Unify: </span>(264) [apply] apply:maplist_(["save-space-test.tmp"], [_173828|_173830], user:expand_eval)
+>Unify: </span>(264) [apply] apply:maplist_(["save-space-test.tmp"], [_189756|_189758], user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Call: </span>(265) [user] expand_eval("save-space-test.tmp", _173828)
+>Call: </span>(265) [user] expand_eval("save-space-test.tmp", _189756)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(265) [user] expand_eval("save-space-test.tmp", _173828)
+>Unify: </span>(265) [user] expand_eval("save-space-test.tmp", _189756)
    <span class="ansi1 ansi32"
 >Call: </span>(266) [system] is_list("save-space-test.tmp")
 ^  <span class="ansi1 ansi33"
->Redo: </span>(265) [user] expand_eval("save-space-test.tmp", _173828)
+>Redo: </span>(265) [user] expand_eval("save-space-test.tmp", _189756)
    <span class="ansi1 ansi32"
->Call: </span>(266) [system] "save-space-test.tmp"=_173828
+>Call: </span>(266) [system] "save-space-test.tmp"=_189756
    <span class="ansi1 ansi32"
 >Exit: </span>(266) [system] "save-space-test.tmp"="save-space-test.tmp"
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(265) [user] expand_eval("save-space-test.tmp", "save-space-test.tmp")
    <span class="ansi1 ansi32"
->Call: </span>(265) [apply] apply:maplist_([], _173830, user:expand_eval)
+>Call: </span>(265) [apply] apply:maplist_([], _189758, user:expand_eval)
    <span class="ansi1 ansi34"
 >Unify: </span>(265) [apply] apply:maplist_([], [], user:expand_eval)
    <span class="ansi1 ansi32"
@@ -1360,9 +1360,9 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] ['save-space!', '&gen-space', "save-space-test.tmp"]\==['save-space!', '&gen-space', "save-space-test.tmp"]
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi32"
 >Call: </span>(260) [user] is_progn('save-space!')
 ^  <span class="ansi1 ansi34"
@@ -1370,71 +1370,71 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
    <span class="ansi1 ansi32"
 >Call: </span>(261) [system] var('save-space!')
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi32"
 >Call: </span>(260) [user] is_space_op('save-space!')
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
    <span class="ansi1 ansi32"
 >Call: </span>(260) [system] is_list('&gen-space')
 ^  <span class="ansi1 ansi33"
->Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Redo: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _64724)
+>Unify: </span>(259) [user] eval_20(=, _5700, 498, '&self', ['save-space!', '&gen-space', "save-space-test.tmp"], _70268)
    <span class="ansi1 ansi32"
->Call: </span>(260) [user] into_space(498, '&self', '&gen-space', _201812)
+>Call: </span>(260) [user] into_space(498, '&self', '&gen-space', _220380)
    <span class="ansi1 ansi34"
 >Unify: </span>(260) [user] into_space(498, '&self', '&gen-space', '&self')
    <span class="ansi1 ansi32"
 >Call: </span>(261) [system] '&gen-space'=='&self'
    <span class="ansi1 ansi33"
->Redo: </span>(260) [user] into_space(498, '&self', '&gen-space', _201812)
+>Redo: </span>(260) [user] into_space(498, '&self', '&gen-space', _220380)
    <span class="ansi1 ansi34"
 >Unify: </span>(260) [user] into_space(498, '&self', '&gen-space', '&self')
    <span class="ansi1 ansi32"
 >Call: </span>(261) [system] '&gen-space'=='None'
    <span class="ansi1 ansi33"
->Redo: </span>(260) [user] into_space(498, '&self', '&gen-space', _201812)
+>Redo: </span>(260) [user] into_space(498, '&self', '&gen-space', _220380)
    <span class="ansi1 ansi34"
->Unify: </span>(260) [user] into_space(498, '&self', '&gen-space', _201812)
+>Unify: </span>(260) [user] into_space(498, '&self', '&gen-space', _220380)
    <span class="ansi1 ansi32"
->Call: </span>(261) [user] eval_H(498, '&self', '&gen-space', _201812)
+>Call: </span>(261) [user] eval_H(498, '&self', '&gen-space', _220380)
    <span class="ansi1 ansi34"
->Unify: </span>(261) [user] eval_H(498, '&self', '&gen-space', _201812)
+>Unify: </span>(261) [user] eval_H(498, '&self', '&gen-space', _220380)
 ^  <span class="ansi1 ansi32"
->Call: </span>(262) [user] catch_metta_return(eval_args(=, _211066, 498, '&self', '&gen-space', _201812), _201812)
+>Call: </span>(262) [user] catch_metta_return(eval_args(=, _230514, 498, '&self', '&gen-space', _220380), _220380)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(262) [user] catch_metta_return(eval_args(=, _211066, 498, '&self', '&gen-space', _201812), _201812)
+>Unify: </span>(262) [user] catch_metta_return(eval_args(=, _230514, 498, '&self', '&gen-space', _220380), _220380)
 ^  <span class="ansi1 ansi32"
->Call: </span>(264) [user] eval_args(=, _211066, 498, '&self', '&gen-space', _201812)
+>Call: </span>(264) [user] eval_args(=, _230514, 498, '&self', '&gen-space', _220380)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(264) [user] eval_args(=, _211066, 498, '&self', '&gen-space', _201812)
+>Unify: </span>(264) [user] eval_args(=, _230514, 498, '&self', '&gen-space', _220380)
    <span class="ansi1 ansi32"
 >Call: </span>(265) [system] var('&gen-space')
 ^  <span class="ansi1 ansi33"
->Redo: </span>(264) [user] eval_args(=, _211066, 498, '&self', '&gen-space', _201812)
+>Redo: </span>(264) [user] eval_args(=, _230514, 498, '&self', '&gen-space', _220380)
 ^  <span class="ansi1 ansi34"
->Unify: </span>(264) [user] eval_args(=, _211066, 498, '&self', '&gen-space', _201812)
+>Unify: </span>(264) [user] eval_args(=, _230514, 498, '&self', '&gen-space', _220380)
 ^  <span class="ansi1 ansi32"
->Call: </span>(266) [system] setup_call_cleanup('$notrace'(_217672, _217674), once(user:self_eval('&gen-space')), '$restore_trace'(_217672, _217674))
+>Call: </span>(266) [system] setup_call_cleanup('$notrace'(_237736, _237738), once(user:self_eval('&gen-space')), '$restore_trace'(_237736, _237738))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(266) [system] setup_call_cleanup(system:'$notrace'(_217672, _217674), system:once(user:self_eval('&gen-space')), system:'$restore_trace'(_217672, _217674))
+>Unify: </span>(266) [system] setup_call_cleanup(system:'$notrace'(_237736, _237738), system:once(user:self_eval('&gen-space')), system:'$restore_trace'(_237736, _237738))
 ^  <span class="ansi1 ansi32"
->Call: </span>(267) [system] sig_atomic(system:'$notrace'(_217672, _217674))
+>Call: </span>(267) [system] sig_atomic(system:'$notrace'(_237736, _237738))
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(266) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:self_eval('&gen-space')), system:'$restore_trace'(3, -1))
    <span class="ansi1 ansi32"
->Call: </span>(265) [system] _201812='&gen-space'
+>Call: </span>(265) [system] _220380='&gen-space'
    <span class="ansi1 ansi32"
 >Exit: </span>(265) [system] '&gen-space'='&gen-space'
 ^  <span class="ansi1 ansi32"
->Exit: </span>(264) [user] eval_args(=, _211066, 498, '&self', '&gen-space', '&gen-space')
+>Exit: </span>(264) [user] eval_args(=, _230514, 498, '&self', '&gen-space', '&gen-space')
 ^  <span class="ansi1 ansi32"
->Exit: </span>(262) [user] catch_metta_return(eval_args(=, _211066, 498, '&self', '&gen-space', '&gen-space'), '&gen-space')
+>Exit: </span>(262) [user] catch_metta_return(eval_args(=, _230514, 498, '&self', '&gen-space', '&gen-space'), '&gen-space')
    <span class="ansi1 ansi32"
 >Exit: </span>(261) [user] eval_H(498, '&self', '&gen-space', '&gen-space')
    <span class="ansi1 ansi32"
@@ -1444,29 +1444,29 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
 ^  <span class="ansi1 ansi34"
 >Unify: </span>(260) [user] 'save-space!'('&gen-space', "save-space-test.tmp")
 ^  <span class="ansi1 ansi32"
->Call: </span>(261) [user] setup_call_cleanup(open("save-space-test.tmp", write, _228930, []), with_output_to(_228930, forall(get_atoms('&gen-space', _228950), write_src(_228950))), close(_228930))
+>Call: </span>(261) [user] setup_call_cleanup(open("save-space-test.tmp", write, _250050, []), with_output_to(_250050, forall(get_atoms('&gen-space', _250070), write_src(_250070))), close(_250050))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(261) [system] setup_call_cleanup(user:open("save-space-test.tmp", write, _228930, []), user:with_output_to(_228930, forall(get_atoms('&gen-space', _228950), write_src(_228950))), user:close(_228930))
+>Unify: </span>(261) [system] setup_call_cleanup(user:open("save-space-test.tmp", write, _250050, []), user:with_output_to(_250050, forall(get_atoms('&gen-space', _250070), write_src(_250070))), user:close(_250050))
 ^  <span class="ansi1 ansi32"
->Call: </span>(262) [system] sig_atomic(user:open("save-space-test.tmp", write, _228930, []))
+>Call: </span>(262) [system] sig_atomic(user:open("save-space-test.tmp", write, _250050, []))
    <span class="ansi1 ansi32"
->Call: </span>(264) [system] open("save-space-test.tmp", write, _228930, [])
+>Call: </span>(264) [system] open("save-space-test.tmp", write, _250050, [])
    <span class="ansi1 ansi32"
->Exit: </span>(264) [system] open("save-space-test.tmp", write, <stream>(0x55d19c621a30), [])
+>Exit: </span>(264) [system] open("save-space-test.tmp", write, <stream>(0x5595cfd7a540), [])
 ^  <span class="ansi1 ansi32"
->Exit: </span>(262) [system] sig_atomic(user:open("save-space-test.tmp", write, <stream>(0x55d19c621a30), []))
+>Exit: </span>(262) [system] sig_atomic(user:open("save-space-test.tmp", write, <stream>(0x5595cfd7a540), []))
 ^  <span class="ansi1 ansi32"
->Call: </span>(262) [user] with_output_to(<stream>(0x55d19c621a30), forall(get_atoms('&gen-space', _228950), write_src(_228950)))
+>Call: </span>(262) [user] with_output_to(<stream>(0x5595cfd7a540), forall(get_atoms('&gen-space', _250070), write_src(_250070)))
 ^  <span class="ansi1 ansi32"
->Call: </span>(264) [user] forall(get_atoms('&gen-space', _228950), write_src(_228950))
+>Call: </span>(264) [user] forall(get_atoms('&gen-space', _250070), write_src(_250070))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(264) [$apply] forall(user:get_atoms('&gen-space', _228950), user:write_src(_228950))
+>Unify: </span>(264) [$apply] forall(user:get_atoms('&gen-space', _250070), user:write_src(_250070))
    <span class="ansi1 ansi32"
->Call: </span>(265) [user] get_atoms('&gen-space', _228950)
+>Call: </span>(265) [user] get_atoms('&gen-space', _250070)
 <span class="ansi34"
 >% Got uncaught (guard = 'C') exception existence_error(procedure,get_atoms/2) (Ctx0='$apply':forall/2)
 </span>   <span class="ansi1 ansi35"
->Exception: </span>(265) [user] get_atoms('&gen-space', _228950) ? <span class="ansi1 ansi90"
+>Exception: </span>(265) [user] get_atoms('&gen-space', _250070) ? <span class="ansi1 ansi90"
 >Info: Processing progress: 100% </span><span class="ansi1 ansi90"
 > - Stopping reporting on /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/output_load_tests.metta progress.
 </span><span class="ansi1 ansi90"
@@ -1482,7 +1482,7 @@ Deterministic: ((Error  (got  ((metta "(bar 1)" Number &new-space))) (expected  
 >Info: Processing progress: 100% </span><span class="ansi1 ansi90"
 > - Stopping reporting on /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/output_load_tests.tmp progress.
 </span>
-Script done on 2024-11-15 23:12:28+00:00 [COMMAND_EXIT_CODE="143"]
+Script done on 2024-11-19 18:04:56+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>
