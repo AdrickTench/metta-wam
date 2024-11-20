@@ -46,7 +46,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-20 21:33:34+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-20 21:35:58+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -378,9 +378,9 @@ Script started on 2024-11-20 21:33:34+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         (= 12  "[()]")
 P;HTML|
-;                                         (= 13  "0.04user 0.00system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 26248maxresident)k")
+;                                         (= 13  "0.04user 0.00system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 26252maxresident)k")
 P;HTML|
-;                                         (= 13  "0inputs+0outputs (0major+3125minor)pagefaults 0swaps")
+;                                         (= 13  "0inputs+0outputs (0major+3123minor)pagefaults 0swaps")
 <span class="ansi1 ansi90"
 >
 Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Metatypes___MeTTa_Language1.metta is 929 bytes (49 lines)
@@ -404,7 +404,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lan
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000430 secs. (430.15 microseconds) 
+; took 0.000415 secs. (414.60 microseconds) 
 
 !(assertEqualToResult (println "xx 25 ") ((println "xx 25 ")))
 
@@ -421,7 +421,7 @@ Deterministic: ()
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000164 secs. (164.15 microseconds) 
+; took 0.000157 secs. (157.37 microseconds) 
 
 !(assertEqualToResult (get-metatype 1) (Grounded))
 
@@ -444,7 +444,7 @@ Deterministic: ()
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000377 secs. (376.91 microseconds) 
+; took 0.000396 secs. (396.21 microseconds) 
 
 !(assertEqualToResult (println "xx 26 ") ((println "xx 26 ")))
 
@@ -461,7 +461,7 @@ Deterministic: ()
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000304 secs. (303.75 microseconds) 
+; took 0.000397 secs. (397.38 microseconds) 
 
 !(assertEqualToResult (get-metatype +) (Grounded))
 
@@ -484,7 +484,7 @@ Deterministic: ()
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000303 secs. (303.37 microseconds) 
+; took 0.000375 secs. (375.09 microseconds) 
 
 !(assertEqualToResult (println "xx 27 ") ((println "xx 27 ")))
 
@@ -501,7 +501,7 @@ Deterministic: ()
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000182 secs. (182.35 microseconds) 
+; took 0.000186 secs. (186.49 microseconds) 
 
 !(assertEqualToResult (get-metatype (+ 1 2)) (Expression))
 
@@ -524,7 +524,7 @@ Deterministic: ((Error  (got  (Grounded)) (expected  (Expression))))
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000304 secs. (303.91 microseconds) 
+; took 0.000393 secs. (393.00 microseconds) 
 
 !(assertEqualToResult (println "xx 28 ") ((println "xx 28 ")))
 
@@ -541,7 +541,7 @@ Deterministic: ()
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000288 secs. (287.70 microseconds) 
+; took 0.000342 secs. (341.54 microseconds) 
 
 !(assertEqualToResult (get-metatype a) (Symbol))
 
@@ -564,7 +564,7 @@ Deterministic: ()
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000300 secs. (299.84 microseconds) 
+; took 0.000358 secs. (358.25 microseconds) 
 
 !(assertEqualToResult (println "xx 29 ") ((println "xx 29 ")))
 
@@ -581,7 +581,7 @@ Deterministic: ()
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000152 secs. (152.01 microseconds) 
+; took 0.000137 secs. (136.98 microseconds) 
 
 !(assertEqualToResult (get-metatype (a b)) (Expression))
 
@@ -604,7 +604,7 @@ Deterministic: ()
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.11</h3>
 ; 
 ; EVAL TEST
-; took 0.000351 secs. (351.25 microseconds) 
+; took 0.000371 secs. (370.92 microseconds) 
 
 !(assertEqualToResult (println "xx 30 ") ((println "xx 30 ")))
 
@@ -621,7 +621,7 @@ Deterministic: ()
 >;; METTA-LANG.METATYPES---METTA-LANGUAGE1.12</h3>
 ; 
 ; EVAL TEST
-; took 0.000135 secs. (134.93 microseconds) 
+; took 0.000156 secs. (155.55 microseconds) 
 
 !(assertEqualToResult (get-metatype $x) (Variable))
 
@@ -631,7 +631,7 @@ Deterministic: ()
 Deterministic: ()
 ;;;  !(assertEqualToResult ( )  (  )  ) 
 <span class="ansi32"
->% 460,437 inferences, 0.122 CPU in 0.125 seconds (98% CPU, 3770765 Lips)
+>% 487,827 inferences, 0.134 CPU in 0.136 seconds (98% CPU, 3651971 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Metatypes___MeTTa_Language1.metta  0)
 <span class="ansi1"
@@ -782,7 +782,7 @@ Deterministic: ()
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-11-20 21:33:41+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-20 21:36:06+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

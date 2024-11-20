@@ -28,20 +28,12 @@
 .ansi38-255238088 { color: #FFEE58; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
-.ansi38-255165009 { color: #FFA509; }
-.ansi38-255238088 { color: #FFEE58; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
-.ansi38-255165009 { color: #FFA509; }
-.ansi38-255238088 { color: #FFEE58; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
-.ansi38-255165009 { color: #FFA509; }
-.ansi38-255238088 { color: #FFEE58; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
-.ansi38-255165009 { color: #FFA509; }
-.ansi38-255238088 { color: #FFEE58; }
 .ansi38-013099040 { color: #0D6328; }
 .ansi38-013099040 { color: #0D6328; }
 </style>
@@ -49,7 +41,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-20 21:33:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-20 21:35:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -363,27 +355,17 @@ Script started on 2024-11-20 21:33:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         (= 3  "[(println \"xx 20 \")]")
 P;HTML|
-;                                         (= 4  "[()]")
+;                                         (= 4  "[(Error (assertEqualToResult (collapse (color)) ((green yellow red))) ")
 P;HTML|
-;                                         (= 5  "[(println \"xx 21 \")]")
+;                                         (= 4  "Expected: [(green yellow red)]")
 P;HTML|
-;                                         (= 6  "[()]")
+;                                         (= 4  "Got: [(red green yellow)]")
 P;HTML|
-;                                         (= 7  "[(println \"xx 22 \")]")
+;                                         (= 5  "Missed result: (green yellow red))]")
 P;HTML|
-;                                         (= 8  "[()]")
+;                                         (= 5  "0.04user 0.00system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 26092maxresident)k")
 P;HTML|
-;                                         (= 9  "[(println \"xx 23 \")]")
-P;HTML|
-;                                         (= 10  "[()]")
-P;HTML|
-;                                         (= 11  "[(println \"xx 24 \")]")
-P;HTML|
-;                                         (= 12  "[()]")
-P;HTML|
-;                                         (= 13  "0.04user 0.01system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 26228maxresident)k")
-P;HTML|
-;                                         (= 13  "0inputs+0outputs (0major+3150minor)pagefaults 0swaps")
+;                                         (= 5  "0inputs+0outputs (0major+3114minor)pagefaults 0swaps")
 <span class="ansi1 ansi90"
 >
 Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language8.metta is 1.18K bytes (72 lines)
@@ -413,7 +395,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lan
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000380 secs. (379.56 microseconds) 
+; took 0.000457 secs. (456.58 microseconds) 
 
 !(assertEqualToResult (println "xx 19 ") ((println "xx 19 ")))
 
@@ -430,7 +412,7 @@ Deterministic: ()
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000305 secs. (304.74 microseconds) 
+; took 0.000329 secs. (328.52 microseconds) 
 
 !(assertEqualToResult (color) (green yellow red))
 
@@ -453,7 +435,7 @@ Deterministic: ()
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000295 secs. (294.90 microseconds) 
+; took 0.000361 secs. (360.98 microseconds) 
 
 !(assertEqualToResult (println "xx 20 ") ((println "xx 20 ")))
 
@@ -470,7 +452,7 @@ Deterministic: ()
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000578 secs. (578.30 microseconds) 
+; took 0.000734 secs. (734.23 microseconds) 
 
 !(assertEqualToResult (collapse (color)) ((green yellow red)))
 
@@ -481,37 +463,21 @@ Deterministic: ()
 ;;;! (let $x (collapse (color))
 ;;;    (superpose $x))  
 ;;; [green, yellow, red]
-<span class="ansi38-255165009"
->;; In file as:  
-</span><span class="ansi1 ansi38-255238088"
->!(println "xx 21 ")
-</span>;; To unit test case:
 <span class="ansi38-013099040"
->!(assertEqualToResult (println "xx 21 ") ((println "xx 21 ")))
+>!(println "xx 21 ")
+
+</span>
+Deterministic: (println "xx 21 ")
+;;; ready works  
+<span class="ansi38-013099040"
+>!(assertEqualToResult (let $x (collapse (color)) (superpose $x)) (green yellow red))
 
 </span>
 ;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.05"
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000277 secs. (276.67 microseconds) 
-
-!(assertEqualToResult (println "xx 21 ") ((println "xx 21 ")))
-
-<span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((println "xx 21 ")) ((println "xx 21 "))))
-</span>
-Deterministic: ()
-;;; ready works  
-<span class="ansi38-013099040"
->!(assertEqualToResult (let $x (collapse (color)) (superpose $x)) (green yellow red))
-
-</span>
-;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.06"
->;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.06</h3>
-; 
-; EVAL TEST
-; took 0.000746 secs. (745.51 microseconds) 
+; took 0.000770 secs. (769.99 microseconds) 
 
 !(assertEqualToResult (let $x (collapse (color)) (superpose $x)) (green yellow red))
 
@@ -521,37 +487,21 @@ Deterministic: ()
 Deterministic: ()
 ;;;! (superpose (1 2 3)) 
 ;;; [1, 2, 3]
-<span class="ansi38-255165009"
->;; In file as:  
-</span><span class="ansi1 ansi38-255238088"
->!(println "xx 22 ")
-</span>;; To unit test case:
 <span class="ansi38-013099040"
->!(assertEqualToResult (println "xx 22 ") ((println "xx 22 ")))
+>!(println "xx 22 ")
 
 </span>
-;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.07"
->;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.07</h3>
-; 
-; EVAL TEST
-; took 0.000287 secs. (286.56 microseconds) 
-
-!(assertEqualToResult (println "xx 22 ") ((println "xx 22 ")))
-
-<span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((println "xx 22 ")) ((println "xx 22 "))))
-</span>
-Deterministic: ()
+Deterministic: (println "xx 22 ")
 ;;; ready works  
 <span class="ansi38-013099040"
 >!(assertEqualToResult (superpose (1 2 3)) (1 2 3))
 
 </span>
-;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.08"
->;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.08</h3>
+;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.06"
+>;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000163 secs. (162.95 microseconds) 
+; took 0.000158 secs. (158.04 microseconds) 
 
 !(assertEqualToResult (superpose (1 2 3)) (1 2 3))
 
@@ -561,37 +511,21 @@ Deterministic: ()
 Deterministic: ()
 ;;;! (collapse (superpose (1 2 3)))
 ;;; [(1 2 3)]
-<span class="ansi38-255165009"
->;; In file as:  
-</span><span class="ansi1 ansi38-255238088"
->!(println "xx 23 ")
-</span>;; To unit test case:
 <span class="ansi38-013099040"
->!(assertEqualToResult (println "xx 23 ") ((println "xx 23 ")))
+>!(println "xx 23 ")
 
 </span>
-;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.09"
->;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.09</h3>
-; 
-; EVAL TEST
-; took 0.000303 secs. (303.27 microseconds) 
-
-!(assertEqualToResult (println "xx 23 ") ((println "xx 23 ")))
-
-<span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((println "xx 23 ")) ((println "xx 23 "))))
-</span>
-Deterministic: ()
+Deterministic: (println "xx 23 ")
 ;;; ready works  
 <span class="ansi38-013099040"
 >!(assertEqualToResult (collapse (superpose (1 2 3))) ((1 2 3)))
 
 </span>
-;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.10"
->;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.10</h3>
+;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.07"
+>;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000425 secs. (425.21 microseconds) 
+; took 0.000432 secs. (431.60 microseconds) 
 
 !(assertEqualToResult (collapse (superpose (1 2 3))) ((1 2 3)))
 
@@ -602,37 +536,21 @@ Deterministic: ()
 ;;;! (let $x (superpose (1 2 3)) 
 ;;;    (collapse $x))    
 ;;; [(1), (2), (3)]
-<span class="ansi38-255165009"
->;; In file as:  
-</span><span class="ansi1 ansi38-255238088"
->!(println "xx 24 ")
-</span>;; To unit test case:
 <span class="ansi38-013099040"
->!(assertEqualToResult (println "xx 24 ") ((println "xx 24 ")))
+>!(println "xx 24 ")
 
 </span>
-;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.11"
->;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.11</h3>
-; 
-; EVAL TEST
-; took 0.000319 secs. (318.60 microseconds) 
-
-!(assertEqualToResult (println "xx 24 ") ((println "xx 24 ")))
-
-<span class="ansi36"
->(loonit_success  (equal_enough_for_test  ((println "xx 24 ")) ((println "xx 24 "))))
-</span>
-Deterministic: ()
+Deterministic: (println "xx 24 ")
 ;;; ready works  
 <span class="ansi38-013099040"
 >!(assertEqualToResult (let $x (superpose (1 2 3)) (collapse $x)) ((1) (2) (3)))
 
 </span>
-;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.12"
->;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.12</h3>
+;<h3 id="METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.08"
+>;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000781 secs. (781.34 microseconds) 
+; took 0.000775 secs. (775.17 microseconds) 
 
 !(assertEqualToResult (let $x (superpose (1 2 3)) (collapse $x)) ((1) (2) (3)))
 
@@ -642,14 +560,14 @@ Deterministic: ()
 Deterministic: ()
 ;;;  !(assertEqualToResult ( )  (  )  ) 
 <span class="ansi32"
->% 502,750 inferences, 0.129 CPU in 0.131 seconds (98% CPU, 3898889 Lips)
+>% 432,787 inferences, 0.118 CPU in 0.120 seconds (98% CPU, 3670822 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language8.metta  0)
 <span class="ansi1"
 >LoonIt Report
 </span>------------
 <span class="ansi32"
->Successes: 12
+>Successes: 8
 </span><span class="ansi32"
 >Failures: 0
 </span><br/> <a href="#" onclick="window.history.back(); return false;"
@@ -780,20 +698,20 @@ Deterministic: ()
 [()]
 [()]
 [()]
+[(println "xx 21 ")]
 [()]
+[(println "xx 22 ")]
 [()]
+[(println "xx 23 ")]
 [()]
-[()]
-[()]
-[()]
-[()]
+[(println "xx 24 ")]
 [()]
 P;HTML|
 ;         (maybe_halt  7)
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-11-20 21:33:33+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-20 21:35:57+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
