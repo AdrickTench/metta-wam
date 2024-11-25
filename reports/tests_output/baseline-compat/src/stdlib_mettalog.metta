@@ -271,6 +271,15 @@
 (: eval (-> Atom Atom))
 (iz eval Builtin)
 
+(iz eval MinimalMeTTa)
+(@doc evalc
+  (@desc "Evaluates input atom, makes one step of the evaluation")
+  (@params (
+    (@param "Atom to be evaluated, can be reduced via equality expression (= ...) or by calling a grounded function")
+    (@param "Space to evaluate atom in its context")))
+  (@return "Result of evaluation"))
+(: evalc (-> Atom Grounded Atom))
+
 (iz chain MinimalMeTTa)
 (@doc chain
   (@desc "Evaluates first argument Atom, binds it to the Variable (second argument) and then evaluates third argument Template with Variable substituted in. When evaluation of the first Atom brings more than a single result, chain returns one instance of the Template expression for each result. The first argument Atom is only evaluated if it is part of the Minimal MeTTa specification; evaluation of non-Minimal MeTTa atoms can be controlled by wrapping in a call to eval (for one evaluation step) or metta (for full evaluation).")
@@ -350,6 +359,7 @@
     (@param "Expression containing atoms of Number type")))
   (@return "Minimum value in the expression. Error if expression contains non-numeric value or is empty."))
 (: min-atom (-> Expression Number))
+(= (min-atom $L) (call-fn min_list $L))
 (iz min-atom Builtin)
 
 (iz max-atom MeTTa)
@@ -359,6 +369,7 @@
     (@param "Expression containing atoms of Number type")))
   (@return "Maximum value in the expression. Error if expression contains non-numeric value or is empty."))
 (: max-atom (-> Expression Number))
+(= (min-atom $L) (call-fn max_list $L))
 (iz max-atom Builtin)
 
 (iz size-atom MeTTa)
@@ -368,6 +379,7 @@
     (@param "Expression to measure the size of")))
   (@return "Size of the expression"))
 (: size-atom (-> Expression Integer))
+(= (size-atom $L) (call-fn length $L))
 (iz size-atom Builtin)
 
 (iz index-atom MeTTa)
@@ -378,6 +390,7 @@
     (@param "Index")))
   (@return "Atom at the specified index in the expression. Error if index is out of bounds."))
 (: index-atom (-> Expression Number Atom))
+(= (index-atom $L $N) (call-fn nth0 $N $L))
 (iz index-atom Builtin)
 
 (iz powi-math MeTTa)
@@ -388,7 +401,17 @@
     (@param "Power. Must be an integer.")))
   (@return "Result of base raised to the power"))
 (: powi-math (-> Number Number Number))
-(f2is-math-op powi-math pow)
+;(is-math-op-2 powi-math pow)
+(= (powi-math $B $P) (call-fn pow $B $P)))
+
+(==> (is-math-op-1 $m $p) (is-op-1 $m $p))
+(==> (is-math-op-2 $m $p) (is-op-2 $m $p))
+(==> (is-math-pred $m $p) (is-pred $m $p))
+
+(==> (is-op-1 $m $p) (= ($m $a) (call-fn $p $a)))
+(==> (is-op-2 $m $p) (= ($m $a $b) (call-fn $p $a $b)))
+(==> (is-pred-1 $m $p) (= ($m $a) (call-p $p $a)))
+(==> (is-pred-2 $m $p) (= ($m $a $b) (call-p $p $a $b)))
 
 (iz powf-math MeTTa)
 (@doc powf-math
@@ -398,7 +421,7 @@
     (@param "Power. Could be afloat.")))
   (@return "Result of base raisedtothepower "))
 (: powf-math (-> Number Number Number))
-(f2is-math-op powf-math pow)
+(is-math-op-2 powf-math pow)
 
 (iz sqrt-math MeTTa)
 (@doc sqrt-math
@@ -407,7 +430,7 @@
     (@param "Input number")))
   (@return "Result of a square root function"))
 (: sqrt-math (-> Number Number))
-(f2is-math-op sqrt-math sqrt)
+(is-math-op-1 sqrt-math sqrt)
 
 (iz abs-math MeTTa)
 (@doc abs-math
@@ -416,7 +439,8 @@
     (@param "Input number")))
   (@return "Absolute value"))
 (: abs-math (-> Number Number))
-(f2is-math-op abs-math abs)
+(is-math-op-1 abs-math abs)
+
 
 (iz log-math MeTTa)
 (@doc log-math
@@ -426,7 +450,7 @@
     (@param "Input number")))
   (@return "Result of log function"))
 (: log-math (-> Number Number Number))
-(f2is-math-op log-math log)
+(is-math-op-1 log-math log)
 
 (iz trunc-math MeTTa)
 (@doc trunc-math
@@ -435,7 +459,7 @@
     (@param "Float value")))
   (@return "Integer part of float"))
 (: trunc-math (-> Number Number))
-(f2is-math-op trunc-math trunc)
+(is-math-op-1 trunc-math trunc)
 
 (iz ceil-math MeTTa)
 (@doc ceil-math
@@ -444,7 +468,7 @@
     (@param "Float value")))
   (@return "Integer value greater than or equal to the input"))
 (: ceil-math (-> Number Number))
-(f2is-math-op ceil-math ceil)
+(is-math-op-1 ceil-math ceil)
 
 (iz floor-math MeTTa)
 (@doc floor-math
@@ -453,7 +477,7 @@
     (@param "Float value")))
   (@return "Integer value less than or equal to the input"))
 (: floor-math (-> Number Number))
-(f2is-math-op floor-math floor)
+(is-math-op-1 floor-math floor)
 
 (iz round-math MeTTa)
 (@doc round-math
@@ -462,7 +486,7 @@
     (@param "Float value")))
   (@return "Nearest integer to the input"))
 (: round-math (-> Number Number))
-(f2is-math-op round-math round)
+(is-math-op-1 round-math round)
 
 (iz sin-math MeTTa)
 (@doc sin-math
@@ -471,7 +495,7 @@
     (@param "Angle in radians")))
   (@return "Result of the sine function"))
 (: sin-math (-> Number Number))
-(f2is-math-op sin-math sin)
+(is-math-op-1 sin-math sin)
 
 (iz asin-math MeTTa)
 (@doc asin-math
@@ -480,7 +504,7 @@
     (@param "Float number")))
   (@return "Result of the arcsine function"))
 (: asin-math (-> Number Number))
-(f2is-math-op asin-math asin)
+(is-math-op-1 asin-math asin)
 
 (iz cos-math MeTTa)
 (@doc cos-math
@@ -489,7 +513,7 @@
     (@param "Angle in radians")))
   (@return "Result of the cosine function"))
 (: cos-math (-> Number Number))
-(f2is-math-op cos-math cos)
+(is-math-op-1 cos-math cos)
 
 (iz acos-math MeTTa)
 (@doc acos-math
@@ -498,7 +522,7 @@
     (@param "Float number")))
   (@return "Result of the arccosine function"))
 (: acos-math (-> Number Number))
-(f2is-math-op acos-math acos)
+(is-math-op-1 acos-math acos)
 
 (iz tan-math MeTTa)
 (@doc tan-math
@@ -507,7 +531,7 @@
     (@param "Angle in radians")))
   (@return "Result of the tangent function"))
 (: tan-math (-> Number Number))
-(f2is-math-op tan-math tan)
+(is-math-op-1 tan-math tan)
 
 (iz atan-math MeTTa)
 (@doc atan-math
@@ -516,7 +540,7 @@
     (@param "Float number")))
   (@return "Result of the tangent function"))
 (: atan-math (-> Number Number))  
-(f2is-math-op atan-math atan)
+(is-math-op-1 atan-math atan)
 
 (iz isnan-math MeTTa)
 (@doc isnan-math
@@ -525,7 +549,7 @@
     (@param "Number")))
   (@return "True/False"))
 (: isnan-math (-> Number Bool))  
-(f2is-math-pred isnan-math is_NaN)
+(is-math-pred isnan-math is_NaN)
 
 (iz isinf-math MeTTa)
 (@doc isinf-math
@@ -534,7 +558,7 @@
     (@param "Number")))
   (@return "True/False"))
 (: isinf-math (-> Number Bool))
-(f2is-math-pred isinf-math is_inf)
+(is-math-pred isinf-math is_Inf)
 
 (iz random-int MeTTa)
 (@doc random-int
@@ -543,6 +567,7 @@
     (@param "Range start")
     (@param "Range end")))
   (@return "Random int number from defined range"))
+(is-math-op-2 random-int random)
 
 (iz random-float MeTTa)
 (@doc random-float
@@ -551,7 +576,7 @@
     (@param "Range start")
     (@param "Range end")))
   (@return "Random float number from defined range"))
-
+(is-math-op-2 random-int random)
 
 (iz collapse-bind MeTTa)
 (@doc collapse-bind

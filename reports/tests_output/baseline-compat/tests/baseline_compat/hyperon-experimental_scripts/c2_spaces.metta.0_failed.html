@@ -59,7 +59,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-20 21:11:41+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-25 17:54:34+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -218,7 +218,10 @@ Script started on 2024-11-20 21:11:41+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;         (set_option_value  test false)
-P;HTML|
+<span class="ansi32"
+>
+% 36,574 inferences, 0.102 CPU in 0.102 seconds (100% CPU, 357767 Lips)
+</span>P;HTML|
 ;          (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;          (set_option_value  halt true)
@@ -445,7 +448,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000781 secs. (781.02 microseconds) 
+; took 0.000956 secs. (955.69 microseconds) 
 
 !(assertEqualToResult (match &kb (, ($obj is $prop) ($prop is-a Color) ($obj is-a Planet)) (Color of Planet $obj is $prop)) ((Color of Planet Mars is Red)))
 
@@ -462,7 +465,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000179 secs. (179.37 microseconds) 
+; took 0.000223 secs. (222.56 microseconds) 
 
 !(assertEqualToResult (match &self ($p is-a Color) $p) ())
 
@@ -482,7 +485,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000350 secs. (349.64 microseconds) 
+; took 0.000482 secs. (482.09 microseconds) 
 
 !(assertEqual (match &kb (, (Venus orbit $x au) (Mars orbit $y au)) (- $y $x)) 0.8)
 
@@ -506,7 +509,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000798 secs. (797.71 microseconds) 
+; took 0.001 secs. (1.01 milliseconds) 
 
 !(assertEqualToResult (match &kb ($prop is-a Color) (match &self ($obj is $prop) $obj)) (Ball))
 
@@ -567,7 +570,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.C2-SPACES.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000597 secs. (596.95 microseconds) 
+; took 0.000923 secs. (923.22 microseconds) 
 
 !(assertEqualToResult (match &self (, ($obj is $prop) ($prop is-a Color) ($obj is-a Planet)) (Color of Planet $obj is $prop)) ((Color of Planet Mars is Red)))
 
@@ -576,7 +579,7 @@ Deterministic: ()
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 508,677 inferences, 0.167 CPU in 0.174 seconds (96% CPU, 3039546 Lips)
+% 513,829 inferences, 0.179 CPU in 0.185 seconds (96% CPU, 2878152 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/c2_spaces.metta  0)
 <span class="ansi1"
@@ -722,7 +725,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-11-20 21:11:48+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-25 17:54:42+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

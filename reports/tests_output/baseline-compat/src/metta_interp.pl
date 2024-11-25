@@ -1409,6 +1409,7 @@ metta_atom(KB,Atom):- metta_atom_asserted( KB,Atom).
 
 %metta_atom(KB,Atom):- KB == '&corelib', !, metta_atom_asserted('&self',Atom).
 metta_atom(KB,Atom):- KB \== '&corelib', using_all_spaces,!, metta_atom('&corelib',Atom).
+metta_atom(KB,Atom):- KB \== '&corelib', !, metta_atom('&corelib',Atom).
 metta_atom(KB,Atom):- KB \== '&corelib', !,
    \+ \+ (metta_atom_asserted(KB,'&corelib'),
           should_inherit_from_corelib(Atom)), !,
@@ -1452,8 +1453,8 @@ not_metta_atom_corelib(A,N):-  A \== '&corelib' , metta_atom('&corelib',N).
 is_metta_space(Space):- \+ \+ is_space_type(Space,_Test).
 
 %metta_eq_def(Eq,KB,H,B):- ignore(Eq = '='),if_or_else(metta_atom(KB,[Eq,H,B]), metta_atom_corelib(KB,[Eq,H,B])).
-metta_eq_def(Eq,KB,H,B):-  ignore(Eq = '='),metta_atom(KB,[Eq,H,B]).
-%metta_eq_def(Eq,KB,H,B):-  ignore(Eq = '='), if_or_else(metta_atom(KB,[Eq,H,B]),not_metta_atom_corelib(KB,[Eq,H,B])).
+%metta_eq_def(Eq,KB,H,B):-  ignore(Eq = '='),metta_atom(KB,[Eq,H,B]).
+metta_eq_def(Eq,KB,H,B):-  ignore(Eq = '='), if_or_else(metta_atom(KB,[Eq,H,B]),not_metta_atom_corelib(KB,[Eq,H,B])).
 
 %metta_defn(KB,Head,Body):- metta_eq_def(_Eq,KB,Head,Body).
 %metta_defn(KB,H,B):- if_or_else(metta_atom(KB,['=',H,B]),not_metta_atom_corelib(KB,['=',H,B])).
@@ -2223,6 +2224,7 @@ fix_message_hook:-
 :- ensure_loaded(metta_corelib).
 %:- ensure_loaded(metta_help).
 :- initialization(use_corelib_file).
+:- initialization(use_metta_ontology).
 
 immediate_ignore:- ignore(((
    %write_src_uo(init_prog),
@@ -2238,14 +2240,17 @@ immediate_ignore:- ignore(((
    metta_final,
    true))).
 
-:- initialization(use_corelib_file).
+use_metta_ontology:- time(ensure_loaded(library('metta_ontology.pfc.pl'))).
+% use_metta_ontology:- load_pfc_file('metta_ontology.pl.pfc').
+%:- use_metta_ontology.
+%:- initialization(use_metta_ontology).
 %:- initialization(loon(program),program).
 %:- initialization(loon(default)).
+
 :- set_prolog_flag(metta_interp,ready).
 %:- set_prolog_flag(gc,false).
 
 :- use_module(library(clpr)). % Import the CLP(R) library
-%:- ensure_loaded('metta_ontology.pfc.pl').
 %:- initialization(loon_main, main).
 :- initialization(loon(main), main).
 
@@ -2261,3 +2266,6 @@ complex_relationship3_ex(Likelihood1, Likelihood2, Likelihood3) :-
 
 % Example query to find the likelihoods that satisfy the constraints
 %?- complex_relationship(L1, L2, L3).
+
+
+

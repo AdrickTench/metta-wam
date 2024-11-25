@@ -81,8 +81,8 @@ self_eval0([]).
 self_eval0('%Undefined%').
 self_eval0(X):- atom(X),!, \+ nb_bound(X,_),!.
 
-nb_bound(Name,X):- atom(Name), atom_concat('&', _, Name),
-  nb_current(Name, X).
+nb_bound(Name,X):- atom(Name), % atom_concat('&', _, Name),
+  nb_current(Name, X), compound(X). % spaces and states are stored as compounds
 
 
 coerce(Type,Value,Result):- nonvar(Value),Value=[Echo|EValue], Echo == echo, EValue = [RValue],!,coerce(Type,RValue,Result).
@@ -133,10 +133,6 @@ is_metta_declaration_f(F,H):- F == '=', !, is_list(H),  \+ (current_self(Space),
 % Sets the current self space to '&self'. This is likely used to track the current context or scope during the evaluation of Metta code.
 :- nb_setval(self_space, '&self').
 
-%! eval_to(+X,+Y) is semidet.
-% checks if X evals to Y
-evals_to(XX,Y):- Y=@=XX,!.
-evals_to(XX,Y):- Y=='True',!, is_True(XX),!.
 
 %current_self(Space):- nb_current(self_space,Space).
 
@@ -171,6 +167,11 @@ eval_args(X,Y):- current_self(Self), eval_args(500,Self,X,Y).
 %eval_args(Eq,RetType,Depth,_Self,X,_Y):- forall(between(6,Depth,_),write(' ')),writeqln(eval_args(Eq,RetType,X)),fail.
 eval_args(Depth,Self,X,Y):- eval_args('=',_RetType,Depth,Self,X,Y).
 
+%! eval_to(+X,+Y) is semidet.
+% checks if X evals to Y
+evals_to(XX,Y):- Y=@=XX,!.
+evals_to(XX,Y):- Y=='True',!, is_True(XX),!.
+
 eval_args(_Eq,_RetType,_Dpth,_Slf,X,Y):- var(X),nonvar(Y),!,X=Y.
 eval_args(_Eq,_RetType,_Dpth,_Slf,X,Y):- notrace(self_eval(X)),!,Y=X.
 
@@ -187,7 +188,6 @@ eval_args(Eq,RetType,Depth,Self,X,Y):- notrace(nonvar(Y)),!,
    eval_args(Eq,RetType,Depth,Self,X,XX),evals_to(XX,Y).
 
 eval_args(Eq,RetType,_Dpth,_Slf,[X|T],Y):- T==[], number(X),!, do_expander(Eq,RetType,X,YY),Y=[YY].
-
 
 /*
 eval_args(Eq,RetType,Depth,Self,[F|X],Y):-
@@ -328,7 +328,7 @@ eval_20(Eq,RetType,Depth,Self,[X|T],[Y]):- T==[], is_list(X),!,
 eval_20(Eq,RetType,Depth,Self,[X|Rest],YL):- is_list(Rest), is_list(X),!,
    eval_args(Eq,RetType,Depth,Self,X,Y),
    ((X\=@=Y,atom(Y)) -> eval_args(Eq,RetType,Depth,Self,[Y|Rest],YL)
-     ; ((maplist(eval_args(Eq,RetType,Depth,Self),Rest,YRest),YL=[Y|Rest]))).
+     ; ((maplist(eval_args(Eq,RetType,Depth,Self),Rest,YRest),YL=[Y|YRest]))).
 
 eval_20(Eq,RetType,Depth,Self,[V|VI],VVO):-  \+ is_list(VI),!,
  eval_args(Eq,RetType,Depth,Self,VI,VM),
@@ -350,13 +350,13 @@ eval_20(=,Type,_,_,['coerce',Type,Value],Result):- !, coerce(Type,Value,Result).
 % =================================================================
 % =================================================================
 
-    %eval_20(Eq,RetType,Depth2,Self,[Qw,X,Y],YO):- Qw == ('=='),!,
-    %  eval_args(X,XX),eval_args(Y,YY), !, as_tf(XX==YY,YO).
+%eval_20(Eq,RetType,Depth2,Self,[Qw,X,Y],YO):- Qw == ('=='),!,
+%  eval_args(X,XX),eval_args(Y,YY), !, as_tf(XX==YY,YO).
 
 
-    eval_20(Eq,RetType,Depth,Self,['let*',Lets,Body],RetVal):-
-        expand_let_star(Lets,Body,NewLet),!,
-            eval_20(Eq,RetType,Depth,Self,NewLet,RetVal).
+eval_20(Eq,RetType,Depth,Self,['let*',Lets,Body],RetVal):-
+    expand_let_star(Lets,Body,NewLet),!,
+        eval_20(Eq,RetType,Depth,Self,NewLet,RetVal).
 
 
 
@@ -400,6 +400,17 @@ eval_20(Eq,RetType,Depth,Self,['chain',Atom,Var|Y],Res):-  !,  eval_args(Eq,_Ret
 %eval_20(Eq,RetType,Depth,Self,['chain-body',X],Res):- !,eval_args(Eq,RetType,Depth,Self,X,Res).
 %eval_20(Eq,RetType,Depth,Self,['chain-body',X|Y],Res):-  !, eval_args(Eq,RetType,Depth,Self,X,_), eval_args(Eq,RetType,Depth,Self,['chain-body'|Y],Res).
 
+% simple version of Minimal MeTTa's `evalc` function
+eval_20(Eq,RetType,Depth,Self,['evalc',Eval,Other],Result):-!,
+    into_space(Depth,Self,Other,Space),
+    eval_args_once(Eq,RetType,Depth,Space,Eval,Result).
+
+
+% @TODO needs to only reduce one steps
+eval_args_once(Eq,RetType,Depth,Space,Eval,Result):-
+   eval_20(Eq,RetType,Depth,Space,Eval,Result)*->true;(Eval=Result).
+
+
 eval_20(Eq,RetType,Depth,Self,['eval',X],Res):- !,
    eval_args(Eq,RetType,Depth,Self,X, Res).
 
@@ -412,6 +423,15 @@ eval_20(Eq,RetType,Depth,Self,['eval-for',_Why,Type,X],Res):- !,
     ignore(Type=RetType),
     eval_args(Eq,Type,Depth,Self,X, Res).
 
+% simple version of Minimal MeTTa's `metta` function (we dont call evalc/2 as it will be corrected to only reduce once)
+eval_20(Eq,_Maybe_TODO_RetType,Depth,Self,['metta',Eval,RetType,Other],Result):-!,
+    into_space(Depth,Self,Other,Space),
+    eval_args(Eq,RetType,Depth,Space,Eval,Result),
+    filter_type(Result,RetType).
+
+filter_type(Result,RetType):-
+  get_type(Result, ResultType),
+  type_conform(ResultType, RetType),!.
 
 
 /* Function takes list of atoms (first argument), variable (second argument) and filter predicate (third argument) and returns list with items which passed filter.
@@ -707,7 +727,7 @@ equal_enough_for_test(X,Y):- must_det_ll((subst_vars(X,XX),subst_vars(Y,YY))),!,
 equal_enough_for_test2(X,Y):- equal_enough(X,Y).
 
 equal_enough(R,V):- is_list(R),is_list(V),sort_univ(R,RR),sort_univ(V,VV),!,equal_enouf(RR,VV),!.
-equal_enough(R,V):- copy_term(R,RR),copy_term(V,VV),equal_enouf(R,V),!,R=@=RR,V=@=VV.
+equal_enough(R,V):- copy_term(R,RR),copy_term(V,VV),equal_enouf(R,V),!,R=@=RR,V=@=VV. % has not altered the term
 equal_enouf(R,V):- is_ftVar(R), is_ftVar(V), R=V,!.
 equal_enouf(X,Y):- is_blank(X),!,is_blank(Y).
 equal_enouf(R,V):- py_is_py(R),py_is_py(V),py_pp_str(R,RR),py_pp_str(V,VV),!,RR=VV.
@@ -925,7 +945,7 @@ cant_be_ok(_,[Let|_]):- Let==let.
 eval_20(Eq,RetType,Depth,Self,['switch',A,CL|T],Res):- !,
   eval_20(Eq,RetType,Depth,Self,['case',A,CL|T],Res).
 
-eval_20(Eq,RetType,Depth,Self,[P,X|More],YY):- is_list(X),X=[_,_,_],simple_math(X),
+eval_20(Eq,RetType,Depth,Self,[P,X|More],YY):- fail, is_list(X),X=[_,_,_],simple_math(X),
    eval_selfless_2(X,XX),X\=@=XX,!, eval_20(Eq,RetType,Depth,Self,[P,XX|More],YY).
 % if there is only a void then always return nothing for each Case
 eval_20(Eq,_RetType,Depth,Self,['case',A,[[Void,_]]],Res):-

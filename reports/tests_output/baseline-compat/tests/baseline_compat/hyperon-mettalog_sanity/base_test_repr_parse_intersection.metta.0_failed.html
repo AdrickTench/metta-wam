@@ -28,7 +28,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-20 21:14:31+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-25 17:58:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -187,7 +187,10 @@ Script started on 2024-11-20 21:14:31+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;         (set_option_value  test false)
-P;HTML|
+<span class="ansi32"
+>
+% 36,574 inferences, 0.104 CPU in 0.104 seconds (100% CPU, 351797 Lips)
+</span>P;HTML|
 ;          (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;          (set_option_value  halt true)
@@ -362,7 +365,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 >;; HYPERON-METTALOG-SANITY.BASE-TEST-REPR-PARSE-INTERSECTION.01</h3>
 ; 
 ; EVAL TEST
-; took 0.050 secs. (50.39 milliseconds) 
+; took 0.050 secs. (49.73 milliseconds) 
 
 !(assertEqualToResult (intersection (superpose (a b (+ 2 3) c)) (superpose (b c (+ 2 3) c c d))) (b 5 c))
 
@@ -379,7 +382,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.BASE-TEST-REPR-PARSE-INTERSECTION.02</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.92 milliseconds) 
+; took 0.002 secs. (1.75 milliseconds) 
 
 !(assertEqual (intersection (superpose (a b (+ 2 3) c)) (superpose (b c (+ 2 3) c c d))) (superpose (b (+ 2 3) c)))
 
@@ -402,7 +405,7 @@ Deterministic: "aswde"
 >;; HYPERON-METTALOG-SANITY.BASE-TEST-REPR-PARSE-INTERSECTION.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000581 secs. (580.75 microseconds) 
+; took 0.000450 secs. (450.05 microseconds) 
 
 !(assertEqualToResult (repr aswde) ("aswde"))
 
@@ -425,7 +428,7 @@ Deterministic: kjh
 >;; HYPERON-METTALOG-SANITY.BASE-TEST-REPR-PARSE-INTERSECTION.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000251 secs. (251.37 microseconds) 
+; took 0.000202 secs. (201.83 microseconds) 
 
 !(assertEqualToResult (parse "kjh") (kjh))
 
@@ -434,7 +437,7 @@ Deterministic: kjh
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 345,026 inferences, 0.129 CPU in 0.131 seconds (98% CPU, 2682162 Lips)
+% 347,213 inferences, 0.130 CPU in 0.132 seconds (98% CPU, 2675371 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/base_test_repr_parse_intersection.metta  0)
 <span class="ansi1"
@@ -579,7 +582,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-11-20 21:14:39+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-25 17:59:01+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

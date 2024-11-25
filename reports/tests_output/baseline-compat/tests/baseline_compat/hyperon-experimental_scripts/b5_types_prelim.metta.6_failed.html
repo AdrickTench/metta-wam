@@ -454,7 +454,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-20 21:11:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-25 17:54:24+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -613,7 +613,10 @@ Script started on 2024-11-20 21:11:22+00:00 [TERM="xterm-256color" TTY="/dev/pts
 
 P;HTML|
 ;         (set_option_value  test false)
-P;HTML|
+<span class="ansi32"
+>
+% 36,574 inferences, 0.100 CPU in 0.100 seconds (100% CPU, 366701 Lips)
+</span>P;HTML|
 ;          (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
 ;          (set_option_value  halt true)
@@ -818,7 +821,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-e
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000475 secs. (475.33 microseconds) 
+; took 0.000497 secs. (497.29 microseconds) 
 
 !(assertEqual (Add S Z) S)
 
@@ -858,21 +861,21 @@ Deterministic: true
 ;<span class="ansi38-047047047"
 >    0:1   |   |--->(Add S Z) </span>
 ;<span class="ansi38-047047047"
->    2:1   |   |-(=(Add $_67254 Z) </span>
+>    2:1   |   |-(=(Add $_67256 Z) </span>
 ;<span class="ansi38-047047047"
->          |     $_67254) </span>
+>          |     $_67256) </span>
 ;<span class="ansi38-047047047"
->          |     (=(Add $_67192 (S $_67210)) </span>
+>          |     (=(Add $_67194 (S $_67212)) </span>
 ;<span class="ansi38-047047047"
->          |     (Add (S $_67192) $_67210)) </span>
+>          |     (Add (S $_67194) $_67212)) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used((['Add',_78276,'Z']->_78276))
+>                                                                                                ;;defs_used((['Add',_78278,'Z']->_78278))
 
 </span>;<span class="ansi38-047047047"
 >          |     <--S </span>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (11.78 milliseconds) 
+; took 0.012 secs. (11.95 milliseconds) 
 
 !(assertEqualToResult (Add S Z) ((Error S BadType)))
 
@@ -905,15 +908,15 @@ Deterministic: ((Error  (got  (S)) (expected  ((Error S BadType)))))
 </span>;<span class="ansi38-047047047"
 >    3:2   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->    5:1   |   |-(=(Add $_132220 Z) </span>
+>    5:1   |   |-(=(Add $_132222 Z) </span>
 ;<span class="ansi38-047047047"
->          |     $_132220) </span>
+>          |     $_132222) </span>
 ;<span class="ansi38-047047047"
->          |     (=(Add $_132158 (S $_132176)) </span>
+>          |     (=(Add $_132160 (S $_132178)) </span>
 ;<span class="ansi38-047047047"
->          |     (Add (S $_132158) $_132176)) </span>
+>          |     (Add (S $_132160) $_132178)) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used((['Add',_143246,'Z']->_143246))
+>                                                                                                ;;defs_used((['Add',_143248,'Z']->_143248))
 
 </span>;<span class="ansi38-047047047"
 >    5:2   |   |   |--->(S Z) </span>
@@ -933,7 +936,7 @@ Deterministic: ((Error  (got  (S)) (expected  ((Error S BadType)))))
 >   11:1   |   |-<--(S Z) </span>
 ; 
 ; EVAL TEST
-; took 0.016 secs. (15.64 milliseconds) 
+; took 0.016 secs. (16.11 milliseconds) 
 
 !(assertEqual (Add (S Z) Z) (S Z))
 
@@ -961,15 +964,15 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >    3:2   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->    5:1   |   |-(=(Add $_202506 Z) </span>
+>    5:1   |   |-(=(Add $_202508 Z) </span>
 ;<span class="ansi38-047047047"
->          |     $_202506) </span>
+>          |     $_202508) </span>
 ;<span class="ansi38-047047047"
->          |     (=(Add $_202444 (S $_202462)) </span>
+>          |     (=(Add $_202446 (S $_202464)) </span>
 ;<span class="ansi38-047047047"
->          |     (Add (S $_202444) $_202462)) </span>
+>          |     (Add (S $_202446) $_202464)) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used((['Add',_213532,['S',_213550]]->['Add',['S',_213532],_213550]))
+>                                                                                                ;;defs_used((['Add',_213534,['S',_213552]]->['Add',['S',_213534],_213552]))
 
 </span>;<span class="ansi38-047047047"
 >          |     <--(Add (S Z) Z) </span>
@@ -983,15 +986,15 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >    9:3   |   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->   11:2   |   |   |-(=(Add $_232106 Z) </span>
+>   11:2   |   |   |-(=(Add $_232108 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |     $_232106) </span>
+>          |   |     $_232108) </span>
 ;<span class="ansi38-047047047"
->          |   |     (=(Add $_232044 (S $_232062)) </span>
+>          |   |     (=(Add $_232046 (S $_232064)) </span>
 ;<span class="ansi38-047047047"
->          |   |     (Add (S $_232044) $_232062)) </span>
+>          |   |     (Add (S $_232046) $_232064)) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used((['Add',_243140,'Z']->_243140))
+>                                                                                              ;;defs_used((['Add',_243142,'Z']->_243142))
 
 </span>;<span class="ansi38-047047047"
 >   11:3   |   |   |   |--->(S Z) </span>
@@ -1011,7 +1014,7 @@ Deterministic: ()
 >   17:1   |   |-<--(S Z) </span>
 ; 
 ; EVAL TEST
-; took 0.029 secs. (28.55 milliseconds) 
+; took 0.030 secs. (29.83 milliseconds) 
 
 !(assertEqual (Add Z (S Z)) (S Z))
 
@@ -1037,21 +1040,21 @@ Deterministic: ()
 ;<span class="ansi38-047047047"
 >    0:1   |   |--->(Add Something Z) </span>
 ;<span class="ansi38-047047047"
->    2:1   |   |-(=(Add $_294210 Z) </span>
+>    2:1   |   |-(=(Add $_294212 Z) </span>
 ;<span class="ansi38-047047047"
->          |     $_294210) </span>
+>          |     $_294212) </span>
 ;<span class="ansi38-047047047"
->          |     (=(Add $_294148 (S $_294166)) </span>
+>          |     (=(Add $_294150 (S $_294168)) </span>
 ;<span class="ansi38-047047047"
->          |     (Add (S $_294148) $_294166)) </span>
+>          |     (Add (S $_294150) $_294168)) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used((['Add',_305236,'Z']->_305236))
+>                                                                                                ;;defs_used((['Add',_305238,'Z']->_305238))
 
 </span>;<span class="ansi38-047047047"
 >          |     <--Something </span>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (11.65 milliseconds) 
+; took 0.012 secs. (11.81 milliseconds) 
 
 !(assertEqual (Add Something Z) Something)
 
@@ -1081,13 +1084,13 @@ Deterministic: ()
 ;<span class="ansi38-047047047"
 >    0:1   |   |--->(Add Z Ten) </span>
 ;<span class="ansi38-047047047"
->    2:1   |   |-(=(Add $_348246 Z) </span>
+>    2:1   |   |-(=(Add $_348248 Z) </span>
 ;<span class="ansi38-047047047"
->          |     $_348246) </span>
+>          |     $_348248) </span>
 ;<span class="ansi38-047047047"
->          |     (=(Add $_348184 (S $_348202)) </span>
+>          |     (=(Add $_348186 (S $_348204)) </span>
 ;<span class="ansi38-047047047"
->          |     (Add (S $_348184) $_348202)) </span>
+>          |     (Add (S $_348186) $_348204)) </span>
 <span class="ansi38-119055001"
 >                                                                                                ;;defs_failed(['Add','Z','Ten'])
 
@@ -1095,7 +1098,7 @@ Deterministic: ()
 >          |     <--(Add Z Ten) </span>
 ; 
 ; EVAL TEST
-; took 0.012 secs. (11.68 milliseconds) 
+; took 0.012 secs. (12.09 milliseconds) 
 
 !(assertEqualToResult (Add Z Ten) ((Add Z Ten)))
 
@@ -1150,7 +1153,7 @@ Deterministic: ()
 >    6:1   |   |-<--(Cons (S Z) (Cons Z Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.79 milliseconds) 
+; took 0.004 secs. (3.87 milliseconds) 
 
 !(assertEqualToResult (Cons (S Z) (Cons Z Nil)) ((Cons (S Z) (Cons Z Nil))))
 
@@ -1181,7 +1184,7 @@ Deterministic: ()
 >    3:1   |   |-<--(Cons S (Cons Z Nil)) </span>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.35 milliseconds) 
+; took 0.002 secs. (2.37 milliseconds) 
 
 !(assertEqualToResult (Cons S (Cons Z Nil)) ((Error (Cons Z Nil) BadType)))
 
@@ -1224,25 +1227,25 @@ Deterministic: ((Error  (got  ((Cons S (Cons Z Nil)))) (expected  ((Error (Cons 
 ;<span class="ansi38-047047047"
 >    1:2   |   |   |--->(Add Z Z) </span>
 ;<span class="ansi38-047047047"
->    3:2   |   |   |-(=(Add $_526766 Z) </span>
+>    3:2   |   |   |-(=(Add $_526768 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |     $_526766) </span>
+>          |   |     $_526768) </span>
 ;<span class="ansi38-047047047"
->          |   |     (=(Add $_526704 (S $_526722)) </span>
+>          |   |     (=(Add $_526706 (S $_526724)) </span>
 ;<span class="ansi38-047047047"
->          |   |     (Add (S $_526704) $_526722)) </span>
+>          |   |     (Add (S $_526706) $_526724)) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used((['Add',_537800,'Z']->_537800))
+>                                                                                              ;;defs_used((['Add',_537802,'Z']->_537802))
 
 </span><span class="ansi38-119055051"
 >                                                                                                ;;[eq,['Add','Z','Z'],'Z']->[eq,'Z','Z']
 
 </span>;<span class="ansi38-047047047"
->    4:1   |   |-(=(eq $_543494 $_543494) </span>
+>    4:1   |   |-(=(eq $_543496 $_543496) </span>
 ;<span class="ansi38-047047047"
 >          |     T) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used(([eq,_549150,_549150]->'T'))
+>                                                                                                ;;defs_used(([eq,_549152,_549152]->'T'))
 
 </span>;<span class="ansi38-047047047"
 >    4:2   |   |   |-<--Z </span>
@@ -1250,7 +1253,7 @@ Deterministic: ((Error  (got  ((Cons S (Cons Z Nil)))) (expected  ((Error (Cons 
 >    5:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.018 secs. (17.57 milliseconds) 
+; took 0.018 secs. (18.02 milliseconds) 
 
 !(assertEqual (eq (Add Z Z) Z) T)
 
@@ -1280,7 +1283,7 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >    3:2   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->    5:1   |   |-(=(eq $_593056 $_593056) </span>
+>    5:1   |   |-(=(eq $_593058 $_593058) </span>
 ;<span class="ansi38-047047047"
 >          |     T) </span>
 <span class="ansi38-119055001"
@@ -1290,7 +1293,7 @@ Deterministic: ()
 >          |     <--(eq Z (S Z)) </span>
 ; 
 ; EVAL TEST
-; took 0.007 secs. (6.71 milliseconds) 
+; took 0.007 secs. (7.07 milliseconds) 
 
 !(assertEqualToResult (eq Z (S Z)) ((eq Z (S Z))))
 
@@ -1312,7 +1315,7 @@ Deterministic: ()
 ;<span class="ansi38-047047047"
 >    0:1   |   |--->(eq Z S) </span>
 ;<span class="ansi38-047047047"
->    2:1   |   |-(=(eq $_631492 $_631492) </span>
+>    2:1   |   |-(=(eq $_631494 $_631494) </span>
 ;<span class="ansi38-047047047"
 >          |     T) </span>
 <span class="ansi38-119055001"
@@ -1322,7 +1325,7 @@ Deterministic: ()
 >          |     <--(eq Z S) </span>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.50 milliseconds) 
+; took 0.006 secs. (6.38 milliseconds) 
 
 !(assertEqualToResult (eq Z S) ((Error S BadType)))
 
@@ -1372,17 +1375,17 @@ Deterministic: ((Error  (got  ((eq Z S))) (expected  ((Error S BadType)))))
 ;<span class="ansi38-047047047"
 >    0:1   |   |--->(of-same-type Color Shape) </span>
 ;<span class="ansi38-047047047"
->    2:1   |   |-(=(of-same-type $_726594 $_726600) </span>
+>    2:1   |   |-(=(of-same-type $_726596 $_726602) </span>
 ;<span class="ansi38-047047047"
 >          |     T) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used((['of-same-type',_732260,_732266]->'T'))
+>                                                                                                ;;defs_used((['of-same-type',_732262,_732268]->'T'))
 
 </span>;<span class="ansi38-047047047"
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.29 milliseconds) 
+; took 0.005 secs. (5.45 milliseconds) 
 
 !(assertEqual (of-same-type Color Shape) T)
 
@@ -1403,17 +1406,17 @@ Deterministic: ()
 ;<span class="ansi38-047047047"
 >    0:1   |   |--->(of-same-type Green Red) </span>
 ;<span class="ansi38-047047047"
->    2:1   |   |-(=(of-same-type $_766948 $_766954) </span>
+>    2:1   |   |-(=(of-same-type $_766950 $_766956) </span>
 ;<span class="ansi38-047047047"
 >          |     T) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used((['of-same-type',_772614,_772620]->'T'))
+>                                                                                                ;;defs_used((['of-same-type',_772616,_772622]->'T'))
 
 </span>;<span class="ansi38-047047047"
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.23 milliseconds) 
+; took 0.005 secs. (5.38 milliseconds) 
 
 !(assertEqual (of-same-type Green Red) T)
 
@@ -1435,17 +1438,17 @@ Deterministic: ()
 ;<span class="ansi38-047047047"
 >    0:1   |   |--->(of-same-type Green Color) </span>
 ;<span class="ansi38-047047047"
->    2:1   |   |-(=(of-same-type $_807766 $_807772) </span>
+>    2:1   |   |-(=(of-same-type $_807768 $_807774) </span>
 ;<span class="ansi38-047047047"
 >          |     T) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used((['of-same-type',_813432,_813438]->'T'))
+>                                                                                                ;;defs_used((['of-same-type',_813434,_813440]->'T'))
 
 </span>;<span class="ansi38-047047047"
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.27 milliseconds) 
+; took 0.005 secs. (5.39 milliseconds) 
 
 !(assertEqualToResult (of-same-type Green Color) ((Error Color BadType)))
 
@@ -1470,17 +1473,17 @@ Deterministic: ((Error  (got  (T)) (expected  ((Error Color BadType)))))
 ;<span class="ansi38-047047047"
 >    0:1   |   |--->(of-same-type Green Circle) </span>
 ;<span class="ansi38-047047047"
->    2:1   |   |-(=(of-same-type $_861254 $_861260) </span>
+>    2:1   |   |-(=(of-same-type $_861256 $_861262) </span>
 ;<span class="ansi38-047047047"
 >          |     T) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used((['of-same-type',_866920,_866926]->'T'))
+>                                                                                                ;;defs_used((['of-same-type',_866922,_866928]->'T'))
 
 </span>;<span class="ansi38-047047047"
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.005 secs. (5.30 milliseconds) 
+; took 0.005 secs. (5.25 milliseconds) 
 
 !(assertEqualToResult (of-same-type Green Circle) ((Error Circle BadType)))
 
@@ -1516,12 +1519,12 @@ Deterministic: ((Error  (got  (T)) (expected  ((Error Circle BadType)))))
 >!(assertEqual (Green $who) T)
 
 </span>;<span class="ansi38-047047047"
->    0:0   |--->(assertEqual (Green $_912686) T) </span>
+>    0:0   |--->(assertEqual (Green $_912688) T) </span>
 
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.16"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.16</h3>
 ;<span class="ansi38-047047047"
->    0:1   |   |--->(Green $_912686) </span>
+>    0:1   |   |--->(Green $_912688) </span>
 ;<span class="ansi38-047047047"
 >    2:1   |   |-(=(Green Sam) </span>
 ;<span class="ansi38-047047047"
@@ -1533,7 +1536,7 @@ Deterministic: ((Error  (got  (T)) (expected  ((Error Circle BadType)))))
 >          |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.78 milliseconds) 
+; took 0.004 secs. (3.69 milliseconds) 
 
 !(assertEqual (Green $who) T)
 
@@ -1547,17 +1550,17 @@ Deterministic: ()
 >!(assertEqual (match &self (Green $who) $who) Sam)
 
 </span>;<span class="ansi38-047047047"
->    0:0   |--->(assertEqual (match &self (Green $_953544) $_953544) Sam) </span>
+>    0:0   |--->(assertEqual (match &self (Green $_953546) $_953546) Sam) </span>
 
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.17"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.17</h3>
 ;<span class="ansi38-047047047"
->    0:1   |   |--->(match &self (Green $_953544) $_953544) </span>
+>    0:1   |   |--->(match &self (Green $_953546) $_953546) </span>
 ;<span class="ansi38-047047047"
 >    1:1   |   |-<--Sam </span>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.66 milliseconds) 
+; took 0.004 secs. (3.82 milliseconds) 
 
 !(assertEqual (match &self (Green $who) $who) Sam)
 
@@ -1577,12 +1580,12 @@ Deterministic: ()
 >!(assertEqual (match &self (Green $who) (Green $who)) T)
 
 </span>;<span class="ansi38-047047047"
->    0:0   |--->(assertEqual (match &self (Green $_984850) (Green $_984850)) T) </span>
+>    0:0   |--->(assertEqual (match &self (Green $_984852) (Green $_984852)) T) </span>
 
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.18"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.18</h3>
 ;<span class="ansi38-047047047"
->    0:1   |   |--->(match &self (Green $_984850) (Green $_984850)) </span>
+>    0:1   |   |--->(match &self (Green $_984852) (Green $_984852)) </span>
 ;<span class="ansi38-047047047"
 >    1:1   |   |-<--(Green Sam) </span>
 ;<span class="ansi38-047047047"
@@ -1598,7 +1601,7 @@ Deterministic: ()
 >          |   |     <--T </span>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (6.30 milliseconds) 
+; took 0.006 secs. (6.40 milliseconds) 
 
 !(assertEqual (match &self (Green $who) (Green $who)) T)
 
@@ -1617,12 +1620,12 @@ Deterministic: ()
 >!(assertEqual (let $r (Add (S Z) Z) (match &self (= (eq $r (S Z)) $tv) $tv)) T)
 
 </span>;<span class="ansi38-047047047"
->    0:0   |--->(assertEqual (let $_1032652 (Add (S Z) Z) (match &self (= (eq $_1032652 (S Z)) $_1032820) $_1032820)) T) </span>
+>    0:0   |--->(assertEqual (let $_1032654 (Add (S Z) Z) (match &self (= (eq $_1032654 (S Z)) $_1032822) $_1032822)) T) </span>
 
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.19"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.19</h3>
 ;<span class="ansi38-047047047"
->    0:1   |   |--->(let $_1032652 (Add (S Z) Z) (match &self (= (eq $_1032652 (S Z)) $_1032820) $_1032820)) </span>
+>    0:1   |   |--->(let $_1032654 (Add (S Z) Z) (match &self (= (eq $_1032654 (S Z)) $_1032822) $_1032822)) </span>
 ;<span class="ansi38-047047047"
 >    1:2   |   |   |--->(Add (S Z) Z) </span>
 ;<span class="ansi38-047047047"
@@ -1633,15 +1636,15 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >    4:3   |   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->    6:2   |   |   |-(=(Add $_19140 Z) </span>
+>    6:2   |   |   |-(=(Add $_19142 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |     $_19140) </span>
+>          |   |     $_19142) </span>
 ;<span class="ansi38-047047047"
->          |   |     (=(Add $_19078 (S $_19096)) </span>
+>          |   |     (=(Add $_19080 (S $_19098)) </span>
 ;<span class="ansi38-047047047"
->          |   |     (Add (S $_19078) $_19096)) </span>
+>          |   |     (Add (S $_19080) $_19098)) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used((['Add',_30172,'Z']->_30172))
+>                                                                                              ;;defs_used((['Add',_30174,'Z']->_30174))
 
 </span>;<span class="ansi38-047047047"
 >    6:3   |   |   |   |--->(S Z) </span>
@@ -1651,7 +1654,7 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >    8:3   |   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->    9:2   |   |   |--->(match &self (= (eq (S Z) (S Z)) $_4416) $_4416) </span>
+>    9:2   |   |   |--->(match &self (= (eq (S Z) (S Z)) $_4418) $_4418) </span>
 ;<span class="ansi38-047047047"
 >   10:2   |   |   |-<--T </span>
 ;<span class="ansi38-047047047"
@@ -1660,7 +1663,7 @@ Deterministic: ()
 >   12:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.026 secs. (25.88 milliseconds) 
+; took 0.026 secs. (26.25 milliseconds) 
 
 !(assertEqual (let $r (Add (S Z) Z) (match &self (= (eq $r (S Z)) $tv) $tv)) T)
 
@@ -1675,17 +1678,17 @@ Deterministic: ()
 >!(assertEqualToResult (match &self (= (eq (Add (S Z) Z) (S Z)) $tv) $tv) ())
 
 </span>;<span class="ansi38-047047047"
->    0:0   |--->(assertEqualToResult (match &self (= (eq (Add (S Z) Z) (S Z)) $_69898) $_69898) ()) </span>
+>    0:0   |--->(assertEqualToResult (match &self (= (eq (Add (S Z) Z) (S Z)) $_69900) $_69900) ()) </span>
 
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.20"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.20</h3>
 ;<span class="ansi38-047047047"
->    0:1   |   |--->(match &self (= (eq (Add (S Z) Z) (S Z)) $_69898) $_69898) </span>
+>    0:1   |   |--->(match &self (= (eq (Add (S Z) Z) (S Z)) $_69900) $_69900) </span>
 ;<span class="ansi38-047047047"
 >    1:1   |   |-<--fail </span>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (3.72 milliseconds) 
+; took 0.004 secs. (3.95 milliseconds) 
 
 !(assertEqualToResult (match &self (= (eq (Add (S Z) Z) (S Z)) $tv) $tv) ())
 
@@ -1712,12 +1715,12 @@ Deterministic: ()
 >!(assertEqual (let (S (S $r)) (Add (S Z) (S Z)) $r) Z)
 
 </span>;<span class="ansi38-047047047"
->    0:0   |--->(assertEqual (let (S (S $_101076)) (Add (S Z) (S Z)) $_101076) Z) </span>
+>    0:0   |--->(assertEqual (let (S (S $_101078)) (Add (S Z) (S Z)) $_101078) Z) </span>
 
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.21"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.21</h3>
 ;<span class="ansi38-047047047"
->    0:1   |   |--->(let (S (S $_101076)) (Add (S Z) (S Z)) $_101076) </span>
+>    0:1   |   |--->(let (S (S $_101078)) (Add (S Z) (S Z)) $_101078) </span>
 ;<span class="ansi38-047047047"
 >    1:2   |   |   |--->(Add (S Z) (S Z)) </span>
 ;<span class="ansi38-047047047"
@@ -1735,15 +1738,15 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >    7:3   |   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->    9:2   |   |   |-(=(Add $_134400 Z) </span>
+>    9:2   |   |   |-(=(Add $_134402 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |     $_134400) </span>
+>          |   |     $_134402) </span>
 ;<span class="ansi38-047047047"
->          |   |     (=(Add $_134338 (S $_134356)) </span>
+>          |   |     (=(Add $_134340 (S $_134358)) </span>
 ;<span class="ansi38-047047047"
->          |   |     (Add (S $_134338) $_134356)) </span>
+>          |   |     (Add (S $_134340) $_134358)) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used((['Add',_145434,['S',_145452]]->['Add',['S',_145434],_145452]))
+>                                                                                              ;;defs_used((['Add',_145436,['S',_145454]]->['Add',['S',_145436],_145454]))
 
 </span>;<span class="ansi38-047047047"
 >          |   |     <--(Add (S (S Z)) Z) </span>
@@ -1764,15 +1767,15 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >   16:4   |   |   |   |   |-<--(S (S Z)) </span>
 ;<span class="ansi38-047047047"
->   18:3   |   |   |   |-(=(Add $_172216 Z) </span>
+>   18:3   |   |   |   |-(=(Add $_172218 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |   |     $_172216) </span>
+>          |   |   |     $_172218) </span>
 ;<span class="ansi38-047047047"
->          |   |   |     (=(Add $_172154 (S $_172172)) </span>
+>          |   |   |     (=(Add $_172156 (S $_172174)) </span>
 ;<span class="ansi38-047047047"
->          |   |   |     (Add (S $_172154) $_172172)) </span>
+>          |   |   |     (Add (S $_172156) $_172174)) </span>
 <span class="ansi38-119055000"
->                                                                                            ;;defs_used((['Add',_183266,'Z']->_183266))
+>                                                                                            ;;defs_used((['Add',_183268,'Z']->_183268))
 
 </span>;<span class="ansi38-047047047"
 >   18:4   |   |   |   |   |--->(S (S Z)) </span>
@@ -1794,7 +1797,7 @@ Deterministic: ()
 >   25:1   |   |-<--Z </span>
 ; 
 ; EVAL TEST
-; took 0.036 secs. (36.49 milliseconds) 
+; took 0.038 secs. (37.66 milliseconds) 
 
 !(assertEqual (let (S (S $r)) (Add (S Z) (S Z)) $r) Z)
 
@@ -1813,27 +1816,27 @@ Deterministic: ()
 >!(assertEqual (let* (($r1 (Add Z Z)) ($r2 (Add $r1 (S Z))) ($r3 (Add $r2 (S Z)))) (match &self (= (eq (S (S Z)) $r3) $tv) $tv)) T)
 
 </span>;<span class="ansi38-047047047"
->    0:0   |--->(assertEqual (let* (($_225046 (Add Z Z)) ($_225108 (Add $_225046 (S Z))) ($_225196 (Add $_225108 (S Z)))) (match &self (= (eq (S (S Z)) $_225196) $_225390) $_225390)) T) </span>
+>    0:0   |--->(assertEqual (let* (($_225048 (Add Z Z)) ($_225110 (Add $_225048 (S Z))) ($_225198 (Add $_225110 (S Z)))) (match &self (= (eq (S (S Z)) $_225198) $_225392) $_225392)) T) </span>
 
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.22"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.22</h3>
 ;<span class="ansi38-047047047"
->    0:1   |   |--->(let $_225046 (Add Z Z) (let $_225108 (Add $_225046 (S Z)) (let $_225196 (Add $_225108 (S Z)) (match &self (= (eq (S (S Z)) $_225196) $_225390) $_225390)))) </span>
+>    0:1   |   |--->(let $_225048 (Add Z Z) (let $_225110 (Add $_225048 (S Z)) (let $_225198 (Add $_225110 (S Z)) (match &self (= (eq (S (S Z)) $_225198) $_225392) $_225392)))) </span>
 ;<span class="ansi38-047047047"
 >    1:2   |   |   |--->(Add Z Z) </span>
 ;<span class="ansi38-047047047"
->    3:2   |   |   |-(=(Add $_243060 Z) </span>
+>    3:2   |   |   |-(=(Add $_243062 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |     $_243060) </span>
+>          |   |     $_243062) </span>
 ;<span class="ansi38-047047047"
->          |   |     (=(Add $_242998 (S $_243016)) </span>
+>          |   |     (=(Add $_243000 (S $_243018)) </span>
 ;<span class="ansi38-047047047"
->          |   |     (Add (S $_242998) $_243016)) </span>
+>          |   |     (Add (S $_243000) $_243018)) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used((['Add',_254094,'Z']->_254094))
+>                                                                                              ;;defs_used((['Add',_254096,'Z']->_254096))
 
 </span>;<span class="ansi38-047047047"
->          |   |     -->(let $_225108 (Add Z (S Z)) (let $_225196 (Add $_225108 (S Z)) (match &self (= (eq (S (S Z)) $_225196) $_225390) $_225390))) </span>
+>          |   |     -->(let $_225110 (Add Z (S Z)) (let $_225198 (Add $_225110 (S Z)) (match &self (= (eq (S (S Z)) $_225198) $_225392) $_225392))) </span>
 ;<span class="ansi38-047047047"
 >    4:3   |   |   |   |--->(Add Z (S Z)) </span>
 ;<span class="ansi38-047047047"
@@ -1844,15 +1847,15 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >    7:4   |   |   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->    9:3   |   |   |   |-(=(Add $_273464 Z) </span>
+>    9:3   |   |   |   |-(=(Add $_273466 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |   |     $_273464) </span>
+>          |   |   |     $_273466) </span>
 ;<span class="ansi38-047047047"
->          |   |   |     (=(Add $_273402 (S $_273420)) </span>
+>          |   |   |     (=(Add $_273404 (S $_273422)) </span>
 ;<span class="ansi38-047047047"
->          |   |   |     (Add (S $_273402) $_273420)) </span>
+>          |   |   |     (Add (S $_273404) $_273422)) </span>
 <span class="ansi38-119055000"
->                                                                                            ;;defs_used((['Add',_284514,['S',_284532]]->['Add',['S',_284514],_284532]))
+>                                                                                            ;;defs_used((['Add',_284516,['S',_284534]]->['Add',['S',_284516],_284534]))
 
 </span>;<span class="ansi38-047047047"
 >          |   |   |     <--(Add (S Z) Z) </span>
@@ -1866,15 +1869,15 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >   13:5   |   |   |   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->   15:4   |   |   |   |   |-(=(Add $_303096 Z) </span>
+>   15:4   |   |   |   |   |-(=(Add $_303098 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |   |   |     $_303096) </span>
+>          |   |   |   |     $_303098) </span>
 ;<span class="ansi38-047047047"
->          |   |   |   |     (=(Add $_303034 (S $_303052)) </span>
+>          |   |   |   |     (=(Add $_303036 (S $_303054)) </span>
 ;<span class="ansi38-047047047"
->          |   |   |   |     (Add (S $_303034) $_303052)) </span>
+>          |   |   |   |     (Add (S $_303036) $_303054)) </span>
 <span class="ansi38-119055000"
->                                                                                          ;;defs_used((['Add',_314154,'Z']->_314154))
+>                                                                                          ;;defs_used((['Add',_314156,'Z']->_314156))
 
 </span>;<span class="ansi38-047047047"
 >   15:5   |   |   |   |   |   |--->(S Z) </span>
@@ -1884,7 +1887,7 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >   17:5   |   |   |   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->   18:3   |   |   |   |--->(let $_225196 (Add (S Z) (S Z)) (match &self (= (eq (S (S Z)) $_225196) $_225390) $_225390)) </span>
+>   18:3   |   |   |   |--->(let $_225198 (Add (S Z) (S Z)) (match &self (= (eq (S (S Z)) $_225198) $_225392) $_225392)) </span>
 ;<span class="ansi38-047047047"
 >   19:4   |   |   |   |   |--->(Add (S Z) (S Z)) </span>
 ;<span class="ansi38-047047047"
@@ -1902,15 +1905,15 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >   25:5   |   |   |   |   |   |-<--(S Z) </span>
 ;<span class="ansi38-047047047"
->   27:4   |   |   |   |   |-(=(Add $_349986 Z) </span>
+>   27:4   |   |   |   |   |-(=(Add $_349988 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |   |   |     $_349986) </span>
+>          |   |   |   |     $_349988) </span>
 ;<span class="ansi38-047047047"
->          |   |   |   |     (=(Add $_349924 (S $_349942)) </span>
+>          |   |   |   |     (=(Add $_349926 (S $_349944)) </span>
 ;<span class="ansi38-047047047"
->          |   |   |   |     (Add (S $_349924) $_349942)) </span>
+>          |   |   |   |     (Add (S $_349926) $_349944)) </span>
 <span class="ansi38-119055000"
->                                                                                          ;;defs_used((['Add',_361044,['S',_361062]]->['Add',['S',_361044],_361062]))
+>                                                                                          ;;defs_used((['Add',_361046,['S',_361064]]->['Add',['S',_361046],_361064]))
 
 </span>;<span class="ansi38-047047047"
 >          |   |   |   |     <--(Add (S (S Z)) Z) </span>
@@ -1931,15 +1934,15 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >   34:6   |   |   |   |   |   |   |-<--(S (S Z)) </span>
 ;<span class="ansi38-047047047"
->   36:5   |   |   |   |   |   |-(=(Add $_387836 Z) </span>
+>   36:5   |   |   |   |   |   |-(=(Add $_387838 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |   |   |   |     $_387836) </span>
+>          |   |   |   |   |     $_387838) </span>
 ;<span class="ansi38-047047047"
->          |   |   |   |   |     (=(Add $_387774 (S $_387792)) </span>
+>          |   |   |   |   |     (=(Add $_387776 (S $_387794)) </span>
 ;<span class="ansi38-047047047"
->          |   |   |   |   |     (Add (S $_387774) $_387792)) </span>
+>          |   |   |   |   |     (Add (S $_387776) $_387794)) </span>
 <span class="ansi38-119055000"
->                                                                                        ;;defs_used((['Add',_398910,'Z']->_398910))
+>                                                                                        ;;defs_used((['Add',_398912,'Z']->_398912))
 
 </span>;<span class="ansi38-047047047"
 >   36:6   |   |   |   |   |   |   |--->(S (S Z)) </span>
@@ -1956,7 +1959,7 @@ Deterministic: ()
 </span>;<span class="ansi38-047047047"
 >   41:6   |   |   |   |   |   |   |-<--(S (S Z)) </span>
 ;<span class="ansi38-047047047"
->   42:4   |   |   |   |   |--->(match &self (= (eq (S (S Z)) (S (S Z))) $_225390) $_225390) </span>
+>   42:4   |   |   |   |   |--->(match &self (= (eq (S (S Z)) (S (S Z))) $_225392) $_225392) </span>
 ;<span class="ansi38-047047047"
 >   43:4   |   |   |   |   |-<--T </span>
 ;<span class="ansi38-047047047"
@@ -1973,7 +1976,7 @@ Deterministic: ()
 >   49:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.114 secs. (113.58 milliseconds) 
+; took 0.117 secs. (116.74 milliseconds) 
 
 !(assertEqual (let* (($r1 (Add Z Z)) ($r2 (Add $r1 (S Z))) ($r3 (Add $r2 (S Z)))) (match &self (= (eq (S (S Z)) $r3) $tv) $tv)) T)
 
@@ -2006,38 +2009,38 @@ Deterministic: ()
 ;<span class="ansi38-047047047"
 >    1:2   |   |   |--->(Add Z Z) </span>
 ;<span class="ansi38-047047047"
->    3:2   |   |   |-(=(Add $_484650 Z) </span>
+>    3:2   |   |   |-(=(Add $_484652 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |     $_484650) </span>
+>          |   |     $_484652) </span>
 ;<span class="ansi38-047047047"
->          |   |     (=(Add $_484588 (S $_484606)) </span>
+>          |   |     (=(Add $_484590 (S $_484608)) </span>
 ;<span class="ansi38-047047047"
->          |   |     (Add (S $_484588) $_484606)) </span>
+>          |   |     (Add (S $_484590) $_484608)) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used((['Add',_495684,'Z']->_495684))
+>                                                                                              ;;defs_used((['Add',_495686,'Z']->_495686))
 
 </span>;<span class="ansi38-047047047"
 >          |   |     -->(Add Z Z) </span>
 ;<span class="ansi38-047047047"
->    5:2   |   |   |-(=(Add $_503196 Z) </span>
+>    5:2   |   |   |-(=(Add $_503198 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |     $_503196) </span>
+>          |   |     $_503198) </span>
 ;<span class="ansi38-047047047"
->          |   |     (=(Add $_503134 (S $_503152)) </span>
+>          |   |     (=(Add $_503136 (S $_503154)) </span>
 ;<span class="ansi38-047047047"
->          |   |     (Add (S $_503134) $_503152)) </span>
+>          |   |     (Add (S $_503136) $_503154)) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used((['Add',_514230,'Z']->_514230))
+>                                                                                              ;;defs_used((['Add',_514232,'Z']->_514232))
 
 </span><span class="ansi38-119055051"
 >                                                                                                ;;[eqa,['Add','Z','Z'],['Add','Z','Z']]->[eqa,'Z','Z']
 
 </span>;<span class="ansi38-047047047"
->    6:1   |   |-(=(eqa $_519834 $_519834) </span>
+>    6:1   |   |-(=(eqa $_519836 $_519836) </span>
 ;<span class="ansi38-047047047"
 >          |     T) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used(([eqa,_525490,_525490]->'T'))
+>                                                                                                ;;defs_used(([eqa,_525492,_525492]->'T'))
 
 </span>;<span class="ansi38-047047047"
 >    6:2   |   |   |-<--Z </span>
@@ -2047,7 +2050,7 @@ Deterministic: ()
 >    8:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.030 secs. (29.70 milliseconds) 
+; took 0.031 secs. (30.57 milliseconds) 
 
 !(assertEqual (eqa (Add Z Z) (Add Z Z)) T)
 
@@ -2073,25 +2076,25 @@ Deterministic: ()
 ;<span class="ansi38-047047047"
 >    1:2   |   |   |--->(Add Z Z) </span>
 ;<span class="ansi38-047047047"
->    3:2   |   |   |-(=(Add $_567728 Z) </span>
+>    3:2   |   |   |-(=(Add $_567730 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |     $_567728) </span>
+>          |   |     $_567730) </span>
 ;<span class="ansi38-047047047"
->          |   |     (=(Add $_567666 (S $_567684)) </span>
+>          |   |     (=(Add $_567668 (S $_567686)) </span>
 ;<span class="ansi38-047047047"
->          |   |     (Add (S $_567666) $_567684)) </span>
+>          |   |     (Add (S $_567668) $_567686)) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used((['Add',_578762,'Z']->_578762))
+>                                                                                              ;;defs_used((['Add',_578764,'Z']->_578764))
 
 </span><span class="ansi38-119055051"
 >                                                                                                ;;[eqa,'Z',['Add','Z','Z']]->[eqa,'Z','Z']
 
 </span>;<span class="ansi38-047047047"
->    4:1   |   |-(=(eqa $_584362 $_584362) </span>
+>    4:1   |   |-(=(eqa $_584364 $_584364) </span>
 ;<span class="ansi38-047047047"
 >          |     T) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used(([eqa,_590018,_590018]->'T'))
+>                                                                                                ;;defs_used(([eqa,_590020,_590020]->'T'))
 
 </span>;<span class="ansi38-047047047"
 >    4:2   |   |   |-<--Z </span>
@@ -2099,7 +2102,7 @@ Deterministic: ()
 >    5:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.017 secs. (17.47 milliseconds) 
+; took 0.018 secs. (17.85 milliseconds) 
 
 !(assertEqualToResult (eqa Z (Add Z Z)) ((eqa Z (Add Z Z))))
 
@@ -2128,25 +2131,25 @@ Deterministic: ((Error  (got  (T)) (expected  ((eqa Z (Add Z Z))))))
 ;<span class="ansi38-047047047"
 >    1:2   |   |   |--->(Add Z Z) </span>
 ;<span class="ansi38-047047047"
->    3:2   |   |   |-(=(Add $_642468 Z) </span>
+>    3:2   |   |   |-(=(Add $_642470 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |     $_642468) </span>
+>          |   |     $_642470) </span>
 ;<span class="ansi38-047047047"
->          |   |     (=(Add $_642406 (S $_642424)) </span>
+>          |   |     (=(Add $_642408 (S $_642426)) </span>
 ;<span class="ansi38-047047047"
->          |   |     (Add (S $_642406) $_642424)) </span>
+>          |   |     (Add (S $_642408) $_642426)) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used((['Add',_653502,'Z']->_653502))
+>                                                                                              ;;defs_used((['Add',_653504,'Z']->_653504))
 
 </span><span class="ansi38-119055051"
 >                                                                                                ;;[eq,'Z',['Add','Z','Z']]->[eq,'Z','Z']
 
 </span>;<span class="ansi38-047047047"
->    4:1   |   |-(=(eq $_659102 $_659102) </span>
+>    4:1   |   |-(=(eq $_659104 $_659104) </span>
 ;<span class="ansi38-047047047"
 >          |     T) </span>
 <span class="ansi38-119055000"
->                                                                                                ;;defs_used(([eq,_664758,_664758]->'T'))
+>                                                                                                ;;defs_used(([eq,_664760,_664760]->'T'))
 
 </span>;<span class="ansi38-047047047"
 >    4:2   |   |   |-<--Z </span>
@@ -2154,7 +2157,7 @@ Deterministic: ((Error  (got  (T)) (expected  ((eqa Z (Add Z Z))))))
 >    5:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.017 secs. (17.50 milliseconds) 
+; took 0.018 secs. (17.68 milliseconds) 
 
 !(assertEqual (eq Z (Add Z Z)) T)
 
@@ -2169,33 +2172,33 @@ Deterministic: ()
 >!(assertEqual (let $z (Add Z Z) (eqa Z $z)) T)
 
 </span>;<span class="ansi38-047047047"
->    0:0   |--->(assertEqual (let $_687152 (Add Z Z) (eqa Z $_687152)) T) </span>
+>    0:0   |--->(assertEqual (let $_687154 (Add Z Z) (eqa Z $_687154)) T) </span>
 
 ;<h3 id="HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.26"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.B5-TYPES-PRELIM.26</h3>
 ;<span class="ansi38-047047047"
->    0:1   |   |--->(let $_687152 (Add Z Z) (eqa Z $_687152)) </span>
+>    0:1   |   |--->(let $_687154 (Add Z Z) (eqa Z $_687154)) </span>
 ;<span class="ansi38-047047047"
 >    1:2   |   |   |--->(Add Z Z) </span>
 ;<span class="ansi38-047047047"
->    3:2   |   |   |-(=(Add $_704190 Z) </span>
+>    3:2   |   |   |-(=(Add $_704192 Z) </span>
 ;<span class="ansi38-047047047"
->          |   |     $_704190) </span>
+>          |   |     $_704192) </span>
 ;<span class="ansi38-047047047"
->          |   |     (=(Add $_704128 (S $_704146)) </span>
+>          |   |     (=(Add $_704130 (S $_704148)) </span>
 ;<span class="ansi38-047047047"
->          |   |     (Add (S $_704128) $_704146)) </span>
+>          |   |     (Add (S $_704130) $_704148)) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used((['Add',_715224,'Z']->_715224))
+>                                                                                              ;;defs_used((['Add',_715226,'Z']->_715226))
 
 </span>;<span class="ansi38-047047047"
 >          |   |     -->(eqa Z Z) </span>
 ;<span class="ansi38-047047047"
->    5:2   |   |   |-(=(eqa $_722668 $_722668) </span>
+>    5:2   |   |   |-(=(eqa $_722670 $_722670) </span>
 ;<span class="ansi38-047047047"
 >          |   |     T) </span>
 <span class="ansi38-119055000"
->                                                                                              ;;defs_used(([eqa,_728328,_728328]->'T'))
+>                                                                                              ;;defs_used(([eqa,_728330,_728330]->'T'))
 
 </span>;<span class="ansi38-047047047"
 >          |   |     <--T </span>
@@ -2205,7 +2208,7 @@ Deterministic: ()
 >    7:1   |   |-<--T </span>
 ; 
 ; EVAL TEST
-; took 0.021 secs. (20.61 milliseconds) 
+; took 0.021 secs. (20.99 milliseconds) 
 
 !(assertEqual (let $z (Add Z Z) (eqa Z $z)) T)
 
@@ -2216,7 +2219,7 @@ Deterministic: ()
 
 Deterministic: ()<span class="ansi32"
 >
-% 3,051,093 inferences, 0.754 CPU in 0.756 seconds (100% CPU, 4047381 Lips)
+% 3,078,564 inferences, 0.779 CPU in 0.781 seconds (100% CPU, 3952149 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/b5_types_prelim.metta  0)
 <span class="ansi1"
@@ -2382,7 +2385,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-11-20 21:11:30+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-25 17:54:32+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
