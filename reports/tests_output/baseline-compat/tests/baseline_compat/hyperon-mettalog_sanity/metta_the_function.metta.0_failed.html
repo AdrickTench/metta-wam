@@ -31,7 +31,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-25 18:04:17+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-26 20:41:37+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -192,7 +192,7 @@ Script started on 2024-11-25 18:04:17+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         (set_option_value  test false)
 <span class="ansi32"
 >
-% 36,574 inferences, 0.105 CPU in 0.105 seconds (100% CPU, 346827 Lips)
+% 45,046 inferences, 0.165 CPU in 0.165 seconds (100% CPU, 273394 Lips)
 </span>P;HTML|
 ;          (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -346,7 +346,7 @@ Script started on 2024-11-25 18:04:17+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         (= 2  "[()]")
 P;HTML|
-;                                         (= 3  "[(Error (assertEqualToResult (metta (match GroundingSpace-top (likes $x $y) ($x $y)) Atom GroundingSpace-0x55fc52e5b0d8) ((John Jane))) ")
+;                                         (= 3  "[(Error (assertEqualToResult (metta (match GroundingSpace-top (likes $x $y) ($x $y)) Atom GroundingSpace-0x557cf192d2a8) ((John Jane))) ")
 P;HTML|
 ;                                         (= 3  "Expected: [(John Jane)]")
 P;HTML|
@@ -354,9 +354,9 @@ Script started on 2024-11-25 18:04:17+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         (= 4  "Missed result: (John Jane))]")
 P;HTML|
-;                                         (= 4  "0.04user 0.00system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26060maxresident)k")
+;                                         (= 4  "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26324maxresident)k")
 P;HTML|
-;                                         (= 4  "0inputs+0outputs (0major+3108minor)pagefaults 0swaps")
+;                                         (= 4  "0inputs+0outputs (0major+3113minor)pagefaults 0swaps")
 <span class="ansi1 ansi90"
 >
 Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/metta_the_function.metta is 501 bytes (12 lines)
@@ -385,7 +385,7 @@ Deterministic: ()
 > (likes John Jane)
 </span>; 
 ; EVAL TEST
-; took 0.003 secs. (2.59 milliseconds) 
+; took 0.003 secs. (2.77 milliseconds) 
 
 !(assertEqualToResult (add-atom &new-space (likes John Jane)) (()))
 
@@ -402,7 +402,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.METTA-THE-FUNCTION.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.12 milliseconds) 
+; took 0.001 secs. (1.19 milliseconds) 
 
 !(assertEqualToResult (metta (match &self (likes $x $y) ($x $y)) Atom &new-space) ((John Jane)))
 
@@ -415,7 +415,7 @@ Deterministic: ()
 >!(add-atom &new-space (= (foo $x) (+ $x 1)))
 
 </span><span class="ansi38-255165000"
-> (= (foo $_73720) (+ $_73720 1))
+> (= (foo $_73808) (+ $_73808 1))
 </span>
 Deterministic: ()
 ;;; Test that (foo 1) evaluates to 2 in &new-space
@@ -427,7 +427,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.METTA-THE-FUNCTION.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000731 secs. (730.62 microseconds) 
+; took 0.000755 secs. (755.33 microseconds) 
 
 !(assertEqualToResult (metta (foo 1) Number &new-space) (2))
 
@@ -436,7 +436,7 @@ Deterministic: ()
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 256,862 inferences, 0.088 CPU in 0.090 seconds (98% CPU, 2930588 Lips)
+% 255,732 inferences, 0.082 CPU in 0.084 seconds (97% CPU, 3134669 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/metta_the_function.metta  0)
 <span class="ansi1"
@@ -580,7 +580,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-11-25 18:04:25+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-26 20:41:45+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

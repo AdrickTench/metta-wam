@@ -30,7 +30,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-25 17:53:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-26 20:29:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -191,7 +191,7 @@ Script started on 2024-11-25 17:53:28+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         (set_option_value  test false)
 <span class="ansi32"
 >
-% 36,574 inferences, 0.102 CPU in 0.102 seconds (100% CPU, 360007 Lips)
+% 45,046 inferences, 0.172 CPU in 0.172 seconds (100% CPU, 262227 Lips)
 </span>P;HTML|
 ;          (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -378,7 +378,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-e
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.06 milliseconds) 
+; took 0.001 secs. (1.12 milliseconds) 
 
 !(assertEqualToResult (match &self (implies (Frog Sam) $what) $what) ((Green Sam) (Eats-flies Sam)))
 
@@ -394,7 +394,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000566 secs. (566.12 microseconds) 
+; took 0.000633 secs. (633.19 microseconds) 
 
 !(assertEqualToResult (match &self (implies ($P $x) (Green Sam)) ($x might be $P)) ((Sam might be Frog)))
 
@@ -421,7 +421,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000922 secs. (921.90 microseconds) 
+; took 0.000870 secs. (869.68 microseconds) 
 
 !(assertEqualToResult (match &self (, (Frog $x) (implies (Frog $x) $y)) $y) ((Green Sam) (Eats-flies Sam)))
 
@@ -441,7 +441,7 @@ Deterministic: ()
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.A3-TWOSIDE.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000623 secs. (622.74 microseconds) 
+; took 0.000621 secs. (621.03 microseconds) 
 
 !(assertEqualToResult (match &self (, (implies ($P $x) (Green $x)) (implies ($P $x) (Eats-flies $x))) (Then it is definitely $P)) ((Then it is definitely Frog)))
 
@@ -450,7 +450,7 @@ Deterministic: ()
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 288,483 inferences, 0.086 CPU in 0.089 seconds (98% CPU, 3335263 Lips)
+% 287,443 inferences, 0.094 CPU in 0.096 seconds (98% CPU, 3060454 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-experimental_scripts/a3_twoside.metta  0)
 <span class="ansi1"
@@ -593,7 +593,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-11-25 17:53:35+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-26 20:30:00+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

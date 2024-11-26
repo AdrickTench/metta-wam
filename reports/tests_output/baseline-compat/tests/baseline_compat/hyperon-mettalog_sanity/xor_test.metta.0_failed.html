@@ -35,7 +35,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-25 18:10:46+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-26 20:48:45+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -196,7 +196,7 @@ Script started on 2024-11-25 18:10:46+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         (set_option_value  test false)
 <span class="ansi32"
 >
-% 36,574 inferences, 0.103 CPU in 0.103 seconds (100% CPU, 355392 Lips)
+% 45,046 inferences, 0.161 CPU in 0.161 seconds (100% CPU, 279073 Lips)
 </span>P;HTML|
 ;          (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -364,7 +364,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000216 secs. (215.68 microseconds) 
+; took 0.000207 secs. (207.09 microseconds) 
 
 !(assertEqual (xor True False) True)
 
@@ -380,7 +380,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000180 secs. (180.43 microseconds) 
+; took 0.000169 secs. (168.92 microseconds) 
 
 !(assertEqual (xor False True) True)
 
@@ -396,7 +396,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000166 secs. (165.95 microseconds) 
+; took 0.000172 secs. (172.31 microseconds) 
 
 !(assertEqual (xor True True) False)
 
@@ -412,7 +412,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000165 secs. (165.30 microseconds) 
+; took 0.000170 secs. (169.78 microseconds) 
 
 !(assertEqual (xor False False) False)
 
@@ -429,7 +429,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000422 secs. (421.69 microseconds) 
+; took 0.000361 secs. (361.20 microseconds) 
 
 !(assertEqual (xor (> 5 3) (< 2 1)) True)
 
@@ -445,7 +445,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.30 milliseconds) 
+; took 0.001 secs. (1.15 milliseconds) 
 
 !(assertEqual (xor (== 1 1) (== 2 2)) False)
 
@@ -461,7 +461,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.XOR-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000336 secs. (336.24 microseconds) 
+; took 0.000324 secs. (324.01 microseconds) 
 
 !(assertEqual (xor (not True) (and True False)) False)
 
@@ -501,7 +501,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.32 milliseconds) 
+; took 0.001 secs. (1.34 milliseconds) 
 
 !(assertEqual (xor (mprogn (println! "First") True) (mprogn (println! "Second") True)) False)
 
@@ -519,7 +519,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.31 milliseconds) 
+; took 0.001 secs. (1.29 milliseconds) 
 
 !(assertEqual (xor (mprogn (println! "First") False) (mprogn (println! "Second") True)) True)
 
@@ -537,7 +537,7 @@ First
 Second
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.32 milliseconds) 
+; took 0.001 secs. (1.31 milliseconds) 
 
 !(assertEqual (xor (mprogn (println! "First") False) (mprogn (println! "Second") False)) False)
 
@@ -546,7 +546,7 @@ Second
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 422,001 inferences, 0.106 CPU in 0.108 seconds (98% CPU, 3971620 Lips)
+% 420,107 inferences, 0.105 CPU in 0.107 seconds (98% CPU, 4011412 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/xor_test.metta  0)
 <span class="ansi1"
@@ -696,7 +696,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-11-25 18:10:54+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-26 20:48:53+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

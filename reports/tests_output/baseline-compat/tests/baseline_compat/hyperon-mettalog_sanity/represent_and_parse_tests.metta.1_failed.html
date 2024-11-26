@@ -24,7 +24,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-25 18:06:24+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-26 20:43:43+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  compat false)
 
@@ -185,7 +185,7 @@ Script started on 2024-11-25 18:06:24+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         (set_option_value  test false)
 <span class="ansi32"
 >
-% 36,574 inferences, 0.099 CPU in 0.099 seconds (100% CPU, 368343 Lips)
+% 45,046 inferences, 0.166 CPU in 0.166 seconds (100% CPU, 271341 Lips)
 </span>P;HTML|
 ;          (is_cmd_option  prescan halt --halt=true true)
 P;HTML|
@@ -360,7 +360,7 @@ Info: File /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-m
 >;; HYPERON-METTALOG-SANITY.REPRESENT-AND-PARSE-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.008 secs. (7.76 milliseconds) 
+; took 0.008 secs. (7.95 milliseconds) 
 
 !(assertEqualToResult (intersect (superpose (a b c d)) (superpose (c d e f))) (c d))
 
@@ -377,7 +377,7 @@ Deterministic: ((Error  (got  ((intersect a c) (intersect a d) (intersect a e) (
 >;; HYPERON-METTALOG-SANITY.REPRESENT-AND-PARSE-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.049 secs. (48.82 milliseconds) 
+; took 0.050 secs. (49.72 milliseconds) 
 
 !(assertEqualToResult (union (superpose (a b c d)) (superpose (c d e f))) (a b c d e f))
 
@@ -386,7 +386,7 @@ Deterministic: ((Error  (got  ((intersect a c) (intersect a d) (intersect a e) (
 </span>
 Deterministic: ()<span class="ansi32"
 >
-% 383,633 inferences, 0.127 CPU in 0.129 seconds (98% CPU, 3026543 Lips)
+% 383,257 inferences, 0.128 CPU in 0.130 seconds (98% CPU, 2992727 Lips)
 </span>P;HTML|
 ;                       (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/represent_and_parse_tests.metta  0)
 <span class="ansi1"
@@ -527,7 +527,7 @@ Deterministic: ()<span class="ansi32"
 <span class="ansi31"
 >(in  (maybe_halt  7) (unwind  (halt  7)))
 </span>
-Script done on 2024-11-25 18:06:31+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-26 20:43:51+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
