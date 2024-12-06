@@ -29,7 +29,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:27:08+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:15:45+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -190,7 +190,7 @@ Script started on 2024-12-06 19:27:08+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4640983 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4616768 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -352,7 +352,7 @@ Script started on 2024-12-06 19:27:08+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 4 "Missed result: ->)]" )
 P;HTML|
-;                                         #( = 4 "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26128maxresident)k" )
+;                                         #( = 4 "0.04user 0.00system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26212maxresident)k" )
 P;HTML|
 ;                                         #( = 4 "0inputs+0outputs (0major+3116minor)pagefaults 0swaps" )
 P;HTML|
@@ -372,7 +372,7 @@ Script started on 2024-12-06 19:27:08+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.COMPILE-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000718 secs. (717.62 microseconds) 
+; took 0.000479 secs. (479.46 microseconds) 
 
 !(assertEqualToResult (foo 1) (2))
 
@@ -389,7 +389,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.COMPILE-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000447 secs. (447.27 microseconds) 
+; took 0.000382 secs. (381.87 microseconds) 
 
 !(assertEqualToResult (foo 2) (3))
 
@@ -406,7 +406,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.COMPILE-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000191 secs. (190.52 microseconds) 
+; took 0.000189 secs. (188.79 microseconds) 
 
 !(assertEqualToResult (get-type foo) (-> Number Number))
 
@@ -1953,21 +1953,21 @@ Deterministic: <span class="ansi33"
 ^  <span class="ansi1 ansi32"
 >Call: </span>(280) [user] clause(user:do_compile('&self', foo, _64160), true, _979874)
 ^  <span class="ansi1 ansi32"
->Exit: </span>(280) [user] clause(do_compile('&self', foo, _64160), true, <clause>(0x55b331a760a0))
+>Exit: </span>(280) [user] clause(do_compile('&self', foo, _64160), true, <clause>(0x557e143096a0))
    <span class="ansi1 ansi32"
->Call: </span>(280) [$syspreds] clause_property(<clause>(0x55b331a760a0), module(user))
+>Call: </span>(280) [$syspreds] clause_property(<clause>(0x557e143096a0), module(user))
    <span class="ansi1 ansi34"
->Unify: </span>(280) [$syspreds] clause_property(<clause>(0x55b331a760a0), module(user))
+>Unify: </span>(280) [$syspreds] clause_property(<clause>(0x557e143096a0), module(user))
    <span class="ansi1 ansi32"
->Exit: </span>(280) [$syspreds] clause_property(<clause>(0x55b331a760a0), module(user))
+>Exit: </span>(280) [$syspreds] clause_property(<clause>(0x557e143096a0), module(user))
 ^  <span class="ansi1 ansi32"
->Call: </span>(280) [user] is_asserted_exact(user, do_compile('&self', foo, _64160), true, <clause>(0x55b331a760a0))
+>Call: </span>(280) [user] is_asserted_exact(user, do_compile('&self', foo, _64160), true, <clause>(0x557e143096a0))
 ^  <span class="ansi1 ansi34"
->Unify: </span>(280) [user] is_asserted_exact(user, do_compile('&self', foo, _64160), true, <clause>(0x55b331a760a0))
+>Unify: </span>(280) [user] is_asserted_exact(user, do_compile('&self', foo, _64160), true, <clause>(0x557e143096a0))
 ^  <span class="ansi1 ansi32"
->Call: </span>(281) [user] clause(_987042, _987044, <clause>(0x55b331a760a0))
+>Call: </span>(281) [user] clause(_987042, _987044, <clause>(0x557e143096a0))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(281) [user] clause(do_compile('&self', foo, _988078), true, <clause>(0x55b331a760a0))
+>Exit: </span>(281) [user] clause(do_compile('&self', foo, _988078), true, <clause>(0x557e143096a0))
 ^  <span class="ansi1 ansi32"
 >Call: </span>(281) [user] strip_m(do_compile('&self', foo, _988078), _989114)
 ^  <span class="ansi1 ansi34"
@@ -1989,7 +1989,7 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Exit: </span>(281) [system] cl(do_compile('&self', foo, _988078), true)=@=cl(do_compile('&self', foo, _64160), true)
 ^  <span class="ansi1 ansi32"
->Exit: </span>(280) [user] is_asserted_exact(user, do_compile('&self', foo, _64160), true, <clause>(0x55b331a760a0))
+>Exit: </span>(280) [user] is_asserted_exact(user, do_compile('&self', foo, _64160), true, <clause>(0x557e143096a0))
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(279) [user] is_asserted_exact(user, do_compile('&self', foo, _64160), true)
 ^  <span class="ansi1 ansi32"
@@ -8268,7 +8268,7 @@ Deterministic: <span class="ansi33"
 >'&lt;garbage_collected&gt;'</span>, <span class="pl-atom"
 >'&lt;garbage_collected&gt;'</span></span>)</span>)]
 </span>
-Script done on 2024-12-06 19:27:49+00:00 [COMMAND_EXIT_CODE="143"]
+Script done on 2024-12-06 22:16:27+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>

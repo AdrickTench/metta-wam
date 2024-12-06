@@ -43,7 +43,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:47:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:36:01+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -204,7 +204,7 @@ Script started on 2024-12-06 19:47:28+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4580382 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4633555 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -394,7 +394,7 @@ Script started on 2024-12-06 19:47:28+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.TYPES2.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000260 secs. (260.28 microseconds) 
+; took 0.000221 secs. (220.66 microseconds) 
 
 !(assertEqualToResult (get-type lion1) (Lion))
 
@@ -416,7 +416,7 @@ Deterministic: <span class="ansi33"
 >;; METTA-MORPH-TESTS.TYPES2.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000367 secs. (366.83 microseconds) 
+; took 0.000348 secs. (348.13 microseconds) 
 
 !(assertEqualToResult (reproduce lion1 lion2) (childlion))
 
@@ -438,7 +438,7 @@ Deterministic: <span class="ansi33"
 >;; METTA-MORPH-TESTS.TYPES2.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000170 secs. (169.99 microseconds) 
+; took 0.000156 secs. (156.17 microseconds) 
 
 !(assertEqualToResult (get-type Lion) (Cat))
 
@@ -460,7 +460,7 @@ Deterministic: <span class="ansi33"
 >;; METTA-MORPH-TESTS.TYPES2.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000185 secs. (185.15 microseconds) 
+; took 0.000213 secs. (213.06 microseconds) 
 
 !(assertEqualToResult (match &self (: Lion $1) $1) (Cat))
 
@@ -482,7 +482,7 @@ Deterministic: <span class="ansi33"
 >;; METTA-MORPH-TESTS.TYPES2.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000183 secs. (183.33 microseconds) 
+; took 0.000174 secs. (173.85 microseconds) 
 
 !(assertEqualToResult (match &self (: reproduce $1) $1) ((-> Lion Lion Lion)))
 
@@ -492,7 +492,7 @@ Deterministic: <span class="ansi33"
 Deterministic: <span class="ansi33"
 >()
 </span><span class="ansi32"
->% 185,906 inferences, 0.064 CPU in 0.066 seconds (96% CPU, 2905084 Lips)
+>% 185,826 inferences, 0.064 CPU in 0.066 seconds (97% CPU, 2921326 Lips)
 </span>P;HTML|
 ;                       #( = /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/types2.metta 0 )
 <span class="ansi1"
@@ -636,7 +636,7 @@ Deterministic: <span class="ansi33"
 <span class="ansi31"
 >#(in #(maybe_halt 7) #(unwind #(halt 7)))
 </span>
-Script done on 2024-12-06 19:47:34+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-06 22:36:07+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

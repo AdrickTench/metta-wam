@@ -39,7 +39,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:19:45+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:08:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 ^@P;HTML|
 ;           #(set_option_value compat false)
 
@@ -200,7 +200,7 @@ Script started on 2024-12-06 19:19:45+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.007 CPU in 0.007 seconds (100% CPU, 3311500 Lips)
+% 23,950 inferences, 0.007 CPU in 0.007 seconds (100% CPU, 3326507 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -4430,7 +4430,7 @@ Script started on 2024-12-06 19:19:45+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >Call: </span>(301) [rtrace] tAt(false, 271, 271, false)
 ; 
 ; EVAL TEST
-; took 0.622 secs. (622.28 milliseconds) 
+; took 0.622 secs. (622.31 milliseconds) 
 
 !(assertEqual ((let $x (get-atoms &self) (get-type $x))) (superpose (((get-type &self)) ((get-type &self)))))
 
@@ -4448,7 +4448,7 @@ Deterministic: <span class="ansi33"
 >;; MODULE-SYSTEM.F1-IMPORTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000272 secs. (271.96 microseconds) 
+; took 0.000284 secs. (284.39 microseconds) 
 
 !(assertEqual (if (> 1 2) 1 2) 2)
 
@@ -4518,7 +4518,7 @@ Deterministic: <span class="ansi33"
 >;; MODULE-SYSTEM.F1-MODULEA.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000253 secs. (252.98 microseconds) 
+; took 0.000228 secs. (227.98 microseconds) 
 
 !(assertEqual (+ 1 2) 3)
 
@@ -9740,8 +9740,28 @@ Last Result(2): <span class="ansi33"
 ;                                         #(eval_call_fn #(pow $10000 $10001) $R)
 P;HTML|
 ;                                         #(eval_call_fn #(pow $10000 $10001) $R)
+P;HTML|
+;                                         #(eval_call_fn #(min_list $10000) $R)
+P;HTML|
+;                                         #(eval_call_fn #(min_list $10000) $R)
+P;HTML|
+;                                         #(eval_call_fn #(pow $10000 $10001) $R)
+P;HTML|
+;                                         #(eval_call_fn #(pow $10000 $10001) $R)
+P;HTML|
+;                                         #(eval_call_fn #(min_list $10000) $R)
+P;HTML|
+;                                         #(eval_call_fn #(min_list $10000) $R)
+P;HTML|
+;                                         #(eval_call_fn #(pow $10000 $10001) $R)
+P;HTML|
+;                                         #(eval_call_fn #(pow $10000 $10001) $R)
+P;HTML|
+;                                         #(eval_call_fn #(min_list $10000) $R)
+P;HTML|
+;                                         #(eval_call_fn #(min_list $10000) $R)
 
-Script done on 2024-12-06 19:20:25+00:00 [COMMAND_EXIT_CODE="143"]
+Script done on 2024-12-06 22:09:06+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>

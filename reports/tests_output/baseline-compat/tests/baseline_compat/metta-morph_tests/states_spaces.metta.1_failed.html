@@ -44,7 +44,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:46:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:34:56+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -205,7 +205,7 @@ Script started on 2024-12-06 19:46:22+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4669995 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4680917 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -410,7 +410,7 @@ Deterministic: <span class="ansi33"
 >;; METTA-MORPH-TESTS.STATES-SPACES.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000228 secs. (227.80 microseconds) 
+; took 0.000222 secs. (222.31 microseconds) 
 
 !(assertEqualToResult (get-state &FIFO) (45))
 
@@ -434,7 +434,7 @@ Deterministic: <span class="ansi33"
 > a
 </span>; 
 ; EVAL TEST
-; took 0.000726 secs. (726.25 microseconds) 
+; took 0.000757 secs. (756.77 microseconds) 
 
 !(assertEqualToResult (add-atom &WU a) (()))
 
@@ -456,7 +456,7 @@ Deterministic: <span class="ansi33"
 >;; METTA-MORPH-TESTS.STATES-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.068 secs. (68.31 milliseconds) 
+; took 0.068 secs. (68.29 milliseconds) 
 
 !(assertEqualToResult (match &WU $1 $1) (a))
 
@@ -494,7 +494,7 @@ Deterministic: <span class="ansi33"
 > b
 </span>; 
 ; EVAL TEST
-; took 0.000807 secs. (807.39 microseconds) 
+; took 0.000807 secs. (806.93 microseconds) 
 
 !(assertEqualToResult (add-atom &WU b) (()))
 
@@ -518,7 +518,7 @@ Deterministic: <span class="ansi33"
 > a
 </span>; 
 ; EVAL TEST
-; took 0.000449 secs. (448.63 microseconds) 
+; took 0.000410 secs. (409.62 microseconds) 
 
 !(assertEqualToResult (remove-atom &WU a) (()))
 
@@ -4553,12 +4553,12 @@ Deterministic: <span class="ansi33"
 >Call: </span>(287) [rtrace] tAt(false, 271, 271, false)
 ; 
 ; EVAL TEST
-; took 0.669 secs. (668.81 milliseconds) 
+; took 0.665 secs. (665.15 milliseconds) 
 
 !(assertEqual (match &WU $1 $1) (get-atoms &WU))
 
 
-Script done on 2024-12-06 19:47:02+00:00 [COMMAND_EXIT_CODE="143"]
+Script done on 2024-12-06 22:35:36+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>

@@ -37,7 +37,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:28:02+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:16:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -198,7 +198,7 @@ Script started on 2024-12-06 19:28:02+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4674908 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4544915 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -358,9 +358,9 @@ Script started on 2024-12-06 19:28:02+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 3 "Missed result: 3)]" )
 P;HTML|
-;                                         #( = 3 "0.04user 0.00system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 26284maxresident)k" )
+;                                         #( = 3 "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26152maxresident)k" )
 P;HTML|
-;                                         #( = 3 "0inputs+0outputs (0major+3134minor)pagefaults 0swaps" )
+;                                         #( = 3 "0inputs+0outputs (0major+3131minor)pagefaults 0swaps" )
 P;HTML|
 ;                                        #(load_answer_file /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/differen_arities_are_fine_he_603.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/differen_arities_are_fine_he_603.metta)
 
@@ -382,7 +382,7 @@ Script started on 2024-12-06 19:28:02+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.DIFFEREN-ARITIES-ARE-FINE-HE-603.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.05 milliseconds) 
+; took 0.001 secs. (1.01 milliseconds) 
 
 !(assertEqualToResult ((λ $x (+ 1 $x)) 1) (2))
 
@@ -458,7 +458,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.DIFFEREN-ARITIES-ARE-FINE-HE-603.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000502 secs. (502.15 microseconds) 
+; took 0.000522 secs. (522.49 microseconds) 
 
 !(assertEqualToResult (foo 1) (2))
 
@@ -482,7 +482,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.DIFFEREN-ARITIES-ARE-FINE-HE-603.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000500 secs. (500.18 microseconds) 
+; took 0.000502 secs. (502.40 microseconds) 
 
 !(assertEqualToResult (foo 1 2) (3))
 
@@ -502,7 +502,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.DIFFEREN-ARITIES-ARE-FINE-HE-603.06</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.10 milliseconds) 
+; took 0.001 secs. (1.03 milliseconds) 
 
 !(assertEqualToResult ((λ $x (+ 1 $x)) 1) (2))
 
@@ -519,7 +519,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.DIFFEREN-ARITIES-ARE-FINE-HE-603.07</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.17 milliseconds) 
+; took 0.001 secs. (1.13 milliseconds) 
 
 !(assertEqualToResult ((λ $x $y (+ $x $y)) 1 2) (3))
 
@@ -529,7 +529,7 @@ Deterministic: <span class="ansi33"
 Deterministic: <span class="ansi33"
 >()
 </span><span class="ansi32"
->% 276,125 inferences, 0.080 CPU in 0.083 seconds (97% CPU, 3439056 Lips)
+>% 276,013 inferences, 0.081 CPU in 0.083 seconds (97% CPU, 3403503 Lips)
 </span>P;HTML|
 ;                       #( = /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/differen_arities_are_fine_he_603.metta 0 )
 <span class="ansi1"
@@ -675,7 +675,7 @@ Deterministic: <span class="ansi33"
 <span class="ansi31"
 >#(in #(maybe_halt 7) #(unwind #(halt 7)))
 </span>
-Script done on 2024-12-06 19:28:09+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-06 22:16:46+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -79,7 +79,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:29:54+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -240,7 +240,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4578382 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4594646 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -420,7 +420,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (\"a\" \"x: 1 y: 2\") " )
 P;HTML|
-;                                         #( = 1 "       (String $X#1657 \"a\" \"x: 1 y: 2\" ()))" )
+;                                         #( = 1 "       (String $X#1657 \"a\" () \"x: 1 y: 2\"))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -428,7 +428,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (Z (S Z) (S (S Z))) " )
 P;HTML|
-;                                         #( = 1 "       (String $X#2396 Z () (S (S Z)) (S Z)))" )
+;                                         #( = 1 "       (Z String $X#2396 () (S (S Z)) (S Z)))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -436,7 +436,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (S GroundingSpace-top) " )
 P;HTML|
-;                                         #( = 1 "       (Error (S String $X#4136 Z ()) IncorrectNumberOfArguments))" )
+;                                         #( = 1 "       (Z S String $X#4139 ()))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -444,7 +444,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (GroundingSpace-top) " )
 P;HTML|
-;                                         #( = 1 "       (String $X#4977 ()))" )
+;                                         #( = 1 "       (String $X#4936 ()))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -452,7 +452,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (1 \"a\" 'c' Z (S Z)) " )
 P;HTML|
-;                                         #( = 1 "       (String $X#5677 \"a\" 1 'c' \"x: 1 y: 2\" ()))" )
+;                                         #( = 1 "       (String 'c' $X#5636 1 \"a\" () \"x: 1 y: 2\"))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -460,7 +460,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (String) " )
 P;HTML|
-;                                         #( = 1 "       (String $X#6534 ()))" )
+;                                         #( = 1 "       (String $X#6493 ()))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -470,7 +470,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (all the values) " )
 P;HTML|
-;                                         #( = 1 "       (Error (S String $X#7236 \"a\" 1 'c' Z \"x: 1 y: 2\" () 5 () (S (S Z)) (Cons 1 (Cons 2 (Cons 3 Nil))) (S Z)) IncorrectNumberOfArguments))" )
+;                                         #( = 1 "       (Z S String 'c' $X#7195 1 \"a\" 5 () (S (S Z)) () (S Z) \"x: 1 y: 2\" (Cons 1 (Cons 2 (Cons 3 Nil)))))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -480,7 +480,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (1 \"a\" Z (S Z) (S (S Z))) " )
 P;HTML|
-;                                         #( = 1 "       (Error (S String $X#10653 \"a\" 1 'c' Z \"x: 1 y: 2\" () 5 () (S (S Z)) (Cons 1 (Cons 2 (Cons 3 Nil))) (S Z)) IncorrectNumberOfArguments))" )
+;                                         #( = 1 "       (Z S String 'c' $X#10212 1 \"a\" 5 () (S (S Z)) () (S Z) \"x: 1 y: 2\" (Cons 1 (Cons 2 (Cons 3 Nil)))))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -488,7 +488,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       () " )
 P;HTML|
-;                                         #( = 1 "       (String $X#14324 ()))" )
+;                                         #( = 1 "       (String $X#13485 ()))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -498,7 +498,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       ((+ 2 3) (format-args \"x: {} y: {}\" (1 2))) " )
 P;HTML|
-;                                         #( = 1 "       (Error (S String $X#15021 \"a\" 1 'c' Z \"x: 1 y: 2\" () 5 () (S (S Z)) (Cons 1 (Cons 2 (Cons 3 Nil))) (S Z)) IncorrectNumberOfArguments))" )
+;                                         #( = 1 "       (Z S String 'c' $X#14182 1 \"a\" 5 () (S (S Z)) () (S Z) \"x: 1 y: 2\" (Cons 1 (Cons 2 (Cons 3 Nil)))))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -508,7 +508,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (1 \"a\" 'c' S Z (S Z)) " )
 P;HTML|
-;                                         #( = 1 "       (Error (S String $X#18172 \"a\" 1 'c' Z \"x: 1 y: 2\" () 5 () (S (S Z)) (Cons 1 (Cons 2 (Cons 3 Nil))) (S Z)) IncorrectNumberOfArguments))" )
+;                                         #( = 1 "       (Z S String 'c' $X#16935 1 \"a\" 5 () (S (S Z)) () (S Z) \"x: 1 y: 2\" (Cons 1 (Cons 2 (Cons 3 Nil)))))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -518,7 +518,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       ((+ 2 3)) " )
 P;HTML|
-;                                         #( = 1 "       (Error (S String $X#21361 \"a\" 1 'c' Z \"x: 1 y: 2\" () 5 () (S (S Z)) (Cons 1 (Cons 2 (Cons 3 Nil))) (S Z)) IncorrectNumberOfArguments))" )
+;                                         #( = 1 "       (Z S String 'c' $X#19726 1 \"a\" 5 () (S (S Z)) () (S Z) \"x: 1 y: 2\" (Cons 1 (Cons 2 (Cons 3 Nil)))))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -528,7 +528,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (empty (println! \"did it\")) " )
 P;HTML|
-;                                         #( = 1 "       (Error (S String $X#24446 \"a\" 1 'c' Z \"x: 1 y: 2\" () 5 () (S (S Z)) (Cons 1 (Cons 2 (Cons 3 Nil))) (S Z)) IncorrectNumberOfArguments))" )
+;                                         #( = 1 "       (Z S String 'c' $X#22413 1 \"a\" 5 () (S (S Z)) () (S Z) \"x: 1 y: 2\" (Cons 1 (Cons 2 (Cons 3 Nil)))))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -538,7 +538,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       () " )
 P;HTML|
-;                                         #( = 1 "       (Error (S String $X#27539 \"a\" 1 'c' Z \"x: 1 y: 2\" () 5 () (S (S Z)) (Cons 1 (Cons 2 (Cons 3 Nil))) (S Z)) IncorrectNumberOfArguments))" )
+;                                         #( = 1 "       (Z S String 'c' $X#25108 1 \"a\" 5 () (S (S Z)) () (S Z) \"x: 1 y: 2\" (Cons 1 (Cons 2 (Cons 3 Nil)))))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -548,7 +548,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (Z String \"a\" 1 'c' $X S (Cons 1 (Cons 2 (Cons 3 Nil))) () 5 (S Z) \"x: 1 y: 2\" (S (S Z)) ()) " )
 P;HTML|
-;                                         #( = 1 "       (Error (S String $X#30610 \"a\" 1 'c' Z \"x: 1 y: 2\" () 5 () (S (S Z)) (Cons 1 (Cons 2 (Cons 3 Nil))) (S Z)) IncorrectNumberOfArguments))" )
+;                                         #( = 1 "       (Z S String 'c' $X#27779 1 \"a\" 5 () (S (S Z)) () (S Z) \"x: 1 y: 2\" (Cons 1 (Cons 2 (Cons 3 Nil)))))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -556,7 +556,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       ('c') " )
 P;HTML|
-;                                         #( = 1 "       (String $X#34598 'c' ()))" )
+;                                         #( = 1 "       (String 'c' $X#31369 ()))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -564,7 +564,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       (empty (println! \"did it\") ()) " )
 P;HTML|
-;                                         #( = 1 "       (String $X#35322 ()))" )
+;                                         #( = 1 "       (String $X#32093 ()))" )
 P;HTML|
 ;                                         #( = 1 "" )
 P;HTML|
@@ -572,7 +572,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 1 "       ((Cons 1 (Cons 2 (Cons 3 Nil)))) " )
 P;HTML|
-;                                         #( = 1 "       (String $X#36064 () (Cons 1 (Cons 2 (Cons 3 Nil)))))" )
+;                                         #( = 1 "       (String $X#32835 () (Cons 1 (Cons 2 (Cons 3 Nil)))))" )
 P;HTML|
 ;                                         #( = 1 "[()]" )
 P;HTML|
@@ -616,9 +616,9 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 21 "[()]" )
 P;HTML|
-;                                         #( = 22 "0.57user 0.01system 0:00.58elapsed 100%CPU (0avgtext+0avgdata 27304maxresident)k" )
+;                                         #( = 22 "0.62user 0.00system 0:00.63elapsed 99%CPU (0avgtext+0avgdata 27344maxresident)k" )
 P;HTML|
-;                                         #( = 22 "0inputs+0outputs (0major+3360minor)pagefaults 0swaps" )
+;                                         #( = 22 "0inputs+0outputs (0major+3370minor)pagefaults 0swaps" )
 P;HTML|
 ;                                        #(load_answer_file /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/type_filtering_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/type_filtering_tests.metta)
 
@@ -774,7 +774,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 </span><span class="ansi38-255165000"
 > (: MeTTa-Test (-> String Atom Atom Atom Atom))
 </span><span class="ansi32"
->% 747,295 inferences, 0.172 CPU in 0.174 seconds (99% CPU, 4350528 Lips)
+>% 743,089 inferences, 0.170 CPU in 0.172 seconds (99% CPU, 4373644 Lips)
 </span>P;HTML|
 ;                       #( = /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/type_filtering_tests.metta 0 )
 <br/> <a href="#" onclick="window.history.back(); return false;"
@@ -906,7 +906,7 @@ Script started on 2024-12-06 19:41:19+00:00 [TERM="xterm-256color" TTY="/dev/pts
 <span class="ansi31"
 >#(in #(maybe_halt 7) #(unwind #(halt 7)))
 </span>
-Script done on 2024-12-06 19:41:26+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-06 22:30:00+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

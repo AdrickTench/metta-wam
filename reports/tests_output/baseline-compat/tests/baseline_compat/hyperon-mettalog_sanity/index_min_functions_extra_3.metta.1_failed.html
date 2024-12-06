@@ -38,7 +38,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:30:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:19:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -199,7 +199,7 @@ Script started on 2024-12-06 19:30:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4489113 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4643609 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -353,7 +353,7 @@ Script started on 2024-12-06 19:30:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 2 "[()]" )
 P;HTML|
-;                                         #( = 3 "[(Error (assertEqualToResult (get-atoms GroundingSpace-0x56210c3c27f8) ((mod-space! stdlib))) " )
+;                                         #( = 3 "[(Error (assertEqualToResult (get-atoms GroundingSpace-0x5566dae487f8) ((mod-space! stdlib))) " )
 P;HTML|
 ;                                         #( = 3 "Expected: [(mod-space! stdlib)]" )
 P;HTML|
@@ -361,9 +361,9 @@ Script started on 2024-12-06 19:30:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 4 "Missed result: (mod-space! stdlib))]" )
 P;HTML|
-;                                         #( = 4 "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26052maxresident)k" )
+;                                         #( = 4 "0.02user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 26048maxresident)k" )
 P;HTML|
-;                                         #( = 4 "0inputs+0outputs (0major+3105minor)pagefaults 0swaps" )
+;                                         #( = 4 "0inputs+0outputs (0major+3103minor)pagefaults 0swaps" )
 P;HTML|
 ;                                        #(load_answer_file /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/index_min_functions_extra_3.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/index_min_functions_extra_3.metta)
 
@@ -390,7 +390,7 @@ Deterministic: <span class="ansi33"
 > (mod-space! stdlib)
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.16 milliseconds) 
+; took 0.000991 secs. (990.92 microseconds) 
 
 !(assertEqualToResult (add-atom &new-space (mod-space! stdlib)) (()))
 
@@ -413,33 +413,33 @@ Deterministic: <span class="ansi33"
 #(on_mettalog_error #(failed #( : user once ) #( : user #(if_or_else #(eval = $10000 497 &self (case (if-unify-or-empty $10001 $10001) (( $10002))) $10003) #(call eval (case (if-unify-or-empty $10001 $10001) (( $10002))) $10003)) )))
 
 ^  <span class="ansi1 ansi32"
->Call: </span>(283) [user] call(user:once, user:if_or_else(eval(=, _621376, 497, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634), call(eval, [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634)))
+>Call: </span>(283) [user] call(user:once, user:if_or_else(eval(=, _621390, 497, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648), call(eval, [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648)))
 ^  <span class="ansi1 ansi32"
->Call: </span>(284) [user] once(user:if_or_else(eval(=, _621376, 497, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634), call(eval, [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634)))
+>Call: </span>(284) [user] once(user:if_or_else(eval(=, _621390, 497, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648), call(eval, [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648)))
    <span class="ansi1 ansi32"
->Call: </span>(285) [user] if_or_else(eval(=, _621376, 497, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634), call(eval, [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634))
+>Call: </span>(285) [user] if_or_else(eval(=, _621390, 497, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648), call(eval, [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648))
 ^  <span class="ansi1 ansi32"
->Call: </span>(286) [user] eval(=, _621376, 497, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634)
+>Call: </span>(286) [user] eval(=, _621390, 497, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648)
 ^  <span class="ansi1 ansi32"
->Call: </span>(287) [user] catch_metta_return(eval_args(=, _621376, 497, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634), _624634)
+>Call: </span>(287) [user] catch_metta_return(eval_args(=, _621390, 497, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648), _624648)
 ^  <span class="ansi1 ansi32"
->Call: </span>(289) [user] eval_args(=, _621376, 497, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634)
+>Call: </span>(289) [user] eval_args(=, _621390, 497, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648)
    <span class="ansi1 ansi32"
->Call: </span>(290) [system] var([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Call: </span>(290) [system] var([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
 ^  <span class="ansi1 ansi32"
->Call: </span>(291) [system] setup_call_cleanup('$notrace'(_643500, _643502), once(user:self_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])), '$restore_trace'(_643500, _643502))
+>Call: </span>(291) [system] setup_call_cleanup('$notrace'(_643514, _643516), once(user:self_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])), '$restore_trace'(_643514, _643516))
 ^  <span class="ansi1 ansi32"
->Call: </span>(292) [system] sig_atomic(system:'$notrace'(_643500, _643502))
+>Call: </span>(292) [system] sig_atomic(system:'$notrace'(_643514, _643516))
 ^  <span class="ansi1 ansi32"
->Call: </span>(291) [system] setup_call_cleanup('$notrace'(_645588, _645590), once(user:nonvar(_624634)), '$restore_trace'(_645588, _645590))
+>Call: </span>(291) [system] setup_call_cleanup('$notrace'(_645602, _645604), once(user:nonvar(_624648)), '$restore_trace'(_645602, _645604))
 ^  <span class="ansi1 ansi32"
->Call: </span>(292) [system] sig_atomic(system:'$notrace'(_645588, _645590))
+>Call: </span>(292) [system] sig_atomic(system:'$notrace'(_645602, _645604))
 ^  <span class="ansi1 ansi32"
->Call: </span>(291) [system] setup_call_cleanup('$notrace'(_647676, _647678), once(user:nonvar(_624634)), '$restore_trace'(_647676, _647678))
+>Call: </span>(291) [system] setup_call_cleanup('$notrace'(_647690, _647692), once(user:nonvar(_624648)), '$restore_trace'(_647690, _647692))
 ^  <span class="ansi1 ansi32"
->Call: </span>(292) [system] sig_atomic(system:'$notrace'(_647676, _647678))
+>Call: </span>(292) [system] sig_atomic(system:'$notrace'(_647690, _647692))
    <span class="ansi1 ansi32"
->Call: </span>(290) [system] [['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]==[]
+>Call: </span>(290) [system] [['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]==[]
    <span class="ansi1 ansi32"
 >Call: </span>(290) [system] atom(=)
    <span class="ansi1 ansi32"
@@ -447,29 +447,29 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Call: </span>(290) [system] (=)\==(=)
 ^  <span class="ansi1 ansi32"
->Call: </span>(290) [user] self_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Call: </span>(290) [user] self_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
 ^  <span class="ansi1 ansi32"
->Call: </span>(292) [system] setup_call_cleanup('$notrace'(_654832, _654834), once(user:self_eval0([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])), '$restore_trace'(_654832, _654834))
+>Call: </span>(292) [system] setup_call_cleanup('$notrace'(_654846, _654848), once(user:self_eval0([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])), '$restore_trace'(_654846, _654848))
 ^  <span class="ansi1 ansi32"
->Call: </span>(293) [system] sig_atomic(system:'$notrace'(_654832, _654834))
+>Call: </span>(293) [system] sig_atomic(system:'$notrace'(_654846, _654848))
 ^  <span class="ansi1 ansi31"
->Fail: </span>(290) [user] self_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Fail: </span>(290) [user] self_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
 ^  <span class="ansi1 ansi32"
->Call: </span>(290) [user] eval_00(=, _621376, 497, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634)
+>Call: </span>(290) [user] eval_00(=, _621390, 497, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648)
 ^  <span class="ansi1 ansi32"
->Call: </span>(291) [user] self_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Call: </span>(291) [user] self_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
 ^  <span class="ansi1 ansi32"
->Call: </span>(293) [system] setup_call_cleanup('$notrace'(_659976, _659978), once(user:self_eval0([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])), '$restore_trace'(_659976, _659978))
+>Call: </span>(293) [system] setup_call_cleanup('$notrace'(_659990, _659992), once(user:self_eval0([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])), '$restore_trace'(_659990, _659992))
 ^  <span class="ansi1 ansi32"
->Call: </span>(294) [system] sig_atomic(system:'$notrace'(_659976, _659978))
+>Call: </span>(294) [system] sig_atomic(system:'$notrace'(_659990, _659992))
 ^  <span class="ansi1 ansi31"
->Fail: </span>(291) [user] self_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Fail: </span>(291) [user] self_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
 ^  <span class="ansi1 ansi32"
->Call: </span>(291) [user] eval_01(=, _621376, 497, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _624634)
+>Call: </span>(291) [user] eval_01(=, _621390, 497, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _624648)
    <span class="ansi1 ansi32"
->Call: </span>(292) [system] [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]\==[empty]
+>Call: </span>(292) [system] [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]\==[empty]
    <span class="ansi1 ansi32"
->Exit: </span>(292) [system] [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]\==[empty]
+>Exit: </span>(292) [system] [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]\==[empty]
 ^  <span class="ansi1 ansi32"
 >Call: </span>(292) [user] if_t((497<1, trace_on_overflow), debug(metta(eval_args)))
    <span class="ansi1 ansi32"
@@ -479,37 +479,37 @@ Deterministic: <span class="ansi33"
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(292) [user] if_t((497<1, trace_on_overflow), debug(metta(eval_args)))
 ^  <span class="ansi1 ansi32"
->Call: </span>(293) [system] setup_call_cleanup('$notrace'(_670250, _670252), once(user:(_670226 is 497-1, copy_term([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _670240))), '$restore_trace'(_670250, _670252))
+>Call: </span>(293) [system] setup_call_cleanup('$notrace'(_670264, _670266), once(user:(_670240 is 497-1, copy_term([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _670254))), '$restore_trace'(_670264, _670266))
 ^  <span class="ansi1 ansi32"
->Call: </span>(294) [system] sig_atomic(system:'$notrace'(_670250, _670252))
+>Call: </span>(294) [system] sig_atomic(system:'$notrace'(_670264, _670266))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(293) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(496 is 497-1, copy_term([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], [case, ['if-unify-or-empty', _672348, _672348], [['Empty', _672378]]]))), system:'$restore_trace'(3, -1))
+>Exit: </span>(293) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(496 is 497-1, copy_term([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], [case, ['if-unify-or-empty', _672362, _672362], [['Empty', _672392]]]))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Call: </span>(292) [user] trace_eval(eval_20(=, _621376), e, 496, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _673414)
+>Call: </span>(292) [user] trace_eval(eval_20(=, _621390), e, 496, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _673428)
 ^  <span class="ansi1 ansi32"
->Call: </span>(293) [user] must_det_ll((notrace((flag(eval_num, _674468, _674468+1), _674486 is _674468 mod 500, _674504 is 99-496 mod 100, _674528=_674530, option_else('trace-length', _674542, 500), option_else('trace-depth', _674550, 30))), quietly(if_t((nop(stop_rtrace), _674486>_674542), (set_debug(eval, false), _674606 is _674542+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674606])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_674658)))))
+>Call: </span>(293) [user] must_det_ll((notrace((flag(eval_num, _674482, _674482+1), _674500 is _674482 mod 500, _674518 is 99-496 mod 100, _674542=_674544, option_else('trace-length', _674556, 500), option_else('trace-depth', _674564, 30))), quietly(if_t((nop(stop_rtrace), _674500>_674556), (set_debug(eval, false), _674620 is _674556+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674620])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_674672)))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(294) [user] once(user:(notrace((flag(eval_num, _674468, _674468+1), _674486 is _674468 mod 500, _674504 is 99-496 mod 100, _674528=_674530, option_else('trace-length', _674542, 500), option_else('trace-depth', _674550, 30))), quietly(if_t((nop(stop_rtrace), _674486>_674542), (set_debug(eval, false), _674606 is _674542+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674606])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_674658)))))
+>Call: </span>(294) [user] once(user:(notrace((flag(eval_num, _674482, _674482+1), _674500 is _674482 mod 500, _674518 is 99-496 mod 100, _674542=_674544, option_else('trace-length', _674556, 500), option_else('trace-depth', _674564, 30))), quietly(if_t((nop(stop_rtrace), _674500>_674556), (set_debug(eval, false), _674620 is _674556+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674620])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_674672)))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(297) [system] setup_call_cleanup('$notrace'(_676704, _676706), once(user:(flag(eval_num, _674468, _674468+1), _674486 is _674468 mod 500, _674504 is 99-496 mod 100, _674528=_674530, option_else('trace-length', _674542, 500), option_else('trace-depth', _674550, 30))), '$restore_trace'(_676704, _676706))
+>Call: </span>(297) [system] setup_call_cleanup('$notrace'(_676718, _676720), once(user:(flag(eval_num, _674482, _674482+1), _674500 is _674482 mod 500, _674518 is 99-496 mod 100, _674542=_674544, option_else('trace-length', _674556, 500), option_else('trace-depth', _674564, 30))), '$restore_trace'(_676718, _676720))
 ^  <span class="ansi1 ansi32"
->Call: </span>(298) [system] sig_atomic(system:'$notrace'(_676704, _676706))
+>Call: </span>(298) [system] sig_atomic(system:'$notrace'(_676718, _676720))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(297) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(flag(eval_num, 576, 576+1), 76 is 576 mod 500, 3 is 99-496 mod 100, _674528=_674528, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), system:'$restore_trace'(3, -1))
+>Exit: </span>(297) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(flag(eval_num, 576, 576+1), 76 is 576 mod 500, 3 is 99-496 mod 100, _674542=_674542, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Call: </span>(297) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 76>500), (set_debug(eval, false), _674606 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674606])), nop((start_rtrace, rtrace)))))
+>Call: </span>(297) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 76>500), (set_debug(eval, false), _674620 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674620])), nop((start_rtrace, rtrace)))))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(297) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 76>500), (set_debug(eval, false), _674606 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674606])), nop((start_rtrace, rtrace)))))
+>Exit: </span>(297) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 76>500), (set_debug(eval, false), _674620 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674620])), nop((start_rtrace, rtrace)))))
    <span class="ansi1 ansi32"
->Call: </span>(296) [user] nop(notrace(no_repeats_var(_674658)))
+>Call: </span>(296) [user] nop(notrace(no_repeats_var(_674672)))
    <span class="ansi1 ansi32"
->Exit: </span>(296) [user] nop(notrace(no_repeats_var(_674658)))
+>Exit: </span>(296) [user] nop(notrace(no_repeats_var(_674672)))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(294) [system] once(user:(notrace((flag(eval_num, 576, 576+1), 76 is 576 mod 500, 3 is 99-496 mod 100, _674528=_674528, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 76>500), (set_debug(eval, false), _674606 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674606])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_674658)))))
+>Exit: </span>(294) [system] once(user:(notrace((flag(eval_num, 576, 576+1), 76 is 576 mod 500, 3 is 99-496 mod 100, _674542=_674542, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 76>500), (set_debug(eval, false), _674620 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674620])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_674672)))))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(293) [user] must_det_ll(user:(notrace((flag(eval_num, 576, 576+1), 76 is 576 mod 500, 3 is 99-496 mod 100, _674528=_674528, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 76>500), (set_debug(eval, false), _674606 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674606])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_674658)))))
+>Exit: </span>(293) [user] must_det_ll(user:(notrace((flag(eval_num, 576, 576+1), 76 is 576 mod 500, 3 is 99-496 mod 100, _674542=_674542, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 76>500), (set_debug(eval, false), _674620 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_674620])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_674672)))))
    <span class="ansi1 ansi32"
->Call: </span>(293) [occurs] occurs:sub_term(_686356, e)
+>Call: </span>(293) [occurs] occurs:sub_term(_686370, e)
    <span class="ansi1 ansi32"
 >Exit: </span>(293) [occurs] occurs:sub_term(e, e)
    <span class="ansi1 ansi32"
@@ -521,45 +521,45 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi31"
 >Fail: </span>(294) [system] compound(e)
    <span class="ansi1 ansi31"
->Fail: </span>(293) [occurs] occurs:sub_term(_686356, e)
+>Fail: </span>(293) [occurs] occurs:sub_term(_686370, e)
    <span class="ansi1 ansi32"
->Call: </span>(293) [system] _693462=e
+>Call: </span>(293) [system] _693476=e
    <span class="ansi1 ansi32"
 >Exit: </span>(293) [system] e=e
 ^  <span class="ansi1 ansi32"
->Call: </span>(293) [user] if_trace((eval;e), (_674528=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]])))
+>Call: </span>(293) [user] if_trace((eval;e), (_674542=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]])))
 ^  <span class="ansi1 ansi32"
->Call: </span>(295) [system] setup_call_cleanup('$notrace'(_696602, _696604), once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _674528=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]]))), _696560, fbug((_696560-->if_trace((eval;e), (_674528=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]])))))))), '$restore_trace'(_696602, _696604))
+>Call: </span>(295) [system] setup_call_cleanup('$notrace'(_696616, _696618), once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _674542=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]]))), _696574, fbug((_696574-->if_trace((eval;e), (_674542=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]])))))))), '$restore_trace'(_696616, _696618))
 ^  <span class="ansi1 ansi32"
->Call: </span>(296) [system] sig_atomic(system:'$notrace'(_696602, _696604))
+>Call: </span>(296) [system] sig_atomic(system:'$notrace'(_696616, _696618))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(295) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _674528=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]]))), _696560, fbug((_696560-->if_trace((eval;e), (_674528=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]])))))))), system:'$restore_trace'(3, -1))
+>Exit: </span>(295) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _674542=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]]))), _696574, fbug((_696574-->if_trace((eval;e), (_674542=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]])))))))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(293) [user] if_trace((eval;e), (_674528=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]])))
+>Exit: </span>(293) [user] if_trace((eval;e), (_674542=1, indentq(3, 76, -->, [e, [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]])))
    <span class="ansi1 ansi32"
->Call: </span>(293) [system] _700798=retval(fail)
+>Call: </span>(293) [system] _700812=retval(fail)
    <span class="ansi1 ansi32"
 >Exit: </span>(293) [system] retval(fail)=retval(fail)
    <span class="ansi1 ansi32"
->Call: </span>(293) [system] _702836=(\+ \+ (flag(eval_num, _702856, _702856+1), (retval(fail)\=@=retval(fail), nonvar(_673414)->indentq(3, _702856, <--, [e, _673414]);indentq(3, _702856, <--, [e, retval(fail)]))))
+>Call: </span>(293) [system] _702850=(\+ \+ (flag(eval_num, _702870, _702870+1), (retval(fail)\=@=retval(fail), nonvar(_673428)->indentq(3, _702870, <--, [e, _673428]);indentq(3, _702870, <--, [e, retval(fail)]))))
    <span class="ansi1 ansi32"
->Exit: </span>(293) [system] (\+ \+ (flag(eval_num, _702856, _702856+1), (retval(fail)\=@=retval(fail), nonvar(_673414)->indentq(3, _702856, <--, [e, _673414]);indentq(3, _702856, <--, [e, retval(fail)]))))=(\+ \+ (flag(eval_num, _702856, _702856+1), (retval(fail)\=@=retval(fail), nonvar(_673414)->indentq(3, _702856, <--, [e, _673414]);indentq(3, _702856, <--, [e, retval(fail)]))))
+>Exit: </span>(293) [system] (\+ \+ (flag(eval_num, _702870, _702870+1), (retval(fail)\=@=retval(fail), nonvar(_673428)->indentq(3, _702870, <--, [e, _673428]);indentq(3, _702870, <--, [e, retval(fail)]))))=(\+ \+ (flag(eval_num, _702870, _702870+1), (retval(fail)\=@=retval(fail), nonvar(_673428)->indentq(3, _702870, <--, [e, _673428]);indentq(3, _702870, <--, [e, retval(fail)]))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(293) [user] call_cleanup(((call(eval_20(=, _621376), 496, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _673414)*->nb_setarg(1, retval(fail), _673414);fail, trace, call(eval_20(=, _621376), 496, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _673414)), ignore(notrace((\+_673414\=_674658, nb_setarg(1, retval(fail), _673414))))), ignore((_674528==1->ignore(\+ \+ (flag(eval_num, _702856, _702856+1), (retval(fail)\=@=retval(fail), nonvar(_673414)->indentq(3, _702856, <--, [e, _673414]);indentq(3, _702856, <--, [e, retval(fail)]))));notrace(ignore(if_t(3<30, if_trace((eval;e), ignore(\+ \+ (flag(eval_num, _702856, _702856+1), (retval(fail)\=@=retval(fail), nonvar(_673414)->indentq(3, _702856, <--, [e, _673414]);indentq(3, _702856, <--, [e, retval(fail)])))))))))))
+>Call: </span>(293) [user] call_cleanup(((call(eval_20(=, _621390), 496, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _673428)*->nb_setarg(1, retval(fail), _673428);fail, trace, call(eval_20(=, _621390), 496, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _673428)), ignore(notrace((\+_673428\=_674672, nb_setarg(1, retval(fail), _673428))))), ignore((_674542==1->ignore(\+ \+ (flag(eval_num, _702870, _702870+1), (retval(fail)\=@=retval(fail), nonvar(_673428)->indentq(3, _702870, <--, [e, _673428]);indentq(3, _702870, <--, [e, retval(fail)]))));notrace(ignore(if_t(3<30, if_trace((eval;e), ignore(\+ \+ (flag(eval_num, _702870, _702870+1), (retval(fail)\=@=retval(fail), nonvar(_673428)->indentq(3, _702870, <--, [e, _673428]);indentq(3, _702870, <--, [e, retval(fail)])))))))))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(295) [user] eval_20(=, _621376, 496, '&self', [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _673414)
+>Call: </span>(295) [user] eval_20(=, _621390, 496, '&self', [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _673428)
    <span class="ansi1 ansi32"
->Call: </span>(296) [system] atom([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Call: </span>(296) [system] atom([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
 ^  <span class="ansi1 ansi32"
->Call: </span>(296) [user] no_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Call: </span>(296) [user] no_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
 ^  <span class="ansi1 ansi32"
->Call: </span>(297) [user] self_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Call: </span>(297) [user] self_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
 ^  <span class="ansi1 ansi32"
->Call: </span>(299) [system] setup_call_cleanup('$notrace'(_710244, _710246), once(user:self_eval0([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])), '$restore_trace'(_710244, _710246))
+>Call: </span>(299) [system] setup_call_cleanup('$notrace'(_710258, _710260), once(user:self_eval0([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])), '$restore_trace'(_710258, _710260))
 ^  <span class="ansi1 ansi32"
->Call: </span>(300) [system] sig_atomic(system:'$notrace'(_710244, _710246))
+>Call: </span>(300) [system] sig_atomic(system:'$notrace'(_710258, _710260))
 ^  <span class="ansi1 ansi31"
->Fail: </span>(297) [user] self_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Fail: </span>(297) [user] self_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
    <span class="ansi1 ansi32"
 >Call: </span>(297) [system] atomic(case)
    <span class="ansi1 ansi32"
@@ -569,7 +569,7 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Call: </span>(298) [system] number(case)
    <span class="ansi1 ansi32"
->Call: </span>(296) [system] [['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]==[]
+>Call: </span>(296) [system] [['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]==[]
    <span class="ansi1 ansi32"
 >Call: </span>(296) [system] atom(=)
    <span class="ansi1 ansi32"
@@ -581,123 +581,123 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Exit: </span>(296) [system] callable(case)
    <span class="ansi1 ansi32"
->Call: </span>(296) [system] [['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]==[]
+>Call: </span>(296) [system] [['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]==[]
    <span class="ansi1 ansi32"
->Call: </span>(296) [system] is_list([['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Call: </span>(296) [system] is_list([['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
    <span class="ansi1 ansi32"
->Exit: </span>(296) [system] is_list([['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Exit: </span>(296) [system] is_list([['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
    <span class="ansi1 ansi32"
 >Call: </span>(296) [system] is_list(case)
    <span class="ansi1 ansi32"
->Call: </span>(296) [system] is_list([['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Call: </span>(296) [system] is_list([['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
    <span class="ansi1 ansi32"
->Exit: </span>(296) [system] is_list([['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Exit: </span>(296) [system] is_list([['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
    <span class="ansi1 ansi32"
->Call: </span>(296) [system] is_list([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Call: </span>(296) [system] is_list([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
    <span class="ansi1 ansi32"
->Exit: </span>(296) [system] is_list([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Exit: </span>(296) [system] is_list([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
    <span class="ansi1 ansi32"
 >Call: </span>(296) [system] var(case)
 ^  <span class="ansi1 ansi32"
->Call: </span>(296) [user] once(expand_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _732588))
+>Call: </span>(296) [user] once(expand_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _732602))
 ^  <span class="ansi1 ansi32"
->Call: </span>(297) [user] expand_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _732588)
+>Call: </span>(297) [user] expand_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _732602)
    <span class="ansi1 ansi32"
->Call: </span>(298) [system] is_list([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Call: </span>(298) [system] is_list([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
    <span class="ansi1 ansi32"
->Exit: </span>(298) [system] is_list([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Exit: </span>(298) [system] is_list([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
    <span class="ansi1 ansi32"
 >Call: </span>(298) [system] ground(case)
    <span class="ansi1 ansi32"
 >Exit: </span>(298) [system] ground(case)
 ^  <span class="ansi1 ansi32"
->Call: </span>(298) [user] apply:maplist(expand_eval, [['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _738688)
+>Call: </span>(298) [user] apply:maplist(expand_eval, [['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _738702)
    <span class="ansi1 ansi32"
->Call: </span>(299) [apply] apply:maplist_([['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], _738688, user:expand_eval)
+>Call: </span>(299) [apply] apply:maplist_([['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], _738702, user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Call: </span>(300) [user] expand_eval(['if-unify-or-empty', _611692, _611692], _740744)
+>Call: </span>(300) [user] expand_eval(['if-unify-or-empty', _611706, _611706], _740758)
    <span class="ansi1 ansi32"
->Call: </span>(301) [system] is_list(['if-unify-or-empty', _611692, _611692])
+>Call: </span>(301) [system] is_list(['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
->Exit: </span>(301) [system] is_list(['if-unify-or-empty', _611692, _611692])
+>Exit: </span>(301) [system] is_list(['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
 >Call: </span>(301) [system] ground('if-unify-or-empty')
    <span class="ansi1 ansi32"
 >Exit: </span>(301) [system] ground('if-unify-or-empty')
 ^  <span class="ansi1 ansi32"
->Call: </span>(301) [user] apply:maplist(expand_eval, [_611692, _611692], _745822)
+>Call: </span>(301) [user] apply:maplist(expand_eval, [_611706, _611706], _745836)
    <span class="ansi1 ansi32"
->Call: </span>(302) [apply] apply:maplist_([_611692, _611692], _745822, user:expand_eval)
+>Call: </span>(302) [apply] apply:maplist_([_611706, _611706], _745836, user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Call: </span>(303) [user] expand_eval(_611692, _747878)
+>Call: </span>(303) [user] expand_eval(_611706, _747892)
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] is_list(_611692)
+>Call: </span>(304) [system] is_list(_611706)
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] _611692=_747878
+>Call: </span>(304) [system] _611706=_747892
    <span class="ansi1 ansi32"
->Exit: </span>(304) [system] _611692=_611692
+>Exit: </span>(304) [system] _611706=_611706
 ^  <span class="ansi1 ansi32"
->Exit: </span>(303) [user] expand_eval(_611692, _611692)
+>Exit: </span>(303) [user] expand_eval(_611706, _611706)
    <span class="ansi1 ansi32"
->Call: </span>(303) [apply] apply:maplist_([_611692], _747880, user:expand_eval)
+>Call: </span>(303) [apply] apply:maplist_([_611706], _747894, user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Call: </span>(304) [user] expand_eval(_611692, _753980)
+>Call: </span>(304) [user] expand_eval(_611706, _753994)
    <span class="ansi1 ansi32"
->Call: </span>(305) [system] is_list(_611692)
+>Call: </span>(305) [system] is_list(_611706)
    <span class="ansi1 ansi32"
->Call: </span>(305) [system] _611692=_753980
+>Call: </span>(305) [system] _611706=_753994
    <span class="ansi1 ansi32"
->Exit: </span>(305) [system] _611692=_611692
+>Exit: </span>(305) [system] _611706=_611706
 ^  <span class="ansi1 ansi32"
->Exit: </span>(304) [user] expand_eval(_611692, _611692)
+>Exit: </span>(304) [user] expand_eval(_611706, _611706)
    <span class="ansi1 ansi32"
->Call: </span>(304) [apply] apply:maplist_([], _753982, user:expand_eval)
+>Call: </span>(304) [apply] apply:maplist_([], _753996, user:expand_eval)
    <span class="ansi1 ansi32"
 >Exit: </span>(304) [apply] apply:maplist_([], [], user:expand_eval)
    <span class="ansi1 ansi32"
->Exit: </span>(303) [apply] apply:maplist_([_611692], [_611692], user:expand_eval)
+>Exit: </span>(303) [apply] apply:maplist_([_611706], [_611706], user:expand_eval)
    <span class="ansi1 ansi32"
->Exit: </span>(302) [apply] apply:maplist_([_611692, _611692], [_611692, _611692], user:expand_eval)
+>Exit: </span>(302) [apply] apply:maplist_([_611706, _611706], [_611706, _611706], user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Exit: </span>(301) [apply] apply:maplist(user:expand_eval, [_611692, _611692], [_611692, _611692])
+>Exit: </span>(301) [apply] apply:maplist(user:expand_eval, [_611706, _611706], [_611706, _611706])
 ^  <span class="ansi1 ansi32"
->Exit: </span>(300) [user] expand_eval(['if-unify-or-empty', _611692, _611692], ['if-unify-or-empty', _611692, _611692])
+>Exit: </span>(300) [user] expand_eval(['if-unify-or-empty', _611706, _611706], ['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
->Call: </span>(300) [apply] apply:maplist_([[['Empty', _611710]]], _740746, user:expand_eval)
+>Call: </span>(300) [apply] apply:maplist_([[['Empty', _611724]]], _740760, user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Call: </span>(301) [user] expand_eval([['Empty', _611710]], _766204)
+>Call: </span>(301) [user] expand_eval([['Empty', _611724]], _766218)
    <span class="ansi1 ansi32"
->Call: </span>(302) [system] is_list([['Empty', _611710]])
+>Call: </span>(302) [system] is_list([['Empty', _611724]])
    <span class="ansi1 ansi32"
->Exit: </span>(302) [system] is_list([['Empty', _611710]])
+>Exit: </span>(302) [system] is_list([['Empty', _611724]])
    <span class="ansi1 ansi32"
->Call: </span>(302) [system] ground(['Empty', _611710])
+>Call: </span>(302) [system] ground(['Empty', _611724])
 ^  <span class="ansi1 ansi32"
->Call: </span>(302) [user] apply:maplist(expand_eval, [], _769252)
+>Call: </span>(302) [user] apply:maplist(expand_eval, [], _769266)
    <span class="ansi1 ansi32"
->Call: </span>(303) [apply] apply:maplist_([], _769252, user:expand_eval)
+>Call: </span>(303) [apply] apply:maplist_([], _769266, user:expand_eval)
    <span class="ansi1 ansi32"
 >Exit: </span>(303) [apply] apply:maplist_([], [], user:expand_eval)
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(302) [apply] apply:maplist(user:expand_eval, [], [])
 ^  <span class="ansi1 ansi32"
->Exit: </span>(301) [user] expand_eval([['Empty', _611710]], [['Empty', _611710]])
+>Exit: </span>(301) [user] expand_eval([['Empty', _611724]], [['Empty', _611724]])
    <span class="ansi1 ansi32"
->Call: </span>(301) [apply] apply:maplist_([], _766206, user:expand_eval)
+>Call: </span>(301) [apply] apply:maplist_([], _766220, user:expand_eval)
    <span class="ansi1 ansi32"
 >Exit: </span>(301) [apply] apply:maplist_([], [], user:expand_eval)
    <span class="ansi1 ansi32"
->Exit: </span>(300) [apply] apply:maplist_([[['Empty', _611710]]], [[['Empty', _611710]]], user:expand_eval)
+>Exit: </span>(300) [apply] apply:maplist_([[['Empty', _611724]]], [[['Empty', _611724]]], user:expand_eval)
    <span class="ansi1 ansi32"
->Exit: </span>(299) [apply] apply:maplist_([['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], [['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], user:expand_eval)
+>Exit: </span>(299) [apply] apply:maplist_([['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], [['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Exit: </span>(298) [apply] apply:maplist(user:expand_eval, [['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], [['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Exit: </span>(298) [apply] apply:maplist(user:expand_eval, [['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], [['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
 ^  <span class="ansi1 ansi32"
->Exit: </span>(297) [user] expand_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]])
+>Exit: </span>(297) [user] expand_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]])
 ^  <span class="ansi1 ansi32"
->Exit: </span>(296) [system] once(user:expand_eval([case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]], [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]))
+>Exit: </span>(296) [system] once(user:expand_eval([case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]], [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]))
    <span class="ansi1 ansi32"
->Call: </span>(296) [system] [case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]\==[case, ['if-unify-or-empty', _611692, _611692], [['Empty', _611710]]]
+>Call: </span>(296) [system] [case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]\==[case, ['if-unify-or-empty', _611706, _611706], [['Empty', _611724]]]
 ^  <span class="ansi1 ansi32"
 >Call: </span>(296) [user] is_progn(case)
    <span class="ansi1 ansi32"
@@ -721,69 +721,69 @@ Deterministic: <span class="ansi33"
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(296) [user] must_det_ll(user:([]==[]))
 ^  <span class="ansi1 ansi32"
->Call: </span>(296) [user] into_case_list([['Empty', _611710]], _794696)
+>Call: </span>(296) [user] into_case_list([['Empty', _611724]], _794710)
    <span class="ansi1 ansi32"
->Call: </span>(297) [system] is_list([['Empty', _611710]])
+>Call: </span>(297) [system] is_list([['Empty', _611724]])
    <span class="ansi1 ansi32"
->Exit: </span>(297) [system] is_list([['Empty', _611710]])
+>Exit: </span>(297) [system] is_list([['Empty', _611724]])
 ^  <span class="ansi1 ansi32"
->Exit: </span>(296) [user] into_case_list([['Empty', _611710]], [['Empty', _611710]])
+>Exit: </span>(296) [user] into_case_list([['Empty', _611724]], [['Empty', _611724]])
 ^  <span class="ansi1 ansi32"
->Call: </span>(296) [user] into_case_keys(1, [['Empty', _611710]], _798754)
+>Call: </span>(296) [user] into_case_keys(1, [['Empty', _611724]], _798768)
    <span class="ansi1 ansi32"
->Call: </span>(297) [system] _799794 is 1+1
+>Call: </span>(297) [system] _799808 is 1+1
    <span class="ansi1 ansi32"
 >Exit: </span>(297) [system] 2 is 1+1
 ^  <span class="ansi1 ansi32"
->Call: </span>(297) [user] is_case(_799784, ['Empty', _611710], _799786)
+>Call: </span>(297) [user] is_case(_799798, ['Empty', _611724], _799800)
 ^  <span class="ansi1 ansi32"
->Exit: </span>(297) [user] is_case('Empty', ['Empty', _611710], _611710)
+>Exit: </span>(297) [user] is_case('Empty', ['Empty', _611724], _611724)
 ^  <span class="ansi1 ansi32"
->Call: </span>(297) [user] if_trace(case, (format('~N'), writeqln(c(1, 'Empty')=_611710)))
+>Call: </span>(297) [user] if_trace(case, (format('~N'), writeqln(c(1, 'Empty')=_611724)))
 ^  <span class="ansi1 ansi32"
->Call: </span>(299) [system] setup_call_cleanup('$notrace'(_804960, _804962), once(user:real_notrace(catch_err(ignore((is_debugging(case), format('~N'), writeqln(c(1, 'Empty')=_611710))), _804918, fbug((_804918-->if_trace(case, (format('~N'), writeqln(c(1, 'Empty')=_611710)))))))), '$restore_trace'(_804960, _804962))
+>Call: </span>(299) [system] setup_call_cleanup('$notrace'(_804974, _804976), once(user:real_notrace(catch_err(ignore((is_debugging(case), format('~N'), writeqln(c(1, 'Empty')=_611724))), _804932, fbug((_804932-->if_trace(case, (format('~N'), writeqln(c(1, 'Empty')=_611724)))))))), '$restore_trace'(_804974, _804976))
 ^  <span class="ansi1 ansi32"
->Call: </span>(300) [system] sig_atomic(system:'$notrace'(_804960, _804962))
+>Call: </span>(300) [system] sig_atomic(system:'$notrace'(_804974, _804976))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(299) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:real_notrace(catch_err(ignore((is_debugging(case), format('~N'), writeqln(c(1, 'Empty')=_611710))), _804918, fbug((_804918-->if_trace(case, (format('~N'), writeqln(c(1, 'Empty')=_611710)))))))), system:'$restore_trace'(3, -1))
+>Exit: </span>(299) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:real_notrace(catch_err(ignore((is_debugging(case), format('~N'), writeqln(c(1, 'Empty')=_611724))), _804932, fbug((_804932-->if_trace(case, (format('~N'), writeqln(c(1, 'Empty')=_611724)))))))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(297) [user] if_trace(case, (format('~N'), writeqln(c(1, 'Empty')=_611710)))
+>Exit: </span>(297) [user] if_trace(case, (format('~N'), writeqln(c(1, 'Empty')=_611724)))
 ^  <span class="ansi1 ansi32"
->Call: </span>(297) [user] into_case_keys(2, [], _799780)
+>Call: </span>(297) [user] into_case_keys(2, [], _799794)
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(297) [user] into_case_keys(2, [], [])
 ^  <span class="ansi1 ansi32"
->Exit: </span>(296) [user] into_case_keys(1, [['Empty', _611710]], ['Empty'-_611710])
+>Exit: </span>(296) [user] into_case_keys(1, [['Empty', _611724]], ['Empty'-_611724])
 ^  <span class="ansi1 ansi32"
->Call: </span>(296) [user] eval_case(=, _621376, 496, '&self', ['if-unify-or-empty', _611692, _611692], ['Empty'-_611710], _673414)
+>Call: </span>(296) [user] eval_case(=, _621390, 496, '&self', ['if-unify-or-empty', _611706, _611706], ['Empty'-_611724], _673428)
 ^  <span class="ansi1 ansi32"
->Call: </span>(297) [user] if_trace(case, writeqln(case=['if-unify-or-empty', _611692, _611692]))
+>Call: </span>(297) [user] if_trace(case, writeqln(case=['if-unify-or-empty', _611706, _611706]))
 ^  <span class="ansi1 ansi32"
->Call: </span>(299) [system] setup_call_cleanup('$notrace'(_814328, _814330), once(user:real_notrace(catch_err(ignore((is_debugging(case), writeqln(case=['if-unify-or-empty', _611692, _611692]))), _814286, fbug((_814286-->if_trace(case, writeqln(case=['if-unify-or-empty', _611692, _611692]))))))), '$restore_trace'(_814328, _814330))
+>Call: </span>(299) [system] setup_call_cleanup('$notrace'(_814342, _814344), once(user:real_notrace(catch_err(ignore((is_debugging(case), writeqln(case=['if-unify-or-empty', _611706, _611706]))), _814300, fbug((_814300-->if_trace(case, writeqln(case=['if-unify-or-empty', _611706, _611706]))))))), '$restore_trace'(_814342, _814344))
 ^  <span class="ansi1 ansi32"
->Call: </span>(300) [system] sig_atomic(system:'$notrace'(_814328, _814330))
+>Call: </span>(300) [system] sig_atomic(system:'$notrace'(_814342, _814344))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(299) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:real_notrace(catch_err(ignore((is_debugging(case), writeqln(case=['if-unify-or-empty', _611692, _611692]))), _814286, fbug((_814286-->if_trace(case, writeqln(case=['if-unify-or-empty', _611692, _611692]))))))), system:'$restore_trace'(3, -1))
+>Exit: </span>(299) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:real_notrace(catch_err(ignore((is_debugging(case), writeqln(case=['if-unify-or-empty', _611706, _611706]))), _814300, fbug((_814300-->if_trace(case, writeqln(case=['if-unify-or-empty', _611706, _611706]))))))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(297) [user] if_trace(case, writeqln(case=['if-unify-or-empty', _611692, _611692]))
+>Exit: </span>(297) [user] if_trace(case, writeqln(case=['if-unify-or-empty', _611706, _611706]))
 ^  <span class="ansi1 ansi32"
->Call: </span>(297) [user] eval_args(=, _818650, 496, '&self', ['if-unify-or-empty', _611692, _611692], _818524)
+>Call: </span>(297) [user] eval_args(=, _818664, 496, '&self', ['if-unify-or-empty', _611706, _611706], _818538)
    <span class="ansi1 ansi32"
->Call: </span>(298) [system] var(['if-unify-or-empty', _611692, _611692])
+>Call: </span>(298) [system] var(['if-unify-or-empty', _611706, _611706])
 ^  <span class="ansi1 ansi32"
->Call: </span>(299) [system] setup_call_cleanup('$notrace'(_820582, _820584), once(user:self_eval(['if-unify-or-empty', _611692, _611692])), '$restore_trace'(_820582, _820584))
+>Call: </span>(299) [system] setup_call_cleanup('$notrace'(_820596, _820598), once(user:self_eval(['if-unify-or-empty', _611706, _611706])), '$restore_trace'(_820596, _820598))
 ^  <span class="ansi1 ansi32"
->Call: </span>(300) [system] sig_atomic(system:'$notrace'(_820582, _820584))
+>Call: </span>(300) [system] sig_atomic(system:'$notrace'(_820596, _820598))
 ^  <span class="ansi1 ansi32"
->Call: </span>(299) [system] setup_call_cleanup('$notrace'(_822670, _822672), once(user:nonvar(_818524)), '$restore_trace'(_822670, _822672))
+>Call: </span>(299) [system] setup_call_cleanup('$notrace'(_822684, _822686), once(user:nonvar(_818538)), '$restore_trace'(_822684, _822686))
 ^  <span class="ansi1 ansi32"
->Call: </span>(300) [system] sig_atomic(system:'$notrace'(_822670, _822672))
+>Call: </span>(300) [system] sig_atomic(system:'$notrace'(_822684, _822686))
 ^  <span class="ansi1 ansi32"
->Call: </span>(299) [system] setup_call_cleanup('$notrace'(_824758, _824760), once(user:nonvar(_818524)), '$restore_trace'(_824758, _824760))
+>Call: </span>(299) [system] setup_call_cleanup('$notrace'(_824772, _824774), once(user:nonvar(_818538)), '$restore_trace'(_824772, _824774))
 ^  <span class="ansi1 ansi32"
->Call: </span>(300) [system] sig_atomic(system:'$notrace'(_824758, _824760))
+>Call: </span>(300) [system] sig_atomic(system:'$notrace'(_824772, _824774))
    <span class="ansi1 ansi32"
->Call: </span>(298) [system] [_611692, _611692]==[]
+>Call: </span>(298) [system] [_611706, _611706]==[]
    <span class="ansi1 ansi32"
 >Call: </span>(298) [system] atom(=)
    <span class="ansi1 ansi32"
@@ -791,29 +791,29 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Call: </span>(298) [system] (=)\==(=)
 ^  <span class="ansi1 ansi32"
->Call: </span>(298) [user] self_eval(['if-unify-or-empty', _611692, _611692])
+>Call: </span>(298) [user] self_eval(['if-unify-or-empty', _611706, _611706])
 ^  <span class="ansi1 ansi32"
->Call: </span>(300) [system] setup_call_cleanup('$notrace'(_831914, _831916), once(user:self_eval0(['if-unify-or-empty', _611692, _611692])), '$restore_trace'(_831914, _831916))
+>Call: </span>(300) [system] setup_call_cleanup('$notrace'(_831928, _831930), once(user:self_eval0(['if-unify-or-empty', _611706, _611706])), '$restore_trace'(_831928, _831930))
 ^  <span class="ansi1 ansi32"
->Call: </span>(301) [system] sig_atomic(system:'$notrace'(_831914, _831916))
+>Call: </span>(301) [system] sig_atomic(system:'$notrace'(_831928, _831930))
 ^  <span class="ansi1 ansi31"
->Fail: </span>(298) [user] self_eval(['if-unify-or-empty', _611692, _611692])
+>Fail: </span>(298) [user] self_eval(['if-unify-or-empty', _611706, _611706])
 ^  <span class="ansi1 ansi32"
->Call: </span>(298) [user] eval_00(=, _835002, 496, '&self', ['if-unify-or-empty', _611692, _611692], _818524)
+>Call: </span>(298) [user] eval_00(=, _835016, 496, '&self', ['if-unify-or-empty', _611706, _611706], _818538)
 ^  <span class="ansi1 ansi32"
->Call: </span>(299) [user] self_eval(['if-unify-or-empty', _611692, _611692])
+>Call: </span>(299) [user] self_eval(['if-unify-or-empty', _611706, _611706])
 ^  <span class="ansi1 ansi32"
->Call: </span>(301) [system] setup_call_cleanup('$notrace'(_837060, _837062), once(user:self_eval0(['if-unify-or-empty', _611692, _611692])), '$restore_trace'(_837060, _837062))
+>Call: </span>(301) [system] setup_call_cleanup('$notrace'(_837074, _837076), once(user:self_eval0(['if-unify-or-empty', _611706, _611706])), '$restore_trace'(_837074, _837076))
 ^  <span class="ansi1 ansi32"
->Call: </span>(302) [system] sig_atomic(system:'$notrace'(_837060, _837062))
+>Call: </span>(302) [system] sig_atomic(system:'$notrace'(_837074, _837076))
 ^  <span class="ansi1 ansi31"
->Fail: </span>(299) [user] self_eval(['if-unify-or-empty', _611692, _611692])
+>Fail: </span>(299) [user] self_eval(['if-unify-or-empty', _611706, _611706])
 ^  <span class="ansi1 ansi32"
->Call: </span>(299) [user] eval_01(=, _835002, 496, '&self', ['if-unify-or-empty', _611692, _611692], _818524)
+>Call: </span>(299) [user] eval_01(=, _835016, 496, '&self', ['if-unify-or-empty', _611706, _611706], _818538)
    <span class="ansi1 ansi32"
->Call: </span>(300) [system] ['if-unify-or-empty', _611692, _611692]\==[empty]
+>Call: </span>(300) [system] ['if-unify-or-empty', _611706, _611706]\==[empty]
    <span class="ansi1 ansi32"
->Exit: </span>(300) [system] ['if-unify-or-empty', _611692, _611692]\==[empty]
+>Exit: </span>(300) [system] ['if-unify-or-empty', _611706, _611706]\==[empty]
 ^  <span class="ansi1 ansi32"
 >Call: </span>(300) [user] if_t((496<1, trace_on_overflow), debug(metta(eval_args)))
    <span class="ansi1 ansi32"
@@ -823,37 +823,37 @@ Deterministic: <span class="ansi33"
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(300) [user] if_t((496<1, trace_on_overflow), debug(metta(eval_args)))
 ^  <span class="ansi1 ansi32"
->Call: </span>(301) [system] setup_call_cleanup('$notrace'(_847334, _847336), once(user:(_847310 is 496-1, copy_term(['if-unify-or-empty', _611692, _611692], _847324))), '$restore_trace'(_847334, _847336))
+>Call: </span>(301) [system] setup_call_cleanup('$notrace'(_847348, _847350), once(user:(_847324 is 496-1, copy_term(['if-unify-or-empty', _611706, _611706], _847338))), '$restore_trace'(_847348, _847350))
 ^  <span class="ansi1 ansi32"
->Call: </span>(302) [system] sig_atomic(system:'$notrace'(_847334, _847336))
+>Call: </span>(302) [system] sig_atomic(system:'$notrace'(_847348, _847350))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(301) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(495 is 496-1, copy_term(['if-unify-or-empty', _611692, _611692], ['if-unify-or-empty', _849420, _849420]))), system:'$restore_trace'(3, -1))
+>Exit: </span>(301) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(495 is 496-1, copy_term(['if-unify-or-empty', _611706, _611706], ['if-unify-or-empty', _849434, _849434]))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Call: </span>(300) [user] trace_eval(eval_20(=, _835002), e, 495, '&self', ['if-unify-or-empty', _611692, _611692], _850462)
+>Call: </span>(300) [user] trace_eval(eval_20(=, _835016), e, 495, '&self', ['if-unify-or-empty', _611706, _611706], _850476)
 ^  <span class="ansi1 ansi32"
->Call: </span>(301) [user] must_det_ll((notrace((flag(eval_num, _851516, _851516+1), _851534 is _851516 mod 500, _851552 is 99-495 mod 100, _851576=_851578, option_else('trace-length', _851590, 500), option_else('trace-depth', _851598, 30))), quietly(if_t((nop(stop_rtrace), _851534>_851590), (set_debug(eval, false), _851654 is _851590+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851654])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_851706)))))
+>Call: </span>(301) [user] must_det_ll((notrace((flag(eval_num, _851530, _851530+1), _851548 is _851530 mod 500, _851566 is 99-495 mod 100, _851590=_851592, option_else('trace-length', _851604, 500), option_else('trace-depth', _851612, 30))), quietly(if_t((nop(stop_rtrace), _851548>_851604), (set_debug(eval, false), _851668 is _851604+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851668])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_851720)))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(302) [user] once(user:(notrace((flag(eval_num, _851516, _851516+1), _851534 is _851516 mod 500, _851552 is 99-495 mod 100, _851576=_851578, option_else('trace-length', _851590, 500), option_else('trace-depth', _851598, 30))), quietly(if_t((nop(stop_rtrace), _851534>_851590), (set_debug(eval, false), _851654 is _851590+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851654])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_851706)))))
+>Call: </span>(302) [user] once(user:(notrace((flag(eval_num, _851530, _851530+1), _851548 is _851530 mod 500, _851566 is 99-495 mod 100, _851590=_851592, option_else('trace-length', _851604, 500), option_else('trace-depth', _851612, 30))), quietly(if_t((nop(stop_rtrace), _851548>_851604), (set_debug(eval, false), _851668 is _851604+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851668])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_851720)))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(305) [system] setup_call_cleanup('$notrace'(_853752, _853754), once(user:(flag(eval_num, _851516, _851516+1), _851534 is _851516 mod 500, _851552 is 99-495 mod 100, _851576=_851578, option_else('trace-length', _851590, 500), option_else('trace-depth', _851598, 30))), '$restore_trace'(_853752, _853754))
+>Call: </span>(305) [system] setup_call_cleanup('$notrace'(_853766, _853768), once(user:(flag(eval_num, _851530, _851530+1), _851548 is _851530 mod 500, _851566 is 99-495 mod 100, _851590=_851592, option_else('trace-length', _851604, 500), option_else('trace-depth', _851612, 30))), '$restore_trace'(_853766, _853768))
 ^  <span class="ansi1 ansi32"
->Call: </span>(306) [system] sig_atomic(system:'$notrace'(_853752, _853754))
+>Call: </span>(306) [system] sig_atomic(system:'$notrace'(_853766, _853768))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(305) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(flag(eval_num, 577, 577+1), 77 is 577 mod 500, 4 is 99-495 mod 100, _851576=_851576, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), system:'$restore_trace'(3, -1))
+>Exit: </span>(305) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:(flag(eval_num, 577, 577+1), 77 is 577 mod 500, 4 is 99-495 mod 100, _851590=_851590, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Call: </span>(305) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 77>500), (set_debug(eval, false), _851654 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851654])), nop((start_rtrace, rtrace)))))
+>Call: </span>(305) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 77>500), (set_debug(eval, false), _851668 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851668])), nop((start_rtrace, rtrace)))))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(305) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 77>500), (set_debug(eval, false), _851654 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851654])), nop((start_rtrace, rtrace)))))
+>Exit: </span>(305) [rtrace] rtrace:quietly3(user:if_t((nop(stop_rtrace), 77>500), (set_debug(eval, false), _851668 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851668])), nop((start_rtrace, rtrace)))))
    <span class="ansi1 ansi32"
->Call: </span>(304) [user] nop(notrace(no_repeats_var(_851706)))
+>Call: </span>(304) [user] nop(notrace(no_repeats_var(_851720)))
    <span class="ansi1 ansi32"
->Exit: </span>(304) [user] nop(notrace(no_repeats_var(_851706)))
+>Exit: </span>(304) [user] nop(notrace(no_repeats_var(_851720)))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(302) [system] once(user:(notrace((flag(eval_num, 577, 577+1), 77 is 577 mod 500, 4 is 99-495 mod 100, _851576=_851576, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 77>500), (set_debug(eval, false), _851654 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851654])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_851706)))))
+>Exit: </span>(302) [system] once(user:(notrace((flag(eval_num, 577, 577+1), 77 is 577 mod 500, 4 is 99-495 mod 100, _851590=_851590, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 77>500), (set_debug(eval, false), _851668 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851668])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_851720)))))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(301) [user] must_det_ll(user:(notrace((flag(eval_num, 577, 577+1), 77 is 577 mod 500, 4 is 99-495 mod 100, _851576=_851576, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 77>500), (set_debug(eval, false), _851654 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851654])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_851706)))))
+>Exit: </span>(301) [user] must_det_ll(user:(notrace((flag(eval_num, 577, 577+1), 77 is 577 mod 500, 4 is 99-495 mod 100, _851590=_851590, option_else('trace-length', 500, 500), option_else('trace-depth', 30, 30))), quietly(if_t((nop(stop_rtrace), 77>500), (set_debug(eval, false), _851668 is 500+1, nop(format('; Switched off tracing. For a longer trace: !(pragma! trace-length ~w)', [_851668])), nop((start_rtrace, rtrace))))), nop(notrace(no_repeats_var(_851720)))))
    <span class="ansi1 ansi32"
->Call: </span>(301) [occurs] occurs:sub_term(_863404, e)
+>Call: </span>(301) [occurs] occurs:sub_term(_863418, e)
    <span class="ansi1 ansi32"
 >Exit: </span>(301) [occurs] occurs:sub_term(e, e)
    <span class="ansi1 ansi32"
@@ -865,45 +865,45 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi31"
 >Fail: </span>(302) [system] compound(e)
    <span class="ansi1 ansi31"
->Fail: </span>(301) [occurs] occurs:sub_term(_863404, e)
+>Fail: </span>(301) [occurs] occurs:sub_term(_863418, e)
    <span class="ansi1 ansi32"
->Call: </span>(301) [system] _870510=e
+>Call: </span>(301) [system] _870524=e
    <span class="ansi1 ansi32"
 >Exit: </span>(301) [system] e=e
 ^  <span class="ansi1 ansi32"
->Call: </span>(301) [user] if_trace((eval;e), (_851576=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611692, _611692]])))
+>Call: </span>(301) [user] if_trace((eval;e), (_851590=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611706, _611706]])))
 ^  <span class="ansi1 ansi32"
->Call: </span>(303) [system] setup_call_cleanup('$notrace'(_873650, _873652), once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _851576=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611692, _611692]]))), _873608, fbug((_873608-->if_trace((eval;e), (_851576=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611692, _611692]])))))))), '$restore_trace'(_873650, _873652))
+>Call: </span>(303) [system] setup_call_cleanup('$notrace'(_873664, _873666), once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _851590=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611706, _611706]]))), _873622, fbug((_873622-->if_trace((eval;e), (_851590=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611706, _611706]])))))))), '$restore_trace'(_873664, _873666))
 ^  <span class="ansi1 ansi32"
->Call: </span>(304) [system] sig_atomic(system:'$notrace'(_873650, _873652))
+>Call: </span>(304) [system] sig_atomic(system:'$notrace'(_873664, _873666))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(303) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _851576=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611692, _611692]]))), _873608, fbug((_873608-->if_trace((eval;e), (_851576=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611692, _611692]])))))))), system:'$restore_trace'(3, -1))
+>Exit: </span>(303) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:real_notrace(catch_err(ignore((is_debugging((eval;e)), _851590=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611706, _611706]]))), _873622, fbug((_873622-->if_trace((eval;e), (_851590=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611706, _611706]])))))))), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(301) [user] if_trace((eval;e), (_851576=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611692, _611692]])))
+>Exit: </span>(301) [user] if_trace((eval;e), (_851590=1, indentq(4, 77, -->, [e, ['if-unify-or-empty', _611706, _611706]])))
    <span class="ansi1 ansi32"
->Call: </span>(301) [system] _877846=retval(fail)
+>Call: </span>(301) [system] _877860=retval(fail)
    <span class="ansi1 ansi32"
 >Exit: </span>(301) [system] retval(fail)=retval(fail)
    <span class="ansi1 ansi32"
->Call: </span>(301) [system] _879884=(\+ \+ (flag(eval_num, _879904, _879904+1), (retval(fail)\=@=retval(fail), nonvar(_850462)->indentq(4, _879904, <--, [e, _850462]);indentq(4, _879904, <--, [e, retval(fail)]))))
+>Call: </span>(301) [system] _879898=(\+ \+ (flag(eval_num, _879918, _879918+1), (retval(fail)\=@=retval(fail), nonvar(_850476)->indentq(4, _879918, <--, [e, _850476]);indentq(4, _879918, <--, [e, retval(fail)]))))
    <span class="ansi1 ansi32"
->Exit: </span>(301) [system] (\+ \+ (flag(eval_num, _879904, _879904+1), (retval(fail)\=@=retval(fail), nonvar(_850462)->indentq(4, _879904, <--, [e, _850462]);indentq(4, _879904, <--, [e, retval(fail)]))))=(\+ \+ (flag(eval_num, _879904, _879904+1), (retval(fail)\=@=retval(fail), nonvar(_850462)->indentq(4, _879904, <--, [e, _850462]);indentq(4, _879904, <--, [e, retval(fail)]))))
+>Exit: </span>(301) [system] (\+ \+ (flag(eval_num, _879918, _879918+1), (retval(fail)\=@=retval(fail), nonvar(_850476)->indentq(4, _879918, <--, [e, _850476]);indentq(4, _879918, <--, [e, retval(fail)]))))=(\+ \+ (flag(eval_num, _879918, _879918+1), (retval(fail)\=@=retval(fail), nonvar(_850476)->indentq(4, _879918, <--, [e, _850476]);indentq(4, _879918, <--, [e, retval(fail)]))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(301) [user] call_cleanup(((call(eval_20(=, _835002), 495, '&self', ['if-unify-or-empty', _611692, _611692], _850462)*->nb_setarg(1, retval(fail), _850462);fail, trace, call(eval_20(=, _835002), 495, '&self', ['if-unify-or-empty', _611692, _611692], _850462)), ignore(notrace((\+_850462\=_851706, nb_setarg(1, retval(fail), _850462))))), ignore((_851576==1->ignore(\+ \+ (flag(eval_num, _879904, _879904+1), (retval(fail)\=@=retval(fail), nonvar(_850462)->indentq(4, _879904, <--, [e, _850462]);indentq(4, _879904, <--, [e, retval(fail)]))));notrace(ignore(if_t(4<30, if_trace((eval;e), ignore(\+ \+ (flag(eval_num, _879904, _879904+1), (retval(fail)\=@=retval(fail), nonvar(_850462)->indentq(4, _879904, <--, [e, _850462]);indentq(4, _879904, <--, [e, retval(fail)])))))))))))
+>Call: </span>(301) [user] call_cleanup(((call(eval_20(=, _835016), 495, '&self', ['if-unify-or-empty', _611706, _611706], _850476)*->nb_setarg(1, retval(fail), _850476);fail, trace, call(eval_20(=, _835016), 495, '&self', ['if-unify-or-empty', _611706, _611706], _850476)), ignore(notrace((\+_850476\=_851720, nb_setarg(1, retval(fail), _850476))))), ignore((_851590==1->ignore(\+ \+ (flag(eval_num, _879918, _879918+1), (retval(fail)\=@=retval(fail), nonvar(_850476)->indentq(4, _879918, <--, [e, _850476]);indentq(4, _879918, <--, [e, retval(fail)]))));notrace(ignore(if_t(4<30, if_trace((eval;e), ignore(\+ \+ (flag(eval_num, _879918, _879918+1), (retval(fail)\=@=retval(fail), nonvar(_850476)->indentq(4, _879918, <--, [e, _850476]);indentq(4, _879918, <--, [e, retval(fail)])))))))))))
 ^  <span class="ansi1 ansi32"
->Call: </span>(303) [user] eval_20(=, _835002, 495, '&self', ['if-unify-or-empty', _611692, _611692], _850462)
+>Call: </span>(303) [user] eval_20(=, _835016, 495, '&self', ['if-unify-or-empty', _611706, _611706], _850476)
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] atom(['if-unify-or-empty', _611692, _611692])
+>Call: </span>(304) [system] atom(['if-unify-or-empty', _611706, _611706])
 ^  <span class="ansi1 ansi32"
->Call: </span>(304) [user] no_eval(['if-unify-or-empty', _611692, _611692])
+>Call: </span>(304) [user] no_eval(['if-unify-or-empty', _611706, _611706])
 ^  <span class="ansi1 ansi32"
->Call: </span>(305) [user] self_eval(['if-unify-or-empty', _611692, _611692])
+>Call: </span>(305) [user] self_eval(['if-unify-or-empty', _611706, _611706])
 ^  <span class="ansi1 ansi32"
->Call: </span>(307) [system] setup_call_cleanup('$notrace'(_887292, _887294), once(user:self_eval0(['if-unify-or-empty', _611692, _611692])), '$restore_trace'(_887292, _887294))
+>Call: </span>(307) [system] setup_call_cleanup('$notrace'(_887306, _887308), once(user:self_eval0(['if-unify-or-empty', _611706, _611706])), '$restore_trace'(_887306, _887308))
 ^  <span class="ansi1 ansi32"
->Call: </span>(308) [system] sig_atomic(system:'$notrace'(_887292, _887294))
+>Call: </span>(308) [system] sig_atomic(system:'$notrace'(_887306, _887308))
 ^  <span class="ansi1 ansi31"
->Fail: </span>(305) [user] self_eval(['if-unify-or-empty', _611692, _611692])
+>Fail: </span>(305) [user] self_eval(['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
 >Call: </span>(305) [system] atomic('if-unify-or-empty')
    <span class="ansi1 ansi32"
@@ -913,7 +913,7 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Call: </span>(306) [system] number('if-unify-or-empty')
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] [_611692, _611692]==[]
+>Call: </span>(304) [system] [_611706, _611706]==[]
    <span class="ansi1 ansi32"
 >Call: </span>(304) [system] atom(=)
    <span class="ansi1 ansi32"
@@ -921,83 +921,83 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Call: </span>(304) [system] (=)\==(=)
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] _898486==eval
+>Call: </span>(304) [system] _898500==eval
    <span class="ansi1 ansi32"
 >Call: </span>(304) [system] callable('if-unify-or-empty')
    <span class="ansi1 ansi32"
 >Exit: </span>(304) [system] callable('if-unify-or-empty')
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] [_611692, _611692]==[]
+>Call: </span>(304) [system] [_611706, _611706]==[]
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] is_list([_611692, _611692])
+>Call: </span>(304) [system] is_list([_611706, _611706])
    <span class="ansi1 ansi32"
->Exit: </span>(304) [system] is_list([_611692, _611692])
+>Exit: </span>(304) [system] is_list([_611706, _611706])
    <span class="ansi1 ansi32"
 >Call: </span>(304) [system] is_list('if-unify-or-empty')
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] is_list([_611692, _611692])
+>Call: </span>(304) [system] is_list([_611706, _611706])
    <span class="ansi1 ansi32"
->Exit: </span>(304) [system] is_list([_611692, _611692])
+>Exit: </span>(304) [system] is_list([_611706, _611706])
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] is_list(['if-unify-or-empty', _611692, _611692])
+>Call: </span>(304) [system] is_list(['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
->Exit: </span>(304) [system] is_list(['if-unify-or-empty', _611692, _611692])
+>Exit: </span>(304) [system] is_list(['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
 >Call: </span>(304) [system] var('if-unify-or-empty')
 ^  <span class="ansi1 ansi32"
->Call: </span>(304) [user] once(expand_eval(['if-unify-or-empty', _611692, _611692], _910664))
+>Call: </span>(304) [user] once(expand_eval(['if-unify-or-empty', _611706, _611706], _910678))
 ^  <span class="ansi1 ansi32"
->Call: </span>(305) [user] expand_eval(['if-unify-or-empty', _611692, _611692], _910664)
+>Call: </span>(305) [user] expand_eval(['if-unify-or-empty', _611706, _611706], _910678)
    <span class="ansi1 ansi32"
->Call: </span>(306) [system] is_list(['if-unify-or-empty', _611692, _611692])
+>Call: </span>(306) [system] is_list(['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
->Exit: </span>(306) [system] is_list(['if-unify-or-empty', _611692, _611692])
+>Exit: </span>(306) [system] is_list(['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
 >Call: </span>(306) [system] ground('if-unify-or-empty')
    <span class="ansi1 ansi32"
 >Exit: </span>(306) [system] ground('if-unify-or-empty')
 ^  <span class="ansi1 ansi32"
->Call: </span>(306) [user] apply:maplist(expand_eval, [_611692, _611692], _916764)
+>Call: </span>(306) [user] apply:maplist(expand_eval, [_611706, _611706], _916778)
    <span class="ansi1 ansi32"
->Call: </span>(307) [apply] apply:maplist_([_611692, _611692], _916764, user:expand_eval)
+>Call: </span>(307) [apply] apply:maplist_([_611706, _611706], _916778, user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Call: </span>(308) [user] expand_eval(_611692, _918820)
+>Call: </span>(308) [user] expand_eval(_611706, _918834)
    <span class="ansi1 ansi32"
->Call: </span>(309) [system] is_list(_611692)
+>Call: </span>(309) [system] is_list(_611706)
    <span class="ansi1 ansi32"
->Call: </span>(309) [system] _611692=_918820
+>Call: </span>(309) [system] _611706=_918834
    <span class="ansi1 ansi32"
->Exit: </span>(309) [system] _611692=_611692
+>Exit: </span>(309) [system] _611706=_611706
 ^  <span class="ansi1 ansi32"
->Exit: </span>(308) [user] expand_eval(_611692, _611692)
+>Exit: </span>(308) [user] expand_eval(_611706, _611706)
    <span class="ansi1 ansi32"
->Call: </span>(308) [apply] apply:maplist_([_611692], _918822, user:expand_eval)
+>Call: </span>(308) [apply] apply:maplist_([_611706], _918836, user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Call: </span>(309) [user] expand_eval(_611692, _924922)
+>Call: </span>(309) [user] expand_eval(_611706, _924936)
    <span class="ansi1 ansi32"
->Call: </span>(310) [system] is_list(_611692)
+>Call: </span>(310) [system] is_list(_611706)
    <span class="ansi1 ansi32"
->Call: </span>(310) [system] _611692=_924922
+>Call: </span>(310) [system] _611706=_924936
    <span class="ansi1 ansi32"
->Exit: </span>(310) [system] _611692=_611692
+>Exit: </span>(310) [system] _611706=_611706
 ^  <span class="ansi1 ansi32"
->Exit: </span>(309) [user] expand_eval(_611692, _611692)
+>Exit: </span>(309) [user] expand_eval(_611706, _611706)
    <span class="ansi1 ansi32"
->Call: </span>(309) [apply] apply:maplist_([], _924924, user:expand_eval)
+>Call: </span>(309) [apply] apply:maplist_([], _924938, user:expand_eval)
    <span class="ansi1 ansi32"
 >Exit: </span>(309) [apply] apply:maplist_([], [], user:expand_eval)
    <span class="ansi1 ansi32"
->Exit: </span>(308) [apply] apply:maplist_([_611692], [_611692], user:expand_eval)
+>Exit: </span>(308) [apply] apply:maplist_([_611706], [_611706], user:expand_eval)
    <span class="ansi1 ansi32"
->Exit: </span>(307) [apply] apply:maplist_([_611692, _611692], [_611692, _611692], user:expand_eval)
+>Exit: </span>(307) [apply] apply:maplist_([_611706, _611706], [_611706, _611706], user:expand_eval)
 ^  <span class="ansi1 ansi32"
->Exit: </span>(306) [apply] apply:maplist(user:expand_eval, [_611692, _611692], [_611692, _611692])
+>Exit: </span>(306) [apply] apply:maplist(user:expand_eval, [_611706, _611706], [_611706, _611706])
 ^  <span class="ansi1 ansi32"
->Exit: </span>(305) [user] expand_eval(['if-unify-or-empty', _611692, _611692], ['if-unify-or-empty', _611692, _611692])
+>Exit: </span>(305) [user] expand_eval(['if-unify-or-empty', _611706, _611706], ['if-unify-or-empty', _611706, _611706])
 ^  <span class="ansi1 ansi32"
->Exit: </span>(304) [system] once(user:expand_eval(['if-unify-or-empty', _611692, _611692], ['if-unify-or-empty', _611692, _611692]))
+>Exit: </span>(304) [system] once(user:expand_eval(['if-unify-or-empty', _611706, _611706], ['if-unify-or-empty', _611706, _611706]))
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] ['if-unify-or-empty', _611692, _611692]\==['if-unify-or-empty', _611692, _611692]
+>Call: </span>(304) [system] ['if-unify-or-empty', _611706, _611706]\==['if-unify-or-empty', _611706, _611706]
 ^  <span class="ansi1 ansi32"
 >Call: </span>(304) [user] is_progn('if-unify-or-empty')
    <span class="ansi1 ansi32"
@@ -1007,83 +1007,83 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Call: </span>(304) [system] fail
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] arg(_942344, v('catch!', 'throw!', 'number-of!', 'limit!', 'offset!', 'max-time!', 'findall!', 'setup-call-cleanup!', 'call-cleanup!', 'call-cleanup!', 'with-output-to!'), 'if-unify-or-empty')
+>Call: </span>(304) [system] arg(_942358, v('catch!', 'throw!', 'number-of!', 'limit!', 'offset!', 'max-time!', 'findall!', 'setup-call-cleanup!', 'call-cleanup!', 'call-cleanup!', 'with-output-to!'), 'if-unify-or-empty')
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] _943242='if-unify-or-empty'
+>Call: </span>(304) [system] _943256='if-unify-or-empty'
    <span class="ansi1 ansi32"
 >Exit: </span>(304) [system] 'if-unify-or-empty'='if-unify-or-empty'
 ^  <span class="ansi1 ansi32"
->Call: </span>(304) [user] metta_compiled_predicate('&self', 'if-unify-or-empty', _945276)
+>Call: </span>(304) [user] metta_compiled_predicate('&self', 'if-unify-or-empty', _945290)
 ^  <span class="ansi1 ansi31"
->Fail: </span>(304) [user] metta_compiled_predicate('&self', 'if-unify-or-empty', _945276)
+>Fail: </span>(304) [user] metta_compiled_predicate('&self', 'if-unify-or-empty', _945290)
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] is_list(['if-unify-or-empty', _611692, _611692])
+>Call: </span>(304) [system] is_list(['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
->Exit: </span>(304) [system] is_list(['if-unify-or-empty', _611692, _611692])
+>Exit: </span>(304) [system] is_list(['if-unify-or-empty', _611706, _611706])
 ^  <span class="ansi1 ansi32"
->Call: </span>(304) [user] apply:maplist(self_eval, ['if-unify-or-empty', _611692, _611692])
+>Call: </span>(304) [user] apply:maplist(self_eval, ['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
->Call: </span>(305) [apply] apply:maplist_(['if-unify-or-empty', _611692, _611692], user:self_eval)
+>Call: </span>(305) [apply] apply:maplist_(['if-unify-or-empty', _611706, _611706], user:self_eval)
 ^  <span class="ansi1 ansi32"
 >Call: </span>(306) [user] self_eval('if-unify-or-empty')
 ^  <span class="ansi1 ansi32"
->Call: </span>(308) [system] setup_call_cleanup('$notrace'(_952410, _952412), once(user:self_eval0('if-unify-or-empty')), '$restore_trace'(_952410, _952412))
+>Call: </span>(308) [system] setup_call_cleanup('$notrace'(_952424, _952426), once(user:self_eval0('if-unify-or-empty')), '$restore_trace'(_952424, _952426))
 ^  <span class="ansi1 ansi32"
->Call: </span>(309) [system] sig_atomic(system:'$notrace'(_952410, _952412))
+>Call: </span>(309) [system] sig_atomic(system:'$notrace'(_952424, _952426))
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(308) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:self_eval0('if-unify-or-empty')), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(306) [user] self_eval('if-unify-or-empty')
    <span class="ansi1 ansi32"
->Call: </span>(306) [apply] apply:maplist_([_611692, _611692], user:self_eval)
+>Call: </span>(306) [apply] apply:maplist_([_611706, _611706], user:self_eval)
 ^  <span class="ansi1 ansi32"
->Call: </span>(307) [user] self_eval(_611692)
+>Call: </span>(307) [user] self_eval(_611706)
 ^  <span class="ansi1 ansi32"
->Call: </span>(309) [system] setup_call_cleanup('$notrace'(_958564, _958566), once(user:self_eval0(_611692)), '$restore_trace'(_958564, _958566))
+>Call: </span>(309) [system] setup_call_cleanup('$notrace'(_958578, _958580), once(user:self_eval0(_611706)), '$restore_trace'(_958578, _958580))
 ^  <span class="ansi1 ansi32"
->Call: </span>(310) [system] sig_atomic(system:'$notrace'(_958564, _958566))
+>Call: </span>(310) [system] sig_atomic(system:'$notrace'(_958578, _958580))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(309) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:self_eval0(_611692)), system:'$restore_trace'(3, -1))
+>Exit: </span>(309) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:self_eval0(_611706)), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(307) [user] self_eval(_611692)
+>Exit: </span>(307) [user] self_eval(_611706)
    <span class="ansi1 ansi32"
->Call: </span>(307) [apply] apply:maplist_([_611692], user:self_eval)
+>Call: </span>(307) [apply] apply:maplist_([_611706], user:self_eval)
 ^  <span class="ansi1 ansi32"
->Call: </span>(308) [user] self_eval(_611692)
+>Call: </span>(308) [user] self_eval(_611706)
 ^  <span class="ansi1 ansi32"
->Call: </span>(310) [system] setup_call_cleanup('$notrace'(_964718, _964720), once(user:self_eval0(_611692)), '$restore_trace'(_964718, _964720))
+>Call: </span>(310) [system] setup_call_cleanup('$notrace'(_964732, _964734), once(user:self_eval0(_611706)), '$restore_trace'(_964732, _964734))
 ^  <span class="ansi1 ansi32"
->Call: </span>(311) [system] sig_atomic(system:'$notrace'(_964718, _964720))
+>Call: </span>(311) [system] sig_atomic(system:'$notrace'(_964732, _964734))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(310) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:self_eval0(_611692)), system:'$restore_trace'(3, -1))
+>Exit: </span>(310) [system] setup_call_cleanup(system:'$notrace'(3, -1), system:once(user:self_eval0(_611706)), system:'$restore_trace'(3, -1))
 ^  <span class="ansi1 ansi32"
->Exit: </span>(308) [user] self_eval(_611692)
+>Exit: </span>(308) [user] self_eval(_611706)
    <span class="ansi1 ansi32"
 >Call: </span>(308) [apply] apply:maplist_([], user:self_eval)
    <span class="ansi1 ansi32"
 >Exit: </span>(308) [apply] apply:maplist_([], user:self_eval)
    <span class="ansi1 ansi32"
->Exit: </span>(307) [apply] apply:maplist_([_611692], user:self_eval)
+>Exit: </span>(307) [apply] apply:maplist_([_611706], user:self_eval)
    <span class="ansi1 ansi32"
->Exit: </span>(306) [apply] apply:maplist_([_611692, _611692], user:self_eval)
+>Exit: </span>(306) [apply] apply:maplist_([_611706, _611706], user:self_eval)
    <span class="ansi1 ansi32"
->Exit: </span>(305) [apply] apply:maplist_(['if-unify-or-empty', _611692, _611692], user:self_eval)
+>Exit: </span>(305) [apply] apply:maplist_(['if-unify-or-empty', _611706, _611706], user:self_eval)
 ^  <span class="ansi1 ansi32"
->Exit: </span>(304) [apply] apply:maplist(user:self_eval, ['if-unify-or-empty', _611692, _611692])
+>Exit: </span>(304) [apply] apply:maplist(user:self_eval, ['if-unify-or-empty', _611706, _611706])
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] ['if-unify-or-empty', _611692, _611692]=[_974936|_974938]
+>Call: </span>(304) [system] ['if-unify-or-empty', _611706, _611706]=[_974950|_974952]
    <span class="ansi1 ansi32"
->Exit: </span>(304) [system] ['if-unify-or-empty', _611692, _611692]=['if-unify-or-empty', _611692, _611692]
+>Exit: </span>(304) [system] ['if-unify-or-empty', _611706, _611706]=['if-unify-or-empty', _611706, _611706]
    <span class="ansi1 ansi32"
 >Call: </span>(304) [system] atom('if-unify-or-empty')
    <span class="ansi1 ansi32"
 >Exit: </span>(304) [system] atom('if-unify-or-empty')
    <span class="ansi1 ansi32"
->Call: </span>(304) [system] _978996=do_more_defs(true)
+>Call: </span>(304) [system] _979010=do_more_defs(true)
    <span class="ansi1 ansi32"
 >Exit: </span>(304) [system] do_more_defs(true)=do_more_defs(true)
 ^  <span class="ansi1 ansi32"
->Call: </span>(304) [user] clause(eval_21(=, _835002, 495, '&self', ['if-unify-or-empty', _611692, _611692], _850462), _981048)
+>Call: </span>(304) [user] clause(eval_21(=, _835016, 495, '&self', ['if-unify-or-empty', _611706, _611706], _850476), _981062)
    <span class="ansi1 ansi32"
 >Call: </span>(304) [system] 'if-unify-or-empty'==(/)
    <span class="ansi1 ansi32"
@@ -1091,11 +1091,11 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Call: </span>(304) [system] 'if-unify-or-empty'== ====
 ^  <span class="ansi1 ansi32"
->Call: </span>(304) [user] eval_40(=, _835002, 495, '&self', ['if-unify-or-empty', _611692, _611692], _985120)
+>Call: </span>(304) [user] eval_40(=, _835016, 495, '&self', ['if-unify-or-empty', _611706, _611706], _985134)
 ^  <span class="ansi1 ansi32"
->Call: </span>(305) [user] eval_selfless(=, _835002, 495, '&self', ['if-unify-or-empty', _611692, _611692], _985120)
+>Call: </span>(305) [user] eval_selfless(=, _835016, 495, '&self', ['if-unify-or-empty', _611706, _611706], _985134)
 ^  <span class="ansi1 ansi32"
->Call: </span>(306) [user] eval_selfless_0(['if-unify-or-empty', _611692, _611692], _985120)
+>Call: </span>(306) [user] eval_selfless_0(['if-unify-or-empty', _611706, _611706], _985134)
    <span class="ansi1 ansi32"
 >Call: </span>(307) [system] var('if-unify-or-empty')
 ^  <span class="ansi1 ansi32"
@@ -1105,7 +1105,7 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Exit: </span>(308) [system] atom('if-unify-or-empty')
 ^  <span class="ansi1 ansi32"
->Call: </span>(307) [user] eval_selfless_1(['if-unify-or-empty', _611692, _611692], _985120)
+>Call: </span>(307) [user] eval_selfless_1(['if-unify-or-empty', _611706, _611706], _985134)
 ^  <span class="ansi1 ansi32"
 >Call: </span>(308) [user] allow_clp
 ^  <span class="ansi1 ansi32"
@@ -1117,27 +1117,27 @@ Deterministic: <span class="ansi33"
 ^  <span class="ansi1 ansi31"
 >Fail: </span>(309) [user] false_flag
 ^  <span class="ansi1 ansi32"
->Call: </span>(307) [user] eval_selfless_2(['if-unify-or-empty', _611692, _611692], _985120)
+>Call: </span>(307) [user] eval_selfless_2(['if-unify-or-empty', _611706, _611706], _985134)
    <span class="ansi1 ansi32"
 >Call: </span>(308) [system] var('if-unify-or-empty')
 ^  <span class="ansi1 ansi32"
->Call: </span>(308) [user] fake_notrace((ground(['if-unify-or-empty', _611692, _611692]), ['if-unify-or-empty', _611692, _611692]=[_1000344, _1000350, _1000356], atom(_1000344), catch_warn(current_op(_1000382, yfx, _1000344)), ['if-unify-or-empty', _611692, _611692]\=[_1000402], s2ps(['if-unify-or-empty', _611692, _611692], _1000410)))
+>Call: </span>(308) [user] fake_notrace((ground(['if-unify-or-empty', _611706, _611706]), ['if-unify-or-empty', _611706, _611706]=[_1000358, _1000364, _1000370], atom(_1000358), catch_warn(current_op(_1000396, yfx, _1000358)), ['if-unify-or-empty', _611706, _611706]\=[_1000416], s2ps(['if-unify-or-empty', _611706, _611706], _1000424)))
 ^  <span class="ansi1 ansi32"
->Call: </span>(309) [user] real_notrace(user:(ground(['if-unify-or-empty', _611692, _611692]), ['if-unify-or-empty', _611692, _611692]=[_1000344, _1000350, _1000356], atom(_1000344), catch_warn(current_op(_1000382, yfx, _1000344)), ['if-unify-or-empty', _611692, _611692]\=[_1000402], s2ps(['if-unify-or-empty', _611692, _611692], _1000410)))
+>Call: </span>(309) [user] real_notrace(user:(ground(['if-unify-or-empty', _611706, _611706]), ['if-unify-or-empty', _611706, _611706]=[_1000358, _1000364, _1000370], atom(_1000358), catch_warn(current_op(_1000396, yfx, _1000358)), ['if-unify-or-empty', _611706, _611706]\=[_1000416], s2ps(['if-unify-or-empty', _611706, _611706], _1000424)))
 ^  <span class="ansi1 ansi32"
->Call: </span>(310) [user] setup_call_cleanup('$notrace'(_1002444, _1002446), once(user:(ground(['if-unify-or-empty', _611692, _611692]), ['if-unify-or-empty', _611692, _611692]=[_1000344, _1000350, _1000356], atom(_1000344), catch_warn(current_op(_1000382, yfx, _1000344)), ['if-unify-or-empty', _611692, _611692]\=[_1000402], s2ps(['if-unify-or-empty', _611692, _611692], _1000410))), '$restore_trace'(_1002444, _1002446))
+>Call: </span>(310) [user] setup_call_cleanup('$notrace'(_1002458, _1002460), once(user:(ground(['if-unify-or-empty', _611706, _611706]), ['if-unify-or-empty', _611706, _611706]=[_1000358, _1000364, _1000370], atom(_1000358), catch_warn(current_op(_1000396, yfx, _1000358)), ['if-unify-or-empty', _611706, _611706]\=[_1000416], s2ps(['if-unify-or-empty', _611706, _611706], _1000424))), '$restore_trace'(_1002458, _1002460))
 ^  <span class="ansi1 ansi32"
->Call: </span>(311) [system] sig_atomic(user:'$notrace'(_1002444, _1002446))
+>Call: </span>(311) [system] sig_atomic(user:'$notrace'(_1002458, _1002460))
 ^  <span class="ansi1 ansi31"
->Fail: </span>(309) [user] real_notrace(user:(ground(['if-unify-or-empty', _611692, _611692]), ['if-unify-or-empty', _611692, _611692]=[_1000344, _1000350, _1000356], atom(_1000344), catch_warn(current_op(_1000382, yfx, _1000344)), ['if-unify-or-empty', _611692, _611692]\=[_1000402], s2ps(['if-unify-or-empty', _611692, _611692], _1000410)))
+>Fail: </span>(309) [user] real_notrace(user:(ground(['if-unify-or-empty', _611706, _611706]), ['if-unify-or-empty', _611706, _611706]=[_1000358, _1000364, _1000370], atom(_1000358), catch_warn(current_op(_1000396, yfx, _1000358)), ['if-unify-or-empty', _611706, _611706]\=[_1000416], s2ps(['if-unify-or-empty', _611706, _611706], _1000424)))
 ^  <span class="ansi1 ansi31"
->Fail: </span>(308) [user] fake_notrace(user:(ground(['if-unify-or-empty', _611692, _611692]), ['if-unify-or-empty', _611692, _611692]=[_1000344, _1000350, _1000356], atom(_1000344), catch_warn(current_op(_1000382, yfx, _1000344)), ['if-unify-or-empty', _611692, _611692]\=[_1000402], s2ps(['if-unify-or-empty', _611692, _611692], _1000410)))
+>Fail: </span>(308) [user] fake_notrace(user:(ground(['if-unify-or-empty', _611706, _611706]), ['if-unify-or-empty', _611706, _611706]=[_1000358, _1000364, _1000370], atom(_1000358), catch_warn(current_op(_1000396, yfx, _1000358)), ['if-unify-or-empty', _611706, _611706]\=[_1000416], s2ps(['if-unify-or-empty', _611706, _611706], _1000424)))
    <span class="ansi1 ansi32"
 >Call: </span>(305) [system] 'if-unify-or-empty'==(==)
    <span class="ansi1 ansi32"
 >Call: </span>(305) [system] 'if-unify-or-empty'==(==)
 ^  <span class="ansi1 ansi32"
->Call: </span>(305) [user] eval_41(=, _835002, 495, '&self', ['if-unify-or-empty', _611692, _611692], _985120)
+>Call: </span>(305) [user] eval_41(=, _835016, 495, '&self', ['if-unify-or-empty', _611706, _611706], _985134)
 ^  <span class="ansi1 ansi32"
 >Call: </span>(306) [user] naive_eval_args
    <span class="ansi1 ansi32"
@@ -1151,9 +1151,9 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi32"
 >Call: </span>(308) [system] fail
 ^  <span class="ansi1 ansi32"
->Call: </span>(306) [user] eval_adjust_args(=, _835002, _1015632, _985120, 495, '&self', ['if-unify-or-empty', _611692, _611692], _1015634)
+>Call: </span>(306) [user] eval_adjust_args(=, _835016, _1015646, _985134, 495, '&self', ['if-unify-or-empty', _611706, _611706], _1015648)
    <span class="ansi1 ansi32"
->Call: </span>(307) [user] if_or_else((eval_all_args, eval_adjust_args2(=, _835002, _1015632, _985120, 495, '&self', ['if-unify-or-empty', _611692, _611692], _1015634)), eval_adjust_args1(=, _835002, _1015632, _985120, 495, '&self', ['if-unify-or-empty', _611692, _611692], _1015634))
+>Call: </span>(307) [user] if_or_else((eval_all_args, eval_adjust_args2(=, _835016, _1015646, _985134, 495, '&self', ['if-unify-or-empty', _611706, _611706], _1015648)), eval_adjust_args1(=, _835016, _1015646, _985134, 495, '&self', ['if-unify-or-empty', _611706, _611706], _1015648))
 ^  <span class="ansi1 ansi32"
 >Call: </span>(309) [user] eval_all_args
 ^  <span class="ansi1 ansi32"
@@ -1163,13 +1163,13 @@ Deterministic: <span class="ansi33"
 ^  <span class="ansi1 ansi32"
 >Exit: </span>(309) [user] eval_all_args
 ^  <span class="ansi1 ansi32"
->Call: </span>(309) [user] eval_adjust_args2(=, _835002, _1015632, _985120, 495, '&self', ['if-unify-or-empty', _611692, _611692], _1015634)
+>Call: </span>(309) [user] eval_adjust_args2(=, _835016, _1015646, _985134, 495, '&self', ['if-unify-or-empty', _611706, _611706], _1015648)
 ^  <span class="ansi1 ansi32"
->Call: </span>(310) [user] apply:maplist(must_eval_args(=, _1022788, 495, '&self'), [_611692, _611692], _1022782)
+>Call: </span>(310) [user] apply:maplist(must_eval_args(=, _1022802, 495, '&self'), [_611706, _611706], _1022796)
    <span class="ansi1 ansi32"
->Call: </span>(311) [apply] apply:maplist_([_611692, _611692], _1022782, user:must_eval_args(=, _1022788, 495, '&self'))
+>Call: </span>(311) [apply] apply:maplist_([_611706, _611706], _1022796, user:must_eval_args(=, _1022802, 495, '&self'))
 ^  <span class="ansi1 ansi32"
->Call: </span>(312) [user] must_eval_args(=, _1022788, 495, '&self', _611692, _1024848)
+>Call: </span>(312) [user] must_eval_args(=, _1022802, 495, '&self', _611706, _1024862)
 ^  <span class="ansi1 ansi32"
 >Call: </span>(313) [user] is_debugging(eval_args)
    <span class="ansi1 ansi32"
@@ -1191,21 +1191,21 @@ Deterministic: <span class="ansi33"
 ^  <span class="ansi1 ansi32"
 >Call: </span>(316) [user] option_value0(nodebug, 'True')
 ^  <span class="ansi1 ansi32"
->Call: </span>(317) [user] was_option_value(nodebug, _1036012)
+>Call: </span>(317) [user] was_option_value(nodebug, _1036026)
    <span class="ansi1 ansi32"
->Call: </span>(318) [system] current_prolog_flag(nodebug, _1037030)
+>Call: </span>(318) [system] current_prolog_flag(nodebug, _1037044)
    <span class="ansi1 ansi31"
->Fail: </span>(318) [system] current_prolog_flag(nodebug, _1037030)
+>Fail: </span>(318) [system] current_prolog_flag(nodebug, _1037044)
    <span class="ansi1 ansi32"
->Call: </span>(318) [$syspreds] prolog_load_context(nodebug, _1039064)
+>Call: </span>(318) [$syspreds] prolog_load_context(nodebug, _1039078)
    <span class="ansi1 ansi31"
->Fail: </span>(318) [$syspreds] prolog_load_context(nodebug, _1039064)
+>Fail: </span>(318) [$syspreds] prolog_load_context(nodebug, _1039078)
    <span class="ansi1 ansi32"
->Call: </span>(318) [system] nb_current(nodebug, _1041098)
+>Call: </span>(318) [system] nb_current(nodebug, _1041112)
    <span class="ansi1 ansi31"
->Fail: </span>(318) [system] nb_current(nodebug, _1041098)
+>Fail: </span>(318) [system] nb_current(nodebug, _1041112)
 ^  <span class="ansi1 ansi31"
->Fail: </span>(317) [user] was_option_value(nodebug, _1036012)
+>Fail: </span>(317) [user] was_option_value(nodebug, _1036026)
 ^  <span class="ansi1 ansi31"
 >Fail: </span>(316) [user] option_value0(nodebug, 'True')
    <span class="ansi1 ansi32"
@@ -1213,7 +1213,7 @@ Deterministic: <span class="ansi33"
    <span class="ansi1 ansi31"
 >Fail: </span>(316) [system] true==false
 ^  <span class="ansi1 ansi32"
->Call: </span>(317) [system] setup_call_cleanup('$notrace'(_1047210, _1047212), once(user:option_value0(nodebug, true)), '$restore_trace'(_1047210, _1047212))
+>Call: </span>(317) [system] setup_call_cleanup('$notrace'(_1047224, _1047226), once(user:option_value0(nodebug, true)), '$restore_trace'(_1047224, _1047226))
 ^  <span class="ansi1 ansi32"
 >Call: </span>(318) [system] sig_atomic(system:'$notrace'(_8728, _8730))
 ^  <span class="ansi1 ansi31"
@@ -4426,7 +4426,7 @@ Deterministic: <span class="ansi33"
 >Call: </span>(287) [rtrace] tAt(false, 271, 271, false)
 ; 
 ; EVAL TEST
-; took 0.574 secs. (573.53 milliseconds) 
+; took 0.571 secs. (570.51 milliseconds) 
 
 !(assertEqualToResult (get-atoms &new-space) ((mod-space! stdlib)))
 
@@ -8518,7 +8518,7 @@ Deterministic: <span class="ansi33"
 >Call: </span>(287) [rtrace] tAt(false, 271, 271, false)
 ; 
 ; EVAL TEST
-; took 0.563 secs. (562.95 milliseconds) 
+; took 0.564 secs. (563.56 milliseconds) 
 
 !(assertEqualToResult (get-atoms &space) ((a a)))
 
@@ -8532,7 +8532,7 @@ Deterministic: <span class="ansi33"
   (call-fn! min_list $10014)) (iz max-atom MeTTa) (@doc max-atom (@desc "Returns atom with maximum value in the expression (first argument). Only numbers are allowed.") (@params ((@param "Expression containing atoms of Number type"))) (@return "Maximum value in the expression. Error if expression contains non-numeric value or is empty.")) (: max-atom (-> Expression Number)) (is-fn-1 max-atom max_list) (iz size-atom MeTTa) (@doc size-atom (@desc "Returns the size of an expression (first argument).") (@params ((@param "Expression to measure the size of"))) (@return "Size of the expression")) (: size-atom (-> Expression Integer)) (is-fn-1 size-atom length) (iz index-atom MeTTa) (@doc index-atom (@desc "Returns atom from an expression (first argument) using index (second argument) or error if index is out of bounds.") (@params ((@param "Expression") (@param "Index"))) (@return "Atom at the specified index in the expression. Error if index is out of bounds.")) (: index-atom (-> Expression Number Atom)) (is-fn-21 index-atom nth0) (iz powi MeTTa) (@doc powi (@desc "Takes base (first argument) and power (second argument) and returns the result of raising the base to the power.") (@params ((@param "Base. Could be a float.") (@param "Power. Must be an integer."))) (@return "Result of base raised to the power")) (= (powi $10015 $10016)  
   (call-fn! pow $10015 $10016)) (==> (is-op-1 $10017 $10018) (is-fn-1 $10017 $10018))) ((a a))))
 </span>
-Script done on 2024-12-06 19:31:06+00:00 [COMMAND_EXIT_CODE="143"]
+Script done on 2024-12-06 22:19:43+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>

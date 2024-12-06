@@ -39,7 +39,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:29:42+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:18:19+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -200,7 +200,7 @@ Script started on 2024-12-06 19:29:42+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4646667 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4693148 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -358,9 +358,9 @@ Script started on 2024-12-06 19:29:42+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 2 "Missed result: (False True False))]" )
 P;HTML|
-;                                         #( = 2 "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26068maxresident)k" )
+;                                         #( = 2 "0.03user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 26156maxresident)k" )
 P;HTML|
-;                                         #( = 2 "0inputs+0outputs (0major+3112minor)pagefaults 0swaps" )
+;                                         #( = 2 "0inputs+0outputs (0major+3116minor)pagefaults 0swaps" )
 P;HTML|
 ;                                        #(load_answer_file /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/functional_programming_tests.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/functional_programming_tests.metta)
 
@@ -409,7 +409,7 @@ Script started on 2024-12-06 19:29:42+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.FUNCTIONAL-PROGRAMMING-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (1.59 milliseconds) 
+; took 0.002 secs. (1.52 milliseconds) 
 
 !(assertEqualToResult (maplist! is-even (1 2 3)) ((False True False)))
 
@@ -427,7 +427,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.FUNCTIONAL-PROGRAMMING-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000599 secs. (599.19 microseconds) 
+; took 0.000622 secs. (621.55 microseconds) 
 
 !(assertEqualToResult (maplist! < (1 2 3) (2 2 2)) ((True False False)))
 
@@ -445,7 +445,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.FUNCTIONAL-PROGRAMMING-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.22 milliseconds) 
+; took 0.001 secs. (1.24 milliseconds) 
 
 !(assertEqualToResult (maplist! plus-ternary (1 2 3) (4 5 6) (7 8 9)) ((12 15 18)))
 
@@ -463,7 +463,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.FUNCTIONAL-PROGRAMMING-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.28 milliseconds) 
+; took 0.002 secs. (2.31 milliseconds) 
 
 !(assertEqualToResult (maplist! maplist! (< >) ((1 2 3) (1 2 3)) ((2 2 2) (2 2 2))) (((True False False) (False False True))))
 
@@ -486,7 +486,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.FUNCTIONAL-PROGRAMMING-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000517 secs. (516.79 microseconds) 
+; took 0.000443 secs. (442.84 microseconds) 
 
 !(assertEqualToResult (maplist! get-type (my-list)) (((-> Expression))))
 
@@ -507,7 +507,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.FUNCTIONAL-PROGRAMMING-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (6.42 milliseconds) 
+; took 0.006 secs. (6.39 milliseconds) 
 
 !(assertEqualToResult (catch (max-time! 1 (concurrent-maplist! is-even (1 2 3))) time_limit_exceeded time_limit_exceeded) ((False True False)))
 
@@ -525,7 +525,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.FUNCTIONAL-PROGRAMMING-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.004 secs. (4.49 milliseconds) 
+; took 0.004 secs. (4.47 milliseconds) 
 
 !(assertEqualToResult (catch (max-time! 1 (concurrent-maplist! < (1 2 3) (2 2 2))) time_limit_exceeded time_limit_exceeded) ((True False False)))
 
@@ -547,7 +547,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.FUNCTIONAL-PROGRAMMING-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.003 secs. (3.42 milliseconds) 
+; took 0.004 secs. (3.53 milliseconds) 
 
 !(assertEqualToResult (catch (max-time! 1 (concurrent-maplist! concurrent-maplist! (is-even is-odd) ((1 2 3) (1 2 3)))) time_limit_exceeded time_limit_exceeded) (((False True False) (True False True))))
 
@@ -565,7 +565,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.FUNCTIONAL-PROGRAMMING-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000909 secs. (908.56 microseconds) 
+; took 0.000851 secs. (850.69 microseconds) 
 
 !(assertEqualToResult (catch (max-time! 1 (maplist! get-type (my-list))) time_limit_exceeded time_limit_exceeded) (((-> Expression))))
 
@@ -575,7 +575,7 @@ Deterministic: <span class="ansi33"
 Deterministic: <span class="ansi33"
 >()
 </span><span class="ansi32"
->% 392,262 inferences, 0.104 CPU in 2.097 seconds (5% CPU, 3789766 Lips)
+>% 392,211 inferences, 0.103 CPU in 2.097 seconds (5% CPU, 3800863 Lips)
 </span>P;HTML|
 ;                       #( = /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/functional_programming_tests.metta 0 )
 <span class="ansi1"
@@ -723,7 +723,7 @@ Deterministic: <span class="ansi33"
 <span class="ansi31"
 >#(in #(maybe_halt 7) #(unwind #(halt 7)))
 </span>
-Script done on 2024-12-06 19:29:51+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-06 22:18:28+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

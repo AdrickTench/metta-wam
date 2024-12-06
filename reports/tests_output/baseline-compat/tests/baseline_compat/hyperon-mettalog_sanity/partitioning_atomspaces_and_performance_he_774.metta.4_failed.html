@@ -59,7 +59,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:33:27+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:22:04+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -220,7 +220,7 @@ Script started on 2024-12-06 19:33:27+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4594396 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4645251 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -390,7 +390,7 @@ Script started on 2024-12-06 19:33:27+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 8 "Missed result: Age)]" )
 P;HTML|
-;                                         #( = 8 "0.05user 0.00system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 26184maxresident)k" )
+;                                         #( = 8 "0.04user 0.01system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 26052maxresident)k" )
 P;HTML|
 ;                                         #( = 8 "0inputs+0outputs (0major+3138minor)pagefaults 0swaps" )
 P;HTML|
@@ -442,7 +442,7 @@ Deterministic: <span class="ansi33"
 > (User Alice #(Space ()))
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.57 milliseconds) 
+; took 0.001 secs. (1.47 milliseconds) 
 
 !(assertEqualToResult (add-user Alice) (()))
 
@@ -466,7 +466,7 @@ Deterministic: <span class="ansi33"
 > (User Bob #(Space ()))
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.34 milliseconds) 
+; took 0.001 secs. (1.35 milliseconds) 
 
 !(assertEqualToResult (add-user Bob) (()))
 
@@ -484,7 +484,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.PARTITIONING-ATOMSPACES-AND-PERFORMANCE-HE-774.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000201 secs. (201.36 microseconds) 
+; took 0.000204 secs. (203.62 microseconds) 
 
 !(assertEqualToResult (match &test-space (User $name $space) $name) (Alice Bob))
 
@@ -509,7 +509,7 @@ Deterministic: <span class="ansi33"
 > (Age 20)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.84 milliseconds) 
+; took 0.002 secs. (1.83 milliseconds) 
 
 !(assertEqualToResult (write-user Alice (Age 20)) (()))
 
@@ -533,7 +533,7 @@ Deterministic: <span class="ansi33"
 > (Age 22)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.83 milliseconds) 
+; took 0.002 secs. (1.85 milliseconds) 
 
 !(assertEqualToResult (write-user Bob (Age 22)) (()))
 
@@ -551,7 +551,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.PARTITIONING-ATOMSPACES-AND-PERFORMANCE-HE-774.06</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.05 milliseconds) 
+; took 0.000970 secs. (969.96 microseconds) 
 
 !(assertEqualToResult (read-user Alice (Age $age) (Age Alice $age)) (Age Alice 20))
 
@@ -569,7 +569,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.PARTITIONING-ATOMSPACES-AND-PERFORMANCE-HE-774.07</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.05 milliseconds) 
+; took 0.000967 secs. (966.72 microseconds) 
 
 !(assertEqualToResult (read-user Bob (Age $age) (Age Bob $age)) (Age Bob 22))
 
@@ -625,7 +625,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.PARTITIONING-ATOMSPACES-AND-PERFORMANCE-HE-774.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000229 secs. (229.06 microseconds) 
+; took 0.000219 secs. (219.23 microseconds) 
 
 !(assertEqualToResult (match &test-space (Partition $name $space) $name) (People Games))
 
@@ -660,7 +660,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.PARTITIONING-ATOMSPACES-AND-PERFORMANCE-HE-774.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000974 secs. (974.09 microseconds) 
+; took 0.000970 secs. (969.98 microseconds) 
 
 !(assertEqualToResult (read-partition People (Friend $x $y) (Friend $x $y)) (Friend Bob Alice))
 
@@ -678,7 +678,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.PARTITIONING-ATOMSPACES-AND-PERFORMANCE-HE-774.10</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.05 milliseconds) 
+; took 0.000942 secs. (942.25 microseconds) 
 
 !(assertEqualToResult (read-partition Games (GameRole $role) (GameRole $role)) (GameRole Predator))
 
@@ -688,7 +688,7 @@ Deterministic: <span class="ansi33"
 Deterministic: <span class="ansi33"
 >(#(Error #(got ()) #(expected (GameRole Predator))))
 </span><span class="ansi32"
->% 422,296 inferences, 0.113 CPU in 0.115 seconds (98% CPU, 3744115 Lips)
+>% 421,942 inferences, 0.113 CPU in 0.115 seconds (98% CPU, 3738726 Lips)
 </span>P;HTML|
 ;                       #( = /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/partitioning_atomspaces_and_performance_he_774.metta 0 )
 <span class="ansi1"
@@ -842,7 +842,7 @@ Deterministic: <span class="ansi33"
 <span class="ansi31"
 >#(in #(maybe_halt 7) #(unwind #(halt 7)))
 </span>
-Script done on 2024-12-06 19:33:34+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-06 22:22:11+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

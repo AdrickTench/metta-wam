@@ -39,7 +39,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:26:10+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:14:47+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -200,7 +200,7 @@ Script started on 2024-12-06 19:26:10+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4482354 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4733592 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -360,9 +360,9 @@ Script started on 2024-12-06 19:26:10+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                         #( = 3 "Missed result: 1)]" )
 P;HTML|
-;                                         #( = 3 "0.04user 0.00system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26300maxresident)k" )
+;                                         #( = 3 "0.04user 0.00system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26160maxresident)k" )
 P;HTML|
-;                                         #( = 3 "0inputs+0outputs (0major+3106minor)pagefaults 0swaps" )
+;                                         #( = 3 "0inputs+0outputs (0major+3104minor)pagefaults 0swaps" )
 P;HTML|
 ;                                        #(load_answer_file /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/arity_tests_mw.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/arity_tests_mw.metta)
 
@@ -385,7 +385,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.ARITY-TESTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000163 secs. (162.94 microseconds) 
+; took 0.000178 secs. (177.77 microseconds) 
 
 !(assertEqualToResult (predicate-arity foo) (1))
 
@@ -402,7 +402,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.ARITY-TESTS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000151 secs. (150.58 microseconds) 
+; took 0.000130 secs. (130.13 microseconds) 
 
 !(assertEqualToResult (function-arity foo) (0))
 
@@ -424,7 +424,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.ARITY-TESTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000142 secs. (141.61 microseconds) 
+; took 0.000133 secs. (133.42 microseconds) 
 
 !(assertEqualToResult (predicate-arity bar) (2 3))
 
@@ -441,7 +441,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.ARITY-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000154 secs. (154.02 microseconds) 
+; took 0.000136 secs. (135.65 microseconds) 
 
 !(assertEqualToResult (function-arity bar) (1 2))
 
@@ -461,7 +461,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.ARITY-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000156 secs. (155.84 microseconds) 
+; took 0.000136 secs. (136.24 microseconds) 
 
 !(assertEqualToResult (predicate-arity foo) (1 2))
 
@@ -478,7 +478,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.ARITY-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000156 secs. (156.47 microseconds) 
+; took 0.000148 secs. (147.56 microseconds) 
 
 !(assertEqualToResult (function-arity foo) (0 1))
 
@@ -501,7 +501,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.ARITY-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000204 secs. (203.70 microseconds) 
+; took 0.000167 secs. (166.78 microseconds) 
 
 !(assertEqualToResult (match &test-space (size-atom (a b c) $size) $size) (3))
 
@@ -520,7 +520,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.ARITY-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000161 secs. (161.10 microseconds) 
+; took 0.000152 secs. (152.41 microseconds) 
 
 !(assertEqualToResult (match &test-space (size-atom $new_atom 4) $new_atom) (($1 $2 $3 $4)))
 
@@ -548,7 +548,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.ARITY-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000171 secs. (171.05 microseconds) 
+; took 0.000165 secs. (165.30 microseconds) 
 
 !(assertEqualToResult (match &test-space (max 5 10 $max) $max) (10))
 
@@ -560,7 +560,7 @@ Deterministic: <span class="ansi33"
 </span>;;; Test: Reverse execution using `max`
 ;;; This functionality uses mettalog's builtin finite domain equational solver
 <span class="ansi32"
->% 759,954 inferences, 0.147 CPU in 0.149 seconds (98% CPU, 5186724 Lips)
+>% 760,354 inferences, 0.147 CPU in 0.149 seconds (98% CPU, 5184580 Lips)
 </span>P;HTML|
 ;                       #( = /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/arity_tests_mw.metta 0 )
 <span class="ansi1"
@@ -709,7 +709,7 @@ Deterministic: <span class="ansi33"
 <span class="ansi31"
 >#(in #(maybe_halt 7) #(unwind #(halt 7)))
 </span>
-Script done on 2024-12-06 19:26:17+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-06 22:14:53+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

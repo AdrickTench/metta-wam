@@ -51,7 +51,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:29:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:18:03+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -212,7 +212,7 @@ Script started on 2024-12-06 19:29:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4626379 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4631940 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -569,7 +569,7 @@ Script started on 2024-12-06 19:29:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.FIRST-ANSWER.01</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (14.63 milliseconds) 
+; took 0.015 secs. (14.66 milliseconds) 
 
 !(assertEqualToResult (limit 1 (synthesize (: $term $type) kb rb (S Z))) ((: a A)))
 
@@ -586,7 +586,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-METTALOG-SANITY.FIRST-ANSWER.02</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (14.92 milliseconds) 
+; took 0.015 secs. (14.99 milliseconds) 
 
 !(assertEqualToResult (limit 6 (synthesize (: $term $type) kb rb (S Z))) ((: a A) (: a B) (: abc (Implication (AndLink A B) C)) (: cde (Implication (OrLink C D) E)) (: (ConjunctionIntroduction a a) (AndLink A A)) (: (ConjunctionIntroduction a a) (AndLink A B))))
 
@@ -596,7 +596,7 @@ Deterministic: <span class="ansi33"
 Deterministic: <span class="ansi33"
 >(#(Error #(got ()) #(expected ((: a A) (: a B) (: abc (Implication (AndLink A B) C)) (: cde (Implication (OrLink C D) E)) (: (ConjunctionIntroduction a a) (AndLink A A)) (: (ConjunctionIntroduction a a) (AndLink A B))))))
 </span><span class="ansi32"
->% 693,351 inferences, 0.142 CPU in 0.144 seconds (99% CPU, 4896205 Lips)
+>% 693,479 inferences, 0.143 CPU in 0.145 seconds (98% CPU, 4854340 Lips)
 </span>P;HTML|
 ;                       #( = /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/first_answer.metta 0 )
 <span class="ansi1"
@@ -737,7 +737,7 @@ Deterministic: <span class="ansi33"
 <span class="ansi31"
 >#(in #(maybe_halt 7) #(unwind #(halt 7)))
 </span>
-Script done on 2024-12-06 19:29:33+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-06 22:18:10+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

@@ -34,7 +34,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:44:10+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:32:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -195,7 +195,7 @@ Script started on 2024-12-06 19:44:10+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4656179 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4759158 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -386,7 +386,7 @@ Deterministic: <span class="ansi33"
 > 1
 </span>; 
 ; EVAL TEST
-; took 0.000678 secs. (677.87 microseconds) 
+; took 0.000753 secs. (753.48 microseconds) 
 
 !(assertEqualToResult (add-atom &attentional_focus 1) (()))
 
@@ -416,7 +416,7 @@ Deterministic: <span class="ansi33"
 > 2
 </span>; 
 ; EVAL TEST
-; took 0.000645 secs. (644.83 microseconds) 
+; took 0.000654 secs. (654.44 microseconds) 
 
 !(assertEqualToResult (add-atom &concepts 2) (()))
 
@@ -434,7 +434,7 @@ Deterministic: <span class="ansi33"
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.03</h3>
 ; 
 ; EVAL TEST
-; took 0.072 secs. (72.33 milliseconds) 
+; took 0.072 secs. (71.96 milliseconds) 
 
 !(assertEqualToResult (match &attentional_focus $1 $1) (1))
 
@@ -465,7 +465,7 @@ Deterministic: <span class="ansi33"
 >;; METTA-MORPH-TESTS.MATCH-SUPERPOSED-SPACES.04</h3>
 ; 
 ; EVAL TEST
-; took 0.068 secs. (67.65 milliseconds) 
+; took 0.067 secs. (67.29 milliseconds) 
 
 !(assertEqualToResult (match &concepts $1 $1) (2))
 
@@ -479,7 +479,7 @@ Deterministic: <span class="ansi33"
   (call-fn! min_list $10014)) (iz max-atom MeTTa) (@doc max-atom (@desc "Returns atom with maximum value in the expression (first argument). Only numbers are allowed.") (@params ((@param "Expression containing atoms of Number type"))) (@return "Maximum value in the expression. Error if expression contains non-numeric value or is empty.")) (: max-atom (-> Expression Number)) (is-fn-1 max-atom max_list) (iz size-atom MeTTa) (@doc size-atom (@desc "Returns the size of an expression (first argument).") (@params ((@param "Expression to measure the size of"))) (@return "Size of the expression")) (: size-atom (-> Expression Integer)) (is-fn-1 size-atom length) (iz index-atom MeTTa) (@doc index-atom (@desc "Returns atom from an expression (first argument) using index (second argument) or error if index is out of bounds.") (@params ((@param "Expression") (@param "Index"))) (@return "Atom at the specified index in the expression. Error if index is out of bounds.")) (: index-atom (-> Expression Number Atom)) (is-fn-21 index-atom nth0) (iz powi MeTTa) (@doc powi (@desc "Takes base (first argument) and power (second argument) and returns the result of raising the base to the power.") (@params ((@param "Base. Could be a float.") (@param "Power. Must be an integer."))) (@return "Result of base raised to the power")) (= (powi $10015 $10016)  
   (call-fn! pow $10015 $10016)) (==> (is-op-1 $10017 $10018) (is-fn-1 $10017 $10018))) (2)))
 </span>
-Script done on 2024-12-06 19:44:50+00:00 [COMMAND_EXIT_CODE="143"]
+Script done on 2024-12-06 22:33:24+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>

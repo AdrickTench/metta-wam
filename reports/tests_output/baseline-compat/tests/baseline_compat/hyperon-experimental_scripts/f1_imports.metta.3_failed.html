@@ -54,7 +54,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-06 19:23:43+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-06 22:12:23+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           #(set_option_value compat false)
 
@@ -215,7 +215,7 @@ Script started on 2024-12-06 19:23:43+00:00 [TERM="xterm-256color" TTY="/dev/pts
 ;         #(set_option_value test false)
 <span class="ansi32"
 >
-% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4683483 Lips)
+% 23,950 inferences, 0.005 CPU in 0.005 seconds (100% CPU, 4674901 Lips)
 </span>P;HTML|
 ;          #(is_cmd_option prescan halt --halt=true true)
 P;HTML|
@@ -405,7 +405,7 @@ Script started on 2024-12-06 19:23:43+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000211 secs. (210.79 microseconds) 
+; took 0.000199 secs. (199.20 microseconds) 
 
 !(assertEqualToResult (get-type &self) (hyperon::space::DynSpace))
 
@@ -4440,7 +4440,7 @@ Deterministic: <span class="ansi33"
 >Call: </span>(301) [rtrace] tAt(false, 271, 271, false)
 ; 
 ; EVAL TEST
-; took 0.616 secs. (616.47 milliseconds) 
+; took 0.615 secs. (614.84 milliseconds) 
 
 !(assertEqual ((let $x (get-atoms &self) (get-type $x))) ((get-type &self)))
 
@@ -4458,7 +4458,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000264 secs. (264.41 microseconds) 
+; took 0.000296 secs. (296.29 microseconds) 
 
 !(assertEqual (if (> 1 2) 1 2) 2)
 
@@ -4526,7 +4526,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000196 secs. (196.09 microseconds) 
+; took 0.000208 secs. (207.60 microseconds) 
 
 !(assertEqual (+ 1 2) 3)
 
@@ -4543,7 +4543,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000162 secs. (161.82 microseconds) 
+; took 0.000155 secs. (155.09 microseconds) 
 
 !(assertEqual (if True "S" "F") "S")
 
@@ -4596,7 +4596,7 @@ Last Result(2): <span class="ansi33"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.22 milliseconds) 
+; took 0.002 secs. (2.35 milliseconds) 
 
 !(assertEqual (match &m (= (f 2)  $x) $x) (g 3))
 
@@ -4657,7 +4657,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000226 secs. (226.40 microseconds) 
+; took 0.000225 secs. (225.10 microseconds) 
 
 !(assertEqual (+ 1 2) 3)
 
@@ -4674,7 +4674,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-MODULEA.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000135 secs. (134.58 microseconds) 
+; took 0.000150 secs. (150.09 microseconds) 
 
 !(assertEqual (if True "S" "F") "S")
 
@@ -4709,7 +4709,7 @@ Last Result(2): <span class="ansi33"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000805 secs. (805.08 microseconds) 
+; took 0.000871 secs. (870.88 microseconds) 
 
 !(assertEqual (g 2) 102)
 
@@ -4726,7 +4726,7 @@ Deterministic: <span class="ansi33"
 >;; HYPERON-EXPERIMENTAL-SCRIPTS.F1-IMPORTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.23 milliseconds) 
+; took 0.001 secs. (1.17 milliseconds) 
 
 !(assertEqual (f 2) 103)
 
@@ -8862,7 +8862,7 @@ Deterministic: <span class="ansi33"
 >Call: </span>(314) [rtrace] tAt(false, 271, 271, false)
 ; 
 ; EVAL TEST
-; took 0.946 secs. (945.74 milliseconds) 
+; took 0.947 secs. (947.48 milliseconds) 
 
 !(assertEqual &m (let* (($a (collapse (get-atoms &self))) ($x (cdr-atom $a)) ($y (cdr-atom $x))) (car-atom $y)))
 
@@ -17819,7 +17819,7 @@ Deterministic: <span class="ansi33"
 P;HTML|
 ;                                         #(eval_call_fn #(pow $10000 $10001) $R)
 
-Script done on 2024-12-06 19:24:23+00:00 [COMMAND_EXIT_CODE="143"]
+Script done on 2024-12-06 22:13:03+00:00 [COMMAND_EXIT_CODE="143"]
 
 </pre>
 </body>
